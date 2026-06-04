@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>巴塞罗那历史极端天气事件地图</title>
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--text:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#2563eb;--red:#dc2626;--orange:#f97316;--teal:#0d9488;--gray:#64748b;--purple:#7c3aed}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif}.container{max-width:1220px;margin:0 auto;padding:34px 22px 70px}.hero{background:linear-gradient(135deg,#0f172a,#1d4ed8 58%,#0891b2);color:white;padding:34px;border-radius:26px;box-shadow:0 18px 45px rgba(15,23,42,.2)}h1{margin:0 0 12px;font-size:36px;letter-spacing:-.03em}.subtitle{margin:0;color:#dbeafe;line-height:1.75;max-width:980px}.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}a.btn,.btn{appearance:none;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700;text-decoration:none;cursor:pointer}.btn.active{background:#1d4ed8;color:white;border-color:#1d4ed8}.layout{display:grid;grid-template-columns:1.35fr .65fr;gap:18px;margin-top:24px}.panel{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 28px rgba(15,23,42,.06)}.map-wrap{position:relative;overflow:hidden}.map{width:100%;height:auto;display:block;border-radius:16px;background:#dbeafe}.marker{cursor:pointer;transition:opacity .15s ease}.marker circle{transition:r .15s ease,stroke-width .15s ease,filter .15s ease}.marker:hover circle{stroke-width:5}.marker.dim{opacity:.18}.marker circle{stroke:white;stroke-width:3}.marker text{font-size:11px;font-weight:800;fill:white;text-anchor:middle;dominant-baseline:middle;pointer-events:none}.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.legend span{display:inline-flex;align-items:center;gap:6px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:999px;padding:6px 10px;font-size:13px;color:#334155}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}.side h2{margin:0 0 12px;font-size:20px}.event-list{display:grid;gap:10px;max-height:690px;overflow:auto;padding-right:4px}.event-item{border:1px solid #e2e8f0;background:#f8fafc;border-radius:16px;padding:12px;cursor:pointer;transition:.15s}.event-item:hover,.event-item.active{background:#eff6ff;border-color:#93c5fd}.event-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.date{font-size:12px;font-weight:800;color:#475569}.tag{font-size:12px;font-weight:800;border-radius:999px;padding:4px 8px}.event-item h3{margin:8px 0 6px;font-size:15px}.event-item p{margin:0;color:#64748b;line-height:1.5;font-size:13px}.detail{margin-top:18px}.detail h2{margin:0 0 8px;font-size:22px}.detail .place{font-weight:800;color:#334155}.detail p{color:#334155;line-height:1.7}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.stat{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:11px}.stat strong{display:block;color:#64748b;font-size:12px;margin-bottom:4px}.stat span{font-size:16px;font-weight:900}.note{margin-top:18px;color:#64748b;font-size:13px;line-height:1.7}.tooltip{position:absolute;display:none;pointer-events:none;background:#0f172a;color:white;padding:9px 11px;border-radius:12px;font-size:13px;max-width:260px;box-shadow:0 12px 28px rgba(15,23,42,.25);z-index:5}.map-label{font-size:13px;font-weight:800;fill:#334155}.water-label{font-size:13px;font-weight:800;fill:#0369a1;opacity:.85}.city-label{font-size:12px;font-weight:800;fill:#0f172a}.small-label{font-size:10px;fill:#475569;font-weight:700}.footer{margin-top:24px;background:white;border:1px solid #e2e8f0;border-radius:18px;padding:16px;color:#64748b;line-height:1.7;font-size:13px}@media(max-width:980px){.layout{grid-template-columns:1fr}.event-list{max-height:none}.stats{grid-template-columns:1fr 1fr}h1{font-size:30px}}@media(max-width:560px){.stats{grid-template-columns:1fr}.hero{padding:26px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <section class="hero">
+    <h1>巴塞罗那历史极端天气事件地图</h1>
+    <p class="subtitle">结合历史极端天气事件发生地区，绘制巴塞罗那及加泰罗尼亚周边的事件地图。点击地图标记或右侧事件列表，可以查看时间、地点、类型和详细说明。地图为离线 SVG 示意图，适合本地和云端静态部署。</p>
+    <div class="nav"><a class="btn" href="index.html">返回首页</a><a class="btn" href="Barcelona_extreme_weather_timeline.html">查看时间线</a><a class="btn" href="Barcelona_climate_trend_analysis_1990_2026.html">查看趋势分析</a></div>
+  </section>
+
+  <section class="layout">
+    <div class="panel map-wrap">
+      <div class="nav" id="filters" style="margin:0 0 14px">
+        <button class="btn active" data-filter="all">全部</button>
+        <button class="btn" data-filter="洪水">洪水/强降雨</button>
+        <button class="btn" data-filter="热浪">热浪/高温</button>
+        <button class="btn" data-filter="干旱">干旱</button>
+        <button class="btn" data-filter="风暴">风暴/强风/暴雪</button>
+      </div>
+      <div id="tooltip" class="tooltip"></div>
+      <svg id="eventMap" class="map" viewBox="0 0 920 660" role="img" aria-label="Barcelona extreme weather event map">
+        <defs>
+          <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+          <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#dcfce7"/></linearGradient>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity=".18"/></filter>
+        </defs>
+        <rect width="920" height="660" fill="#e0f2fe"/>
+        <path d="M610 0 C565 72 540 126 510 190 C470 275 448 358 430 456 C418 520 395 586 355 660 L920 660 L920 0 Z" fill="url(#sea)"/>
+        <path d="M0 0 H610 C570 72 548 125 520 190 C480 278 458 370 440 466 C428 535 398 603 360 660 H0 Z" fill="url(#land)"/>
+        <path d="M521 180 C505 220 493 255 477 300 C458 354 450 407 440 466 C432 515 410 575 375 640" fill="none" stroke="#0ea5e9" stroke-width="6" opacity=".55"/>
+        <path d="M342 90 C390 140 418 185 445 245 C475 310 500 375 525 450" fill="none" stroke="#0284c7" stroke-width="4" opacity=".28"/>
+        <path d="M125 430 C190 390 240 402 305 440 C350 466 390 476 440 468" fill="none" stroke="#0284c7" stroke-width="4" opacity=".35"/>
+        <path d="M80 110 C160 72 260 63 360 85 C455 106 540 150 630 180" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 8" opacity=".55"/>
+        <path d="M85 250 C160 215 240 210 322 238 C386 260 445 295 505 335" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 8" opacity=".55"/>
+        <text x="655" y="120" class="water-label">Mediterranean Sea</text>
+        <text x="660" y="145" class="small-label">地中海</text>
+        <text x="382" y="424" class="city-label">Barcelona</text>
+        <text x="365" y="444" class="small-label">巴塞罗那</text>
+        <text x="304" y="390" class="small-label">L'Hospitalet</text>
+        <text x="272" y="446" class="small-label">El Prat Airport</text>
+        <text x="255" y="256" class="small-label">Sant Boi</text>
+        <text x="170" y="172" class="small-label">Rubí / Terrassa / Sabadell</text>
+        <text x="112" y="468" class="small-label">Llobregat basin</text>
+        <text x="520" y="392" class="small-label">Barcelona Coast</text>
+        <text x="474" y="344" class="small-label">Fabra Observatory</text>
+        <g opacity=".22" fill="#64748b"><circle cx="390" cy="420" r="42"/><circle cx="335" cy="402" r="25"/><circle cx="462" cy="344" r="23"/><circle cx="290" cy="252" r="22"/><circle cx="210" cy="170" r="34"/></g>
+      </svg>
+      <div class="legend"><span><i class="dot" style="background:#0284c7"></i>洪水/强降雨</span><span><i class="dot" style="background:#dc2626"></i>热浪/高温</span><span><i class="dot" style="background:#f59e0b"></i>干旱</span><span><i class="dot" style="background:#64748b"></i>风暴/强风/暴雪</span></div>
+      <div class="detail panel" id="detail" style="box-shadow:none"></div>
+    </div>
+
+    <aside class="panel side">
+      <h2>事件列表</h2>
+      <div id="eventList" class="event-list"></div>
+    </aside>
+  </section>
+
+  <section class="footer">
+    说明：地图坐标为示意定位，基于事件主要影响区域放置标记，不等同精确灾害边界。热浪和干旱等区域性事件以 Fabra Observatory、巴塞罗那市区或供水系统代表点标注；洪水和强风等局地事件以主要受灾区域标注。
+  </section>
+</div>
+<script>
+const events = [
+  {id:'e1962', year:'1962', date:'1962年9月25日', type:'洪水', title:'瓦列斯特大山洪 / 都会区洪灾', place:'Vallès、Rubí、Terrassa、Sabadell、巴塞罗那都会区', x:215, y:170, color:'#0284c7', detail:'加泰罗尼亚现代史上最严重洪灾之一。极端短时降雨导致 Llobregat 与 Besòs 水系及支流暴涨，Rubí、Terrassa、Sabadell 等地受灾尤其严重。该事件是理解巴塞罗那都市圈洪水风险的关键历史案例。', impact:'重大人员伤亡、河道与工业区洪灾、城市防洪意识转折。'},
+  {id:'e2000', year:'2000', date:'2000年6月9—10日', type:'洪水', title:'巴塞罗那地区突发暴雨洪水', place:'Llobregat basin、Montserrat、Vendrell、Barcelona area', x:165, y:452, color:'#0284c7', detail:'强降雨在短时间内集中爆发，Llobregat 流域和周边地区出现突发洪水。该事件体现地中海城市“平时偏干、短时极端暴雨”的风险。', impact:'河流洪水、道路积水、区域交通与排水压力。'},
+  {id:'e2003', year:'2003', date:'2003年7—8月', type:'热浪', title:'欧洲热浪波及巴塞罗那', place:'巴塞罗那市区', x:395, y:420, color:'#dc2626', detail:'欧洲历史性热浪影响西班牙与巴塞罗那。研究显示，热浪期间死亡风险与年龄、性别和社会经济因素有关，是公共健康和城市公平问题。', impact:'高温健康风险、老年人与弱势人群暴露增加。'},
+  {id:'e2008', year:'2007—2008', date:'2007—2008年', type:'干旱', title:'严重干旱与船运饮用水', place:'Ter-Llobregat 供水系统、巴塞罗那都会区', x:330, y:405, color:'#f59e0b', detail:'长期干旱影响服务巴塞罗那都会区的供水系统。巴塞罗那采取非常规应急措施，包括船运饮用水，并推动海水淡化等供水方案。', impact:'供水压力、节水限制、水资源治理转折。'},
+  {id:'e2009', year:'2009', date:'2009年1月24日', type:'风暴', title:'Sant Boi 强风灾害与体育馆坍塌', place:'Sant Boi de Llobregat', x:292, y:255, color:'#64748b', detail:'强风过程袭击加泰罗尼亚沿海和近海地区，Sant Boi 一处体育设施坍塌，造成严重伤亡。', impact:'公共设施安全、强风预警和学校活动安全管理。'},
+  {id:'e2010', year:'2010', date:'2010年3月7—8日', type:'风暴', title:'加泰罗尼亚低海拔湿雪暴', place:'巴塞罗那、加泰罗尼亚沿海与近海地区', x:385, y:392, color:'#64748b', detail:'异常强的低海拔降雪席卷加泰罗尼亚，雪线降至海平面附近，湿雪、雷暴和强风共同导致交通、电力和城市运行受阻。', impact:'罕见降雪、交通中断、电力与城市运行压力。'},
+  {id:'e2020', year:'2020', date:'2020年1月19—24日', type:'风暴', title:'风暴 Gloria：巨浪、强风与海岸破坏', place:'巴塞罗那海滨、港口和加泰罗尼亚海岸', x:535, y:402, color:'#64748b', detail:'风暴 Gloria 带来巨浪、强风、风暴潮和强降雨，严重影响巴塞罗那海滩、港口和海滨设施。', impact:'海岸侵蚀、海滨设施受损、港口与交通影响。'},
+  {id:'e2022', year:'2022', date:'2022年全年', type:'热浪', title:'Fabra Observatory 破纪录暖年与少雨年', place:'Fabra Observatory', x:468, y:344, color:'#dc2626', detail:'Fabra Observatory 记录到异常暖年和少雨年，多个单月热记录、年平均温度记录和低降水记录相继出现。', impact:'持续性气候背景改变、供水与城市绿化压力。'},
+  {id:'e2023', year:'2023', date:'2023年8月21—23日', type:'热浪', title:'三日极端热事件', place:'巴塞罗那市区与 Fabra Observatory', x:448, y:358, color:'#dc2626', detail:'巴塞罗那出现罕见强热事件，刷新长序列三日平均最高温和最低温记录，热夜风险尤其突出。', impact:'夜间热压力、公共健康风险、空调和能源需求上升。'},
+  {id:'e2024d', year:'2024', date:'2024年2月起', type:'干旱', title:'巴塞罗那进入干旱紧急阶段', place:'巴塞罗那与 Ter-Llobregat 供水系统覆盖区', x:350, y:390, color:'#f59e0b', detail:'巴塞罗那进入干旱协议紧急阶段，居民用水限额下调，公共服务、企业和个人用水都面临压减。', impact:'城市供水、公共清洁、绿化、喷泉和旅游服务受影响。'},
+  {id:'e2024h', year:'2024', date:'2024年7月30日', type:'热浪', title:'Fabra Observatory 约40°C历史高温', place:'Fabra Observatory', x:485, y:330, color:'#dc2626', detail:'Fabra Observatory 录得约40°C，打破该站长期最高温记录，把巴塞罗那极端高温风险推到新量级。', impact:'极端高温、户外活动风险、城市热岛叠加。'},
+  {id:'e2024r', year:'2024', date:'2024年11月4日', type:'洪水', title:'DANA 后续强降雨影响交通', place:'巴塞罗那都会区、El Prat 机场、铁路系统', x:285, y:448, color:'#0284c7', detail:'瓦伦西亚洪灾后，强降雨系统继续影响西班牙东部。巴塞罗那出现红色预警，航班取消、铁路服务中断。', impact:'机场、铁路、道路和城市排水系统压力。'},
+  {id:'e2025', year:'2025', date:'2025年6月', type:'热浪', title:'Fabra Observatory 6月多次超过35°C', place:'Fabra Observatory', x:505, y:350, color:'#dc2626', detail:'Fabra Observatory 单月多次出现≥35°C高温，说明高温风险更早进入夏季。', impact:'早夏热浪、学校和旅游高温风险、公共健康压力。'}
+];
+const typeGroup = { '洪水':'洪水', '热浪':'热浪', '干旱':'干旱', '风暴':'风暴' };
+const map = document.getElementById('eventMap');
+const list = document.getElementById('eventList');
+const detail = document.getElementById('detail');
+const tooltip = document.getElementById('tooltip');
+let activeId = events[0].id;
+let activeFilter = 'all';
+function renderMarkers(){
+  document.querySelectorAll('.marker').forEach(n=>n.remove());
+  events.forEach((e,i)=>{
+    const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.setAttribute('class','marker');
+    g.setAttribute('data-id',e.id);
+    g.setAttribute('transform',`translate(${e.x} ${e.y})`);
+    const visible = activeFilter==='all' || typeGroup[e.type]===activeFilter;
+    if(!visible) g.classList.add('dim');
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('r', activeId===e.id ? 17 : 14); c.setAttribute('fill',e.color); c.setAttribute('filter','url(#shadow)');
+    const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.textContent = i+1; t.setAttribute('y','1');
+    g.appendChild(c); g.appendChild(t);
+    g.addEventListener('click',()=>selectEvent(e.id));
+    g.addEventListener('mousemove',(ev)=>showTip(ev,e));
+    g.addEventListener('mouseleave',hideTip);
+    map.appendChild(g);
+  });
+}
+function renderList(){
+  list.innerHTML = events.map((e,i)=>{
+    const visible = activeFilter==='all' || typeGroup[e.type]===activeFilter;
+    return `<article class="event-item ${e.id===activeId?'active':''}" data-id="${e.id}" style="display:${visible?'block':'none'}"><div class="event-top"><span class="date">${i+1}. ${e.date}</span><span class="tag" style="background:${e.color}22;color:${e.color}">${e.type}</span></div><h3>${e.title}</h3><p>${e.place}</p></article>`;
+  }).join('');
+  document.querySelectorAll('.event-item').forEach(el=>el.addEventListener('click',()=>selectEvent(el.dataset.id)));
+}
+function renderDetail(){
+  const e = events.find(x=>x.id===activeId) || events[0];
+  detail.innerHTML = `<h2>${e.title}</h2><p class="place">📍 ${e.place}</p><p><strong>时间：</strong>${e.date}　<strong>类型：</strong>${e.type}</p><p>${e.detail}</p><div class="stats"><div class="stat"><strong>年份</strong><span>${e.year}</span></div><div class="stat"><strong>事件类型</strong><span>${e.type}</span></div><div class="stat"><strong>主要区域</strong><span>${e.place.split('、')[0]}</span></div><div class="stat"><strong>影响重点</strong><span>${e.impact.split('、')[0]}</span></div></div><p class="note"><strong>影响说明：</strong>${e.impact}</p>`;
+}
+function selectEvent(id){ activeId=id; renderMarkers(); renderList(); renderDetail(); }
+function showTip(ev,e){ tooltip.style.display='block'; tooltip.innerHTML=`<strong>${e.date}</strong><br>${e.title}<br><span style="color:#cbd5e1">${e.place}</span>`; const rect=document.querySelector('.map-wrap').getBoundingClientRect(); tooltip.style.left=(ev.clientX-rect.left+14)+'px'; tooltip.style.top=(ev.clientY-rect.top+14)+'px'; }
+function hideTip(){ tooltip.style.display='none'; }
+document.querySelectorAll('#filters .btn').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#filters .btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;const first=events.find(e=>activeFilter==='all'||typeGroup[e.type]===activeFilter);if(first) activeId=first.id;renderMarkers();renderList();renderDetail();}));
+renderMarkers(); renderList(); renderDetail();
+</script>
+</body>
+</html>
+

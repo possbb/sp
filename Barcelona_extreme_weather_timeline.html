@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>巴塞罗那历史极端天气事件时间线</title>
+<style>
+:root { --bg:#f6f8fb; --card:#ffffff; --text:#0f172a; --muted:#64748b; --line:#e2e8f0; --blue:#2563eb; --red:#dc2626; --orange:#f97316; --teal:#0d9488; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif; background:var(--bg); color:var(--text); }
+.container { max-width:1180px; margin:0 auto; padding:34px 22px 70px; }
+.hero { background:linear-gradient(135deg,#0f172a,#1d4ed8 58%,#0891b2); color:white; padding:34px; border-radius:26px; box-shadow:0 18px 45px rgba(15,23,42,.2); }
+h1 { margin:0 0 12px; font-size:36px; letter-spacing:-.02em; }
+.subtitle { margin:0; color:#dbeafe; line-height:1.75; max-width:980px; font-size:16px; }
+.summary { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:22px 0 8px; }
+.summary .box { background:white; border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:0 8px 24px rgba(15,23,42,.06); }
+.summary strong { display:block; font-size:24px; margin-bottom:4px; }
+.summary span { color:var(--muted); font-size:13px; line-height:1.5; }
+.timeline { position:relative; margin-top:26px; }
+.timeline:before { content:""; position:absolute; left:24px; top:0; bottom:0; width:3px; background:linear-gradient(#2563eb,#f97316,#0d9488); border-radius:99px; }
+.event-card { position:relative; display:grid; grid-template-columns:360px 1fr; gap:22px; margin:0 0 24px 56px; background:white; border:1px solid var(--line); border-radius:24px; padding:16px; box-shadow:0 12px 32px rgba(15,23,42,.07); overflow:hidden; }
+.event-card:before { content:""; position:absolute; left:-41px; top:34px; width:18px; height:18px; background:white; border:4px solid #2563eb; border-radius:50%; box-shadow:0 0 0 6px var(--bg); }
+.event-card.heat:before { border-color:#dc2626; } .event-card.drought:before { border-color:#f59e0b; } .event-card.flood:before { border-color:#0284c7; } .event-card.wind:before { border-color:#64748b; } .event-card.snow:before { border-color:#38bdf8; }
+.image-wrap { border-radius:18px; overflow:hidden; background:#e2e8f0; min-height:190px; }
+.event-img { display:block; width:100%; height:100%; min-height:220px; object-fit:cover; }
+.event-body { padding:4px 6px 6px 0; }
+.event-top { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
+.date { display:inline-flex; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; border-radius:999px; padding:6px 11px; font-size:13px; font-weight:700; }
+.tag { display:inline-flex; background:#fff7ed; color:#c2410c; border:1px solid #fed7aa; border-radius:999px; padding:6px 11px; font-size:13px; font-weight:700; }
+h2 { margin:6px 0 8px; font-size:24px; letter-spacing:-.01em; }
+p { color:#334155; line-height:1.72; margin:8px 0; }
+.place { color:#475569; font-weight:700; }
+.why { background:#f8fafc; border-left:4px solid #2563eb; padding:10px 12px; border-radius:10px; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:12px 0; }
+.stats div { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:9px 10px; }
+.stats strong { display:block; font-size:12px; color:#64748b; margin-bottom:3px; }
+.stats span { font-size:16px; font-weight:800; color:#0f172a; }
+.stat-note { background:#f8fafc; border:1px dashed #cbd5e1; color:#64748b; border-radius:12px; padding:10px 12px; margin:12px 0; font-size:13px; }
+.sources { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:12px; color:#64748b; font-size:13px; }
+.sources a { text-decoration:none; color:#1d4ed8; background:#eff6ff; border:1px solid #bfdbfe; border-radius:999px; padding:5px 9px; }
+.note { background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; color:#475569; line-height:1.7; box-shadow:0 8px 24px rgba(15,23,42,.05); }
+.footer { margin-top:28px; font-size:13px; color:#64748b; line-height:1.7; }
+@media (max-width:900px) { .summary { grid-template-columns:1fr 1fr; } .event-card { grid-template-columns:1fr; margin-left:42px; } .timeline:before { left:16px; } .event-card:before { left:-34px; } h1 { font-size:29px; } .stats { grid-template-columns:1fr 1fr; } }
+@media (max-width:560px) { .summary { grid-template-columns:1fr; } .stats { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <section class="hero">
+    <h1>巴塞罗那历史极端天气事件时间线</h1>
+    <p class="subtitle">按时间顺序梳理巴塞罗那及其都会区具有代表性的极端天气与灾害事件。每个事件配有原创示意图、发生时间、地点、详细描述、影响意义，以及来自研究论文、气象机构、城市政府或权威媒体的资料来源。1990年后的事件还尽量加入本项目“月度明细”表中的月度气象指标。</p>
+  </section>
+
+  <section class="summary">
+    <div class="box"><strong>13</strong><span>个代表性极端天气事件</span></div>
+    <div class="box"><strong>1962—2025</strong><span>覆盖从历史洪灾到近年热浪、干旱和DANA影响</span></div>
+    <div class="box"><strong>5类</strong><span>洪水、热浪、干旱、强风、暴雪/风暴</span></div>
+    <div class="box"><strong>月度数据</strong><span>1990年后事件结合现有月度明细表补充指标</span></div>
+  </section>
+
+  <section class="note">
+    <strong>阅读说明：</strong>这不是“所有发生过的天气异常”的完整数据库，而是选择对巴塞罗那城市安全、气候适应和公共记忆影响较大的代表性事件。早于1990年的事件不在本项目月度表范围内，因此使用历史文献和研究资料描述。
+  </section>
+
+  <main class="timeline">
+    
+    <article class="event-card flood">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="洪水"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="800" height="430" fill="url(#g)"/><circle cx="665" cy="70" r="58" fill="#93c5fd" opacity=".45"/><path d="M0 300 C120 245 210 355 345 300 S590 245 800 310 L800 430 L0 430Z" fill="#38bdf8" opacity=".85"/><path d="M0 345 C130 305 250 390 390 348 S650 305 800 360 L800 430 L0 430Z" fill="#0ea5e9" opacity=".95"/><g fill="#e2e8f0"><rect x="110" y="160" width="95" height="125"/><rect x="235" y="120" width="80" height="175"/><rect x="520" y="150" width="110" height="135"/></g><g fill="#0f172a" opacity=".65"><rect x="128" y="180" width="18" height="22"/><rect x="164" y="180" width="18" height="22"/><rect x="252" y="145" width="16" height="22"/><rect x="282" y="145" width="16" height="22"/><rect x="545" y="174" width="18" height="22"/><rect x="584" y="174" width="18" height="22"/></g><path d="M80 60 L130 120 L95 120 L150 205" stroke="#facc15" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">洪水</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">1962年9月25日夜间</span><span class="tag">洪水</span></div>
+        <h2>瓦列斯特大山洪 / 巴塞罗那都会区洪灾</h2>
+        <p class="place">📍 Vallès Occidental、Vallès Oriental、Barcelonès 一带，影响巴塞罗那都会区</p>
+        <p>这是加泰罗尼亚乃至西班牙现代史上最严重的洪灾之一。冷涡/“gota fría”形势带来极端短时降雨，Llobregat 与 Besòs 水系及其支流暴涨，Rubí、Terrassa、Sabadell 等地受灾尤其严重。官方死亡数字常列为617人，后续研究和估计更高。</p>
+        <p class="why"><strong>为什么重要：</strong>这次事件改变了巴塞罗那周边地区对河道、工业区、居民区和洪水预警的认识，是理解今日巴塞罗那都市圈洪水风险的起点。</p>
+        <div class="stat-note">该事件早于本项目1990—2026月度表，页面使用历史文献资料描述。</div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.sciencedirect.com/science/article/pii/S0022169418307157" target="_blank" rel="noopener">ScienceDirect：Rubí stream flash flood</a><a href="https://upcommons.upc.edu/bitstreams/df847506-26dc-4edd-929e-3b34bd7e5fc6/download" target="_blank" rel="noopener">UPC/WRF simulation paper</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card flood">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="暴雨洪水"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="800" height="430" fill="url(#g)"/><circle cx="665" cy="70" r="58" fill="#93c5fd" opacity=".45"/><path d="M0 300 C120 245 210 355 345 300 S590 245 800 310 L800 430 L0 430Z" fill="#38bdf8" opacity=".85"/><path d="M0 345 C130 305 250 390 390 348 S650 305 800 360 L800 430 L0 430Z" fill="#0ea5e9" opacity=".95"/><g fill="#e2e8f0"><rect x="110" y="160" width="95" height="125"/><rect x="235" y="120" width="80" height="175"/><rect x="520" y="150" width="110" height="135"/></g><g fill="#0f172a" opacity=".65"><rect x="128" y="180" width="18" height="22"/><rect x="164" y="180" width="18" height="22"/><rect x="252" y="145" width="16" height="22"/><rect x="282" y="145" width="16" height="22"/><rect x="545" y="174" width="18" height="22"/><rect x="584" y="174" width="18" height="22"/></g><path d="M80 60 L130 120 L95 120 L150 205" stroke="#facc15" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">暴雨洪水</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2000年6月9日夜—6月10日</span><span class="tag">暴雨洪水</span></div>
+        <h2>巴塞罗那地区突发性暴雨洪水</h2>
+        <p class="place">📍 Barcelona area、Llobregat basin、Montserrat、Vendrell 一带</p>
+        <p>强降雨在很短时间内集中爆发，资料显示 Llobregat 流域 Montserrat 一带最大降雨约224 mm，其中超过80%在6小时内落下；Vendrell 区域也出现3小时内约134 mm的强降雨。</p>
+        <p class="why"><strong>为什么重要：</strong>这类事件体现了地中海沿岸城市“平时偏干、短时极端暴雨”的典型风险，对地下交通、道路排水和河道空间压力很大。</p>
+        <div class="stats"><div><strong>均温</strong><span>20.5°C</span></div><div><strong>最高</strong><span>27.7°C</span></div><div><strong>降水</strong><span>109.8mm</span></div><div><strong>单日最大降水</strong><span>63.3mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>2天</span></div><div><strong>最长少雨</strong><span>9天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://geographyfieldwork.com/Flash-Flood-Case-Study-June-2000.htm" target="_blank" rel="noopener">Barcelona Flash Flood Case Study</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card heat">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="热浪"><defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs><rect width="800" height="430" fill="url(#h)"/><circle cx="620" cy="115" r="82" fill="#fde047"/><circle cx="620" cy="115" r="128" fill="#fde047" opacity=".22"/><g opacity=".55" stroke="#fff7ed" stroke-width="7"><path d="M80 280 C160 240 240 320 330 280 S520 240 620 285 S720 325 780 285"/><path d="M60 335 C160 295 230 370 340 330 S540 295 640 340 S730 375 790 335"/></g><rect x="140" y="170" width="70" height="145" fill="#fecaca"/><rect x="250" y="135" width="85" height="180" fill="#fed7aa"/><rect x="380" y="190" width="75" height="125" fill="#fee2e2"/><rect x="500" y="160" width="90" height="155" fill="#ffedd5"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">热浪</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2003年7—8月</span><span class="tag">热浪</span></div>
+        <h2>欧洲热浪波及巴塞罗那</h2>
+        <p class="place">📍 欧洲多国、西班牙与巴塞罗那</p>
+        <p>2003年夏季欧洲遭遇历史性热浪，西班牙也受到显著影响。针对巴塞罗那的研究显示，2003年热浪期间死亡风险与年龄、性别、教育水平等社会因素有关，说明热浪不仅是气象事件，也是不平等的公共健康事件。</p>
+        <p class="why"><strong>为什么重要：</strong>这次热浪推动欧洲城市更系统地建立高温健康预警、气候庇护所和弱势人群保护机制。</p>
+        <div class="stats"><div><strong>均温</strong><span>26.5°C</span></div><div><strong>最高</strong><span>34.6°C</span></div><div><strong>降水</strong><span>7.8mm</span></div><div><strong>单日最大降水</strong><span>5.5mm</span></div><div><strong>高温日</strong><span>17天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>31天</span></div><div><strong>强降雨日</strong><span>0天</span></div><div><strong>最长少雨</strong><span>16天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://link.springer.com/article/10.1007/s10654-006-9047-4" target="_blank" rel="noopener">Springer：Barcelona 2003 heatwave mortality</a><a href="https://science.nasa.gov/earth/earth-observatory/european-heat-wave-3714/" target="_blank" rel="noopener">NASA：European Heat Wave 2003</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card drought">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="干旱"><defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#78350f"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs><rect width="800" height="430" fill="url(#d)"/><circle cx="650" cy="85" r="70" fill="#fde68a"/><path d="M0 300 L800 230 L800 430 L0 430Z" fill="#92400e" opacity=".75"/><g stroke="#fef3c7" stroke-width="5" opacity=".75"><path d="M80 335 L155 285 L235 350 L310 300 L410 360 L500 300 L630 365"/><path d="M210 410 L260 360 L330 420"/><path d="M560 405 L620 350 L700 415"/></g><path d="M385 80 C350 120 325 155 325 190 C325 232 352 258 385 258 C418 258 445 232 445 190 C445 155 420 120 385 80Z" fill="#38bdf8" opacity=".85"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">干旱</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2007—2008年</span><span class="tag">干旱</span></div>
+        <h2>巴塞罗那严重干旱与船运饮用水</h2>
+        <p class="place">📍 Ter-Llobregat 供水系统、巴塞罗那都会区</p>
+        <p>2007—2008年干旱严重影响服务巴塞罗那都会区的 Ter-Llobregat 供水系统。为应对供水压力，巴塞罗那采取了非常规应急措施，包括通过船只运送饮用水，并推动海水淡化等供水方案。</p>
+        <p class="why"><strong>为什么重要：</strong>这是巴塞罗那水资源治理史上的标志性事件，显示地中海大城市在长期少雨和高用水需求下的脆弱性。</p>
+        <div class="stats"><div><strong>均温</strong><span>16.4°C</span></div><div><strong>最高</strong><span>23.2°C</span></div><div><strong>降水</strong><span>133.3mm</span></div><div><strong>单日最大降水</strong><span>35.2mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>3天</span></div><div><strong>最长少雨</strong><span>8天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.water-alternatives.org/index.php/alldoc/articles/volume-13/issue-3-1/603-a13-3-21/file" target="_blank" rel="noopener">Water Alternatives：2007–2008 drought case</a><a href="https://news.bbc.co.uk/2/hi/science/nature/7398012.stm" target="_blank" rel="noopener">BBC：Ships bring water to parched Barcelona</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card wind">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="强风"><defs><linearGradient id="w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#64748b"/></linearGradient></defs><rect width="800" height="430" fill="url(#w)"/><g stroke="#e0f2fe" stroke-width="14" fill="none" stroke-linecap="round" opacity=".9"><path d="M70 125 H510 C610 125 610 65 545 65"/><path d="M95 205 H650 C740 205 735 125 660 125"/><path d="M55 285 H450 C545 285 545 360 465 360"/></g><path d="M260 300 L360 175 L470 300Z" fill="#cbd5e1"/><path d="M330 300 L420 190 L535 300Z" fill="#94a3b8"/><path d="M520 330 L600 270 L655 330Z" fill="#cbd5e1"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">强风</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2009年1月24日</span><span class="tag">强风</span></div>
+        <h2>Sant Boi 强风灾害与体育馆坍塌</h2>
+        <p class="place">📍 Sant Boi de Llobregat，巴塞罗那西南约10公里</p>
+        <p>一次由爆发性气旋发展引发的强风过程袭击加泰罗尼亚沿海和近海地区，造成城市和森林严重破坏。Sant Boi de Llobregat 一处体育设施坍塌，造成4名儿童死亡，是巴塞罗那地区近代最惨痛的风灾事件之一。</p>
+        <p class="why"><strong>为什么重要：</strong>事件促使人们重新审视强风预警、公共设施结构安全、学校与体育活动停课/停训机制。</p>
+        <div class="stats"><div><strong>均温</strong><span>7.8°C</span></div><div><strong>最高</strong><span>17.7°C</span></div><div><strong>降水</strong><span>44.6mm</span></div><div><strong>单日最大降水</strong><span>21mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>1天</span></div><div><strong>最长少雨</strong><span>12天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://upcommons.upc.edu/entities/publication/4fd635eb-0220-4fa2-97c9-61c5c913f8a9/full" target="_blank" rel="noopener">UPC：Sant Boi wind speed and loads study</a><a href="https://www.rtve.es/noticias/20090125/primer-dia-luto-oficial-sant-boi-mientras-temporal-viento-remite/224466.shtml" target="_blank" rel="noopener">RTVE：Sant Boi tragedy report</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card snow">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="暴雪"><defs><linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c4a6e"/><stop offset="1" stop-color="#bae6fd"/></linearGradient></defs><rect width="800" height="430" fill="url(#s)"/><g fill="white" opacity=".9"><circle cx="70" cy="60" r="5"/><circle cx="150" cy="105" r="6"/><circle cx="230" cy="150" r="7"/><circle cx="310" cy="60" r="8"/><circle cx="390" cy="105" r="5"/><circle cx="470" cy="150" r="6"/><circle cx="550" cy="60" r="7"/><circle cx="630" cy="105" r="8"/><circle cx="710" cy="150" r="5"/><circle cx="790" cy="60" r="6"/><circle cx="50" cy="210" r="6"/><circle cx="140" cy="260" r="7"/><circle cx="230" cy="210" r="8"/><circle cx="320" cy="260" r="6"/><circle cx="410" cy="210" r="7"/><circle cx="500" cy="260" r="8"/><circle cx="590" cy="210" r="6"/><circle cx="680" cy="260" r="7"/><circle cx="770" cy="210" r="8"/></g><path d="M0 330 C150 285 300 355 450 315 S665 275 800 330 L800 430 L0 430Z" fill="white" opacity=".95"/><rect x="130" y="190" width="95" height="115" fill="#e0f2fe"/><rect x="255" y="150" width="80" height="155" fill="#f8fafc"/><rect x="500" y="175" width="110" height="130" fill="#e0f2fe"/><text x="34" y="390" fill="#0f172a" font-size="38" font-weight="800">暴雪</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2010年3月7—8日</span><span class="tag">暴雪</span></div>
+        <h2>加泰罗尼亚低海拔湿雪暴</h2>
+        <p class="place">📍 巴塞罗那、加泰罗尼亚沿海与近海地区</p>
+        <p>2010年3月8日，异常强的低海拔降雪席卷加泰罗尼亚，雪线甚至降至海平面，局地降水超过100 mm，近海地区局地积雪可超过60 cm。湿雪、雷暴和强风共同导致交通、电力和城市运行受阻。</p>
+        <p class="why"><strong>为什么重要：</strong>对地中海城市而言，暴雪虽罕见但影响巨大，因为城市基础设施和公众行为通常不按长期冰雪环境设计。</p>
+        <div class="stats"><div><strong>均温</strong><span>9.5°C</span></div><div><strong>最高</strong><span>18.7°C</span></div><div><strong>降水</strong><span>79.5mm</span></div><div><strong>单日最大降水</strong><span>36.6mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>2天</span></div><div><strong>最长少雨</strong><span>10天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.aemet.es/es/noticias/2010/03/nevadascataluna080310" target="_blank" rel="noopener">AEMET：2010 Catalunya snowfall analysis</a><a href="https://nhess.copernicus.org/articles/14/427/2014/nhess-14-427-2014.html" target="_blank" rel="noopener">NHESS：8 March 2010 snow storm</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card storm">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="风暴"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="800" height="430" fill="url(#g)"/><path d="M110 155 C140 95 220 88 262 132 C305 70 420 88 440 165 C510 160 565 205 555 265 L160 265 C95 260 70 195 110 155Z" fill="#cbd5e1"/><path d="M300 250 L245 350 L315 330 L285 405 L405 285 L335 305 L365 250Z" fill="#facc15"/><path d="M0 330 C120 270 210 370 345 320 S590 270 800 335 L800 430 L0 430Z" fill="#0284c7" opacity=".8"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">风暴</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2020年1月19—24日</span><span class="tag">风暴</span></div>
+        <h2>风暴 Gloria：巨浪、强风、强降雨与海岸破坏</h2>
+        <p class="place">📍 西地中海、加泰罗尼亚海岸、巴塞罗那海滨</p>
+        <p>Gloria 是近年影响西班牙东部和西地中海最显著的风暴之一。研究显示，其海浪和风暴潮造成严重海岸影响，西地中海部分区域有效波高可达约8米，风暴潮沿伊比利亚东岸可达约1米。巴塞罗那海滩、港口、海滨设施和交通都受到影响。</p>
+        <p class="why"><strong>为什么重要：</strong>这次事件突出显示巴塞罗那海滨城市形态面对风暴潮、巨浪和海平面风险的脆弱性。</p>
+        <div class="stats"><div><strong>均温</strong><span>8.5°C</span></div><div><strong>最高</strong><span>18.6°C</span></div><div><strong>降水</strong><span>178.6mm</span></div><div><strong>单日最大降水</strong><span>75.4mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>4天</span></div><div><strong>最长少雨</strong><span>9天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.aemet.es/es/conocermas/borrascas/2019-2020/estudios_e_impactos/gloria" target="_blank" rel="noopener">AEMET：Borrasca Gloria</a><a href="https://nhess.copernicus.org/articles/20/1955/2020/" target="_blank" rel="noopener">NHESS：Coastal impacts of Storm Gloria</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card heat">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="暖年/干旱"><defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs><rect width="800" height="430" fill="url(#h)"/><circle cx="620" cy="115" r="82" fill="#fde047"/><circle cx="620" cy="115" r="128" fill="#fde047" opacity=".22"/><g opacity=".55" stroke="#fff7ed" stroke-width="7"><path d="M80 280 C160 240 240 320 330 280 S520 240 620 285 S720 325 780 285"/><path d="M60 335 C160 295 230 370 340 330 S540 295 640 340 S730 375 790 335"/></g><rect x="140" y="170" width="70" height="145" fill="#fecaca"/><rect x="250" y="135" width="85" height="180" fill="#fed7aa"/><rect x="380" y="190" width="75" height="125" fill="#fee2e2"/><rect x="500" y="160" width="90" height="155" fill="#ffedd5"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">暖年/干旱</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2022年全年</span><span class="tag">暖年/干旱</span></div>
+        <h2>Observatori Fabra 破纪录暖年与少雨年</h2>
+        <p class="place">📍 巴塞罗那 Fabra Observatory</p>
+        <p>2022年，巴塞罗那 Fabra Observatory 的资料被当地媒体形容为“前所未有”的一年：全年热记录、多个单月热记录、年平均温度记录以及极少降水记录相继出现。</p>
+        <p class="why"><strong>为什么重要：</strong>这类“全年型极端”比单日热浪更能说明城市气候背景正在改变，也会持续影响供水、城市绿地、健康和能源需求。</p>
+        <div class="stats"><div><strong>均温</strong><span>11.1°C</span></div><div><strong>最高</strong><span>20.4°C</span></div><div><strong>降水</strong><span>36.4mm</span></div><div><strong>单日最大降水</strong><span>6.1mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>0天</span></div><div><strong>最长少雨</strong><span>10天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.3cat.cat/3catinfo/record-sobre-record-meteorologic-a-lobservatori-fabra-un-2022-sense-precedents/noticia/3204694/" target="_blank" rel="noopener">3Cat：Fabra Observatory 2022 records</a><a href="https://www.copernicus.eu/en/media/image-day-gallery/record-high-may-temperature-recorded-barcelona" target="_blank" rel="noopener">Copernicus：May 2022 record-high temperature image</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card heat">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="极端热浪"><defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs><rect width="800" height="430" fill="url(#h)"/><circle cx="620" cy="115" r="82" fill="#fde047"/><circle cx="620" cy="115" r="128" fill="#fde047" opacity=".22"/><g opacity=".55" stroke="#fff7ed" stroke-width="7"><path d="M80 280 C160 240 240 320 330 280 S520 240 620 285 S720 325 780 285"/><path d="M60 335 C160 295 230 370 340 330 S540 295 640 340 S730 375 790 335"/></g><rect x="140" y="170" width="70" height="145" fill="#fecaca"/><rect x="250" y="135" width="85" height="180" fill="#fed7aa"/><rect x="380" y="190" width="75" height="125" fill="#fee2e2"/><rect x="500" y="160" width="90" height="155" fill="#ffedd5"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">极端热浪</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2023年8月21—23日</span><span class="tag">极端热浪</span></div>
+        <h2>巴塞罗那前所未有的三日极端热事件</h2>
+        <p class="place">📍 巴塞罗那市区与 Fabra Observatory</p>
+        <p>2023年8月21—23日，巴塞罗那出现罕见强热事件。研究指出，这次事件刷新了超过110年连续观测序列中的三日平均最高温和最低温记录。媒体报道还提到，Fabra Observatory 一度出现极高夜间最低温，体现“热夜”风险。</p>
+        <p class="why"><strong>为什么重要：</strong>夜间温度不降是城市热健康风险的关键，因为居民、老人和没有空调的人群很难在夜间恢复。</p>
+        <div class="stats"><div><strong>均温</strong><span>25.7°C</span></div><div><strong>最高</strong><span>35°C</span></div><div><strong>降水</strong><span>56.4mm</span></div><div><strong>单日最大降水</strong><span>43.4mm</span></div><div><strong>高温日</strong><span>12天</span></div><div><strong>极端高温日</strong><span>1天</span></div><div><strong>热夜</strong><span>24天</span></div><div><strong>强降雨日</strong><span>1天</span></div><div><strong>最长少雨</strong><span>21天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.sciencedirect.com/science/article/pii/S2212095524002153" target="_blank" rel="noopener">ScienceDirect：Attribution of August 2023 heat event</a><a href="https://elpais.com/espana/catalunya/2023-08-24/barcelona-bate-un-record-de-calor-con-la-temperatura-minima-mas-alta-de-su-historia-295.html" target="_blank" rel="noopener">El País：Barcelona minimum temperature record</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card drought">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="干旱紧急"><defs><linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#78350f"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs><rect width="800" height="430" fill="url(#d)"/><circle cx="650" cy="85" r="70" fill="#fde68a"/><path d="M0 300 L800 230 L800 430 L0 430Z" fill="#92400e" opacity=".75"/><g stroke="#fef3c7" stroke-width="5" opacity=".75"><path d="M80 335 L155 285 L235 350 L310 300 L410 360 L500 300 L630 365"/><path d="M210 410 L260 360 L330 420"/><path d="M560 405 L620 350 L700 415"/></g><path d="M385 80 C350 120 325 155 325 190 C325 232 352 258 385 258 C418 258 445 232 445 190 C445 155 420 120 385 80Z" fill="#38bdf8" opacity=".85"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">干旱紧急</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2024年2月2日起</span><span class="tag">干旱紧急</span></div>
+        <h2>巴塞罗那进入干旱紧急阶段</h2>
+        <p class="place">📍 巴塞罗那与 Ter-Llobregat 供水系统覆盖区</p>
+        <p>巴塞罗那市政府宣布，城市从2024年2月2日起进入干旱协议的紧急阶段，居民用水限额设为每人每日200升。市政府说明当时并无入户断水计划，但公共服务、企业和个人用水都需要进一步压减。</p>
+        <p class="why"><strong>为什么重要：</strong>这表明干旱已从“环境问题”转变成城市治理问题，影响清洁、绿化、喷泉、体育设施、旅游和公共服务。</p>
+        <div class="stats"><div><strong>均温</strong><span>11.6°C</span></div><div><strong>最高</strong><span>20.8°C</span></div><div><strong>降水</strong><span>19.5mm</span></div><div><strong>单日最大降水</strong><span>6.5mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>0天</span></div><div><strong>最长少雨</strong><span>8天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.barcelona.cat/infobarcelona/en/tema/environment-and-sustainability/barcelona-entra-en-emergencia-per-sequera-2_1366201.html" target="_blank" rel="noopener">Barcelona City Council：Drought emergency</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card heat">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="历史高温"><defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs><rect width="800" height="430" fill="url(#h)"/><circle cx="620" cy="115" r="82" fill="#fde047"/><circle cx="620" cy="115" r="128" fill="#fde047" opacity=".22"/><g opacity=".55" stroke="#fff7ed" stroke-width="7"><path d="M80 280 C160 240 240 320 330 280 S520 240 620 285 S720 325 780 285"/><path d="M60 335 C160 295 230 370 340 330 S540 295 640 340 S730 375 790 335"/></g><rect x="140" y="170" width="70" height="145" fill="#fecaca"/><rect x="250" y="135" width="85" height="180" fill="#fed7aa"/><rect x="380" y="190" width="75" height="125" fill="#fee2e2"/><rect x="500" y="160" width="90" height="155" fill="#ffedd5"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">历史高温</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2024年7月30日</span><span class="tag">历史高温</span></div>
+        <h2>Fabra Observatory 录得约40°C历史高温</h2>
+        <p class="place">📍 巴塞罗那 Fabra Observatory</p>
+        <p>2024年7月30日，巴塞罗那经历历史性高温。多家报道援引 Fabra Observatory 数据称，当日最高温达到约40°C，打破该站自1914年以来的最高温记录，超过1982年7月的旧纪录。</p>
+        <p class="why"><strong>为什么重要：</strong>这一天把巴塞罗那的极端高温风险推到新的量级，也说明传统“地中海夏季炎热但可承受”的经验正在被挑战。</p>
+        <div class="stats"><div><strong>均温</strong><span>24.9°C</span></div><div><strong>最高</strong><span>37°C</span></div><div><strong>降水</strong><span>29.8mm</span></div><div><strong>单日最大降水</strong><span>13.3mm</span></div><div><strong>高温日</strong><span>10天</span></div><div><strong>极端高温日</strong><span>2天</span></div><div><strong>热夜</strong><span>20天</span></div><div><strong>强降雨日</strong><span>0天</span></div><div><strong>最长少雨</strong><span>10天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.rtve.es/noticias/20240730/barcelona-alcanza-40-grados-110-anos-nunca-se-habia-registrado/16203442.shtml" target="_blank" rel="noopener">RTVE：Barcelona reaches 40°C</a><a href="https://www.3cat.cat/3catinfo/lobservatori-fabra-viu-el-dia-mes-calid-en-110-anys-i-registra-una-maxima-de-40-0-c/noticia/3305811/" target="_blank" rel="noopener">3Cat：Fabra 40.0°C record</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card flood">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="强降雨/内涝"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs><rect width="800" height="430" fill="url(#g)"/><circle cx="665" cy="70" r="58" fill="#93c5fd" opacity=".45"/><path d="M0 300 C120 245 210 355 345 300 S590 245 800 310 L800 430 L0 430Z" fill="#38bdf8" opacity=".85"/><path d="M0 345 C130 305 250 390 390 348 S650 305 800 360 L800 430 L0 430Z" fill="#0ea5e9" opacity=".95"/><g fill="#e2e8f0"><rect x="110" y="160" width="95" height="125"/><rect x="235" y="120" width="80" height="175"/><rect x="520" y="150" width="110" height="135"/></g><g fill="#0f172a" opacity=".65"><rect x="128" y="180" width="18" height="22"/><rect x="164" y="180" width="18" height="22"/><rect x="252" y="145" width="16" height="22"/><rect x="282" y="145" width="16" height="22"/><rect x="545" y="174" width="18" height="22"/><rect x="584" y="174" width="18" height="22"/></g><path d="M80 60 L130 120 L95 120 L150 205" stroke="#facc15" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">强降雨/内涝</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2024年11月4日</span><span class="tag">强降雨/内涝</span></div>
+        <h2>DANA 后续强降雨影响巴塞罗那交通</h2>
+        <p class="place">📍 巴塞罗那都会区、El Prat 机场及铁路系统</p>
+        <p>2024年10月底瓦伦西亚洪灾后，强降雨系统继续影响西班牙东部。NASA Earth Observatory 资料提到，11月4日前后巴塞罗那进入红色预警，出现航班取消、铁路服务中断等交通影响。</p>
+        <p class="why"><strong>为什么重要：</strong>这说明即使最严重灾情不在巴塞罗那，区域性 DANA/强降雨仍能迅速冲击机场、铁路和城市排水系统。</p>
+        <div class="stats"><div><strong>均温</strong><span>14.2°C</span></div><div><strong>最高</strong><span>20.9°C</span></div><div><strong>降水</strong><span>88.3mm</span></div><div><strong>单日最大降水</strong><span>27.1mm</span></div><div><strong>高温日</strong><span>0天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>0天</span></div><div><strong>强降雨日</strong><span>1天</span></div><div><strong>最长少雨</strong><span>17天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://science.nasa.gov/earth/earth-observatory/a-week-of-rain-across-spain-153546/" target="_blank" rel="noopener">NASA Earth Observatory：A Week of Rain Across Spain</a><a href="https://gpm.nasa.gov/applications/weather/news/imerg-estimates-flooding-rainfall-spain" target="_blank" rel="noopener">NASA GPM：IMERG flooding rainfall in Spain</a></div>
+      </div>
+    </article>
+    
+    <article class="event-card heat">
+      <div class="image-wrap"><svg viewBox="0 0 800 430" class="event-img" role="img" aria-label="早夏热浪"><defs><linearGradient id="h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs><rect width="800" height="430" fill="url(#h)"/><circle cx="620" cy="115" r="82" fill="#fde047"/><circle cx="620" cy="115" r="128" fill="#fde047" opacity=".22"/><g opacity=".55" stroke="#fff7ed" stroke-width="7"><path d="M80 280 C160 240 240 320 330 280 S520 240 620 285 S720 325 780 285"/><path d="M60 335 C160 295 230 370 340 330 S540 295 640 340 S730 375 790 335"/></g><rect x="140" y="170" width="70" height="145" fill="#fecaca"/><rect x="250" y="135" width="85" height="180" fill="#fed7aa"/><rect x="380" y="190" width="75" height="125" fill="#fee2e2"/><rect x="500" y="160" width="90" height="155" fill="#ffedd5"/><text x="34" y="390" fill="white" font-size="38" font-weight="800">早夏热浪</text></svg></div>
+      <div class="event-body">
+        <div class="event-top"><span class="date">2025年6月</span><span class="tag">早夏热浪</span></div>
+        <h2>Fabra Observatory 6月多次超过35°C</h2>
+        <p class="place">📍 巴塞罗那 Fabra Observatory</p>
+        <p>2025年6月，Fabra Observatory 单月出现多次≥35°C高温。报道指出，该站112年资料中，6月达到或超过35°C的次数创下记录，显示高温风险正在更早进入夏季。</p>
+        <p class="why"><strong>为什么重要：</strong>早夏热浪会延长高温季节，增加学校、户外工作、旅游和公共健康系统的压力。</p>
+        <div class="stats"><div><strong>均温</strong><span>25.3°C</span></div><div><strong>最高</strong><span>34.6°C</span></div><div><strong>降水</strong><span>0.3mm</span></div><div><strong>单日最大降水</strong><span>0.1mm</span></div><div><strong>高温日</strong><span>13天</span></div><div><strong>极端高温日</strong><span>0天</span></div><div><strong>热夜</strong><span>22天</span></div><div><strong>强降雨日</strong><span>0天</span></div><div><strong>最长少雨</strong><span>30天</span></div></div>
+        <div class="sources"><span>资料来源：</span><a href="https://www.catalannews.com/society-science/item/june-sees-temperatures-at-barcelona-weather-station-surpass-35c-record-four-times" target="_blank" rel="noopener">Catalan News：June Fabra Observatory &gt;35°C record</a></div>
+      </div>
+    </article>
+    
+  </main>
+
+  <section class="footer">
+    数据说明：月度指标来自本文件夹中的 <strong>Barcelona_climate_monthly_1990_2026.xlsx</strong>；历史事件说明综合 AEMET、Barcelona City Council、NASA、Copernicus/NHESS、学术论文和权威媒体公开资料。示意图为本报告原创 SVG 插画，用于说明事件类型，并非现场照片。
+  </section>
+</div>
+</body>
+</html>
