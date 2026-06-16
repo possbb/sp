@@ -74,6 +74,9 @@ ul{margin:0;padding-left:18px}
 
 .scenario-box{background:#fff7ed;border:1px solid #fed7aa;border-left:6px solid #f97316;border-radius:20px;padding:18px;margin:16px 0}
 .scenario-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}.scenario-summary span{background:white;border:1px solid #fed7aa;border-radius:14px;padding:10px;color:#334155}.scenario-summary b{display:block;color:#9a3412;margin-bottom:4px}.scenario-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}.scenario-card{background:#fff;border:1px solid #fed7aa;border-radius:16px;padding:14px}.scenario-card h4{margin:0 0 8px;color:#9a3412}.scenario-card ul{margin:0;padding-left:20px}.scenario-card li{margin-bottom:6px}.priority-list{counter-reset:item}.priority-list li{list-style:none;counter-increment:item;margin-bottom:8px}.priority-list li::before{content:counter(item);display:inline-flex;width:22px;height:22px;border-radius:50%;background:#2563eb;color:white;align-items:center;justify-content:center;font-weight:900;margin-right:8px}@media(max-width:980px){.scenario-summary,.scenario-grid{grid-template-columns:1fr}}
+
+.flow-box{background:#ffffff;border:1px solid #dbeafe;border-left:6px solid #2563eb;border-radius:22px;padding:18px;margin-top:14px}
+.flow-box h3{color:#1e3a8a;margin-top:0}.flow-sub{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;margin:12px 0}.flow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.flow-item{background:white;border:1px solid #dbeafe;border-radius:14px;padding:12px}.flow-item b{display:block;color:#1d4ed8;margin-bottom:5px}.flow-scenario{background:#fff7ed;border:1px solid #fed7aa;border-left:5px solid #f97316;border-radius:18px;padding:16px;margin-top:14px}.flow-scenario h3{color:#9a3412}.flow-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}.flow-card{background:white;border:1px solid #fed7aa;border-radius:14px;padding:12px}.flow-card h4{margin:0 0 8px;color:#9a3412}.flow-card li{margin-bottom:6px}.priority-list{counter-reset:item}.priority-list li{list-style:none;counter-increment:item;margin-bottom:8px}.priority-list li::before{content:counter(item);display:inline-flex;width:22px;height:22px;border-radius:50%;background:#2563eb;color:white;align-items:center;justify-content:center;font-weight:900;margin-right:8px}@media(max-width:980px){.flow-grid,.flow-two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -343,97 +346,62 @@ ul{margin:0;padding-left:18px}
   </div>
   <div class="req-block verified">
     <h3>详细入学要求：FEP L&#x27;Esperança</h3>
-    <div class="req-grid">
-      <div><h4>建议租住/登记街道范围</h4><div class="badge-list"><span>c. Quito 周边</span><span>Trinitat Vella 靠地铁与主路较明亮街段</span><span>Sant Andreu 北侧靠近学校方向</span><span>Baró de Viver / Bon Pastor 需逐街段核验</span><span>靠近地铁和公交的住宅街优先</span></div><p class="note">这些是为了提高通勤和 proximity（住址邻近加分/就近范围） 机会的实用租房范围；最终必须用具体门牌查询官方 school proximity（住址邻近加分/就近范围）。</p></div>
-      <div><h4>不建议优先选择</h4><ul><li>夜间人流少、照明差的街段</li><li>离学校近但通勤到父母工作地点很不便的房源</li><li>无法办理 empadronamiento（市政住址登记/住家证明） 的短租或合租不规范房源</li></ul></div>
-    </div>
-    <div class="req-grid">
-      <div><h4>中国家庭建议准备材料</h4><ul><li>孩子与父母身份证件</li><li>empadronamiento（市政住址登记/住家证明），同址最稳妥</li><li>长期租房合同（vivienda habitual（长期自住房/常住房租赁），1 年可接受），不建议短租 temporada（短租/临时租赁） 作为入学主地址</li><li>出生证明/亲属关系证明翻译件</li><li>国内学校/幼儿园证明</li><li>疫苗/健康记录</li><li>所有加分项证明材料</li></ul></div>
-      <div><h4>联系学校必问问题：已整理答案</h4><ul class="answer-list"><li>是否有稳定官网信息？当前本地访问官网存在 SSL/TLS 问题，需要电话或邮件二次确认。</li><li>是否宗教强制？表格未明显标注宗教背景，但需问 FEP 体系价值观和宗教安排。</li><li>语言支持如何？未查到公开承诺，必须直接问。</li><li>费用多少？估 €1,200–4,000/年，实际以学校收费表为准。</li><li>适合中国家庭吗？适合作为预算和本地融入备选；如果孩子语言基础弱，需谨慎评估支持力度。</li></ul></div>
-    </div>
-    <div class="req-block"><h4>申请动作清单</h4><ul><li>先电话确认官网、邮箱、开放日和招生负责人。</li><li>实地早晚各走一次学校周边。</li><li>问外国家庭比例和语言支持。</li><li>确认是否可提供费用清单和申请流程书面说明。</li></ul></div>
-  </div>
-</section>
+    <div class="req-gr<section class="section panel">
+    <h2>五、入学流程说明</h2>
+    <div class="flow-box">
+      <h3>1. 正常申请时间线：2026-2027 学年参考</h3>
+      <p><b>适用：</b>已经在巴塞罗那有稳定住址，并能赶上每年 3 月正常 preinscripción（预注册/入学申请）窗口的家庭。</p>
+      <div class="flow-grid">
+        <div class="flow-item"><b>3月3日</b><span>公布 oferta inicial（初始学位名额），先看目标学校对应年级是否有名额。</span></div>
+        <div class="flow-item"><b>3月4日–3月18日</b><span>Infantil（幼儿阶段）和 Primària（小学阶段）提交预注册申请。</span></div>
+        <div class="flow-item"><b>3月19日前</b><span>补交身份证明、住址、亲属关系、加分项等证明材料。</span></div>
+        <div class="flow-item"><b>4月28日</b><span>desempate（同分抽签/同分排序）。</span></div>
+        <div class="flow-item"><b>4月29日</b><span>公布排序名单，按优先分和抽签号排序。</span></div>
+        <div class="flow-item"><b>6月10日</b><span>公布最终学位、录取名单和 lista de espera（等待名单）。</span></div>
+        <div class="flow-item"><b>6月22日–6月30日</b><span>完成 matrícula（正式注册/确认入学）。错过注册可能丢失学位。</span></div>
+        <div class="flow-item"><b>9月30日</b><span>公布已完成注册学生名单。</span></div>
+      </div>
+      <p class="note">官方规则会按学年更新。中国家庭建议至少提前 2–3 个月完成住房、empadronamiento（市政住址登记/住家证明）和材料翻译准备。</p>
 
+      <div class="flow-sub">
+        <h3>2. 住房合同要求：vivienda habitual 1 年可以吗？</h3>
+        <p><b>可以。</b>如果合同性质写明 arrendamiento de vivienda habitual（长期自住房租赁合同），初始 1 年通常也可作为长期居住用途，不等同于短租。</p>
+        <ul>
+          <li><b>必须确认：</b>能给全家办理 empadronamiento（市政住址登记/住家证明）。</li>
+          <li><b>优先选择：</b>vivienda habitual（长期自住房/常住房租赁），初始 12 个月或以上。</li>
+          <li><b>避免选择：</b>alquiler de temporada（季节性/临时短租）、旅游短租、学习/临时项目合同。</li>
+          <li><b>签约前必问：</b>¿Es contrato de vivienda habitual? ¿Se puede empadronar toda la familia? ¿La duración inicial es de 12 meses con prórroga legal?</li>
+        </ul>
+      </div>
+
+      <div class="flow-sub">
+        <h3>3. 新到达学生/中途入学通用路径</h3>
+        <p>如果孩子不是在 3 月正常窗口申请，而是学年中途到达，通常按 matrícula viva（滚动入学/学年中途安置）或 fuera de plazo（逾期/超过申请期限）处理。</p>
+        <div class="flow-grid">
+          <div class="flow-item"><b>先固定住址</b><span>签可登记的 vivienda habitual 合同，并尽快办理 empadronamiento。</span></div>
+          <div class="flow-item"><b>预约教育局/OME</b><span>联系 Consorci d'Educació de Barcelona 或 OME，说明年龄、年级、住址和到达时间。</span></div>
+          <div class="flow-item"><b>提交基础材料</b><span>护照/NIE、住址登记、亲属关系证明、原学校证明、疫苗/健康记录。</span></div>
+          <div class="flow-item"><b>联系目标学校</b><span>问 vacants（空位/剩余名额）、lista de espera（等待名单）和语言支持。</span></div>
+          <div class="flow-item"><b>接受空位逻辑</b><span>中途入学更取决于剩余名额，家庭偏好会让位于系统安置。</span></div>
+          <div class="flow-item"><b>先入学再优化</b><span>先保证孩子进入系统，下一轮预注册或转学窗口再争取目标学校。</span></div>
+        </div>
+      </div>
+
+      <div class="flow-scenario">
+        <h3>4. 具体场景：孩子 2020年6月3日出生、无西班牙语言基础、2026年9月底到达</h3>
+        <p><b>判断：</b>孩子 2026年9月约 6岁3个月，对应 Primària（小学阶段）1年级左右；到达时已经错过 3月预注册和 6月 matrícula（正式注册/确认入学），应按 matrícula viva（滚动入学/学年中途安置）处理。</p>
+        <div class="flow-two">
+          <div class="flow-card"><h4>到达前 2–3 个月</h4><ul><li>确定可办理 empadronamiento 的 vivienda habitual 房源。</li><li>准备孩子证件、父母证件、出生/亲属关系证明西语翻译件。</li><li>准备中国幼儿园/小学在读证明、评语或转学证明。</li><li>提前用西语邮件联系 5 所目标学校，说明出生日期、预计到达时间和语言情况。</li></ul></div>
+          <div class="flow-card"><h4>到达后 1–2 周</h4><ul><li>优先办理 empadronamiento。</li><li>立即预约教育局/OME。</li><li>按 matrícula viva 提交入学需求。</li><li>同时问目标学校是否有 1年级 vacants 或 lista de espera。</li></ul></div>
+          <div class="flow-card"><h4>可能遇到的问题</h4><ul><li>9月底热门 Concertada 学校可能已满。</li><li>孩子没有 Catalan/Spanish 基础，课堂初期理解困难。</li><li>中国文件如无翻译，可能被要求补交。</li><li>中途入学更看空位，择校自由度较低。</li></ul></div>
+          <div class="flow-card"><h4>解决策略</h4><ul><li>先接受有空位学校，避免孩子长期脱离学校。</li><li>同时进入目标学校等待名单。</li><li>到达前开始西语启蒙，到达后重点补 Catalan/Spanish 课堂指令。</li><li>计划 2027年3月参加下一轮 preinscripción，再尝试优化学校。</li></ul></div>
+        </div>
+        <div class="flow-card" style="margin-top:12px"><h4>5 所学校优先联系顺序</h4><ol class="priority-list"><li><b>Piaget / Guinardó：</b>宗教压力较低，适合语言零基础孩子先融入本地环境，优先问 1年级空位。</li><li><b>FEDAC-Horta：</b>体系成熟，但要确认宗教活动、费用和是否接收中途到达学生。</li><li><b>Arrels：</b>如果住 Sant Andreu / Navas / La Sagrera，优先联系，问 1年级空位。</li><li><b>FEP L'Esperança：</b>作为预算和空位备选，但要实地看学校周边和语言支持。</li></ol></div>
+      </div>
+    </div>
   </section>
 
-  <section class="section panel">
-    <h2>五、入学要求与申请路径</h2>
-    <div class="calendar-box">
-      <h3>2026-2027 学年官方时间窗口提示</h3>
-      <p><b>以下日期对应巴塞罗那 3-16 岁义务教育预注册流程中的 Infantil（幼儿阶段）/Primària（3-12岁）节点。</b>后续年份日期会变化，但通常仍集中在每年 3 月申请、6 月录取和注册。</p>
-      <div class="calendar-grid">
-        <div class="calendar-item"><b>3月3日</b><span>公布初始学位 oferta inicial（初始学位名额）。先看目标学校有没有对应年级名额。</span></div>
-        <div class="calendar-item"><b>3月4日–3月18日</b><span>Infantil（幼儿阶段） 3-6岁和 Primària（小学阶段） 6-12岁提交预注册申请。</span></div>
-        <div class="calendar-item"><b>3月19日前</b><span>补交身份证明、住址、加分项等证明材料。</span></div>
-        <div class="calendar-item"><b>4月28日</b><span>同分抽签 desempate（同分抽签/同分排序），用于同分排序。</span></div>
-        <div class="calendar-item"><b>4月29日</b><span>公布排序名单，按优先分和抽签号排序。</span></div>
-        <div class="calendar-item"><b>6月1日–6月3日</b><span>无分配申请的补充志愿/扩大申请窗口。</span></div>
-        <div class="calendar-item"><b>6月10日</b><span>公布最终学位、录取名单和等待名单。</span></div>
-        <div class="calendar-item"><b>6月22日–6月30日</b><span>已录取学生正式 matrícula（正式注册/确认入学） 注册。错过注册可能丢失学位。</span></div>
-        <div class="calendar-item"><b>9月30日</b><span>公布通过预注册和录取流程完成注册的学生名单。</span></div>
-      </div>
-      <p class="note">重要：官方说明中明确，逾期提交申请会失去本可用于获取学位的优先权。因此中国家庭建议至少提前 2-3 个月完成住址、empadronamiento（市政住址登记/住家证明） 和材料翻译准备。</p>
-    </div>
-    
-    <div class="contract-note">
-      <h3>关于 vivienda habitual（长期自住房/常住房租赁）：1 年合同可以吗？</h3>
-      <p><b>可以。</b>如果合同性质明确写的是 <b>arrendamiento de vivienda habitual（长期自住房租赁合同）</b>，即“长期自住房/常住房租赁”，哪怕合同初始期限写 1 年，通常也属于长期居住用途，而不是短租。</p>
-      <ul>
-        <li><b>1 年合同可作为入学住址基础：</b>前提是能办理 <b>empadronamiento（市政住址登记/住家证明）</b>，且房东/中介不限制登记。</li>
-        <li><b>法律保护通常更长：</b>西班牙 vivienda habitual（长期自住房/常住房租赁） 合同即使约定 1 年，通常会按年自动延长，房东为个人时最长可到 5 年，房东为公司/法人时最长可到 7 年；具体以合同和法律适用情况为准。</li>
-        <li><b>不要选 temporada（短租/临时租赁）：</b>如果合同写 <b>alquiler de temporada（季节性/临时短租）</b>、短租、旅游、学习/临时项目用途，入学和长期登记稳定性会弱很多。</li>
-        <li><b>签约前必问：</b>¿Es contrato de vivienda habitual（长期自住房/常住房租赁）?（长期自住房租赁吗？） ¿Se puede empadronar toda la familia? ¿La duración inicial es de 12 meses con prórroga legal?</li>
-      </ul>
-      <p class="note">实操建议：中国家庭申请小学时，优先选择写明 vivienda habitual（长期自住房/常住房租赁）、初始 12 个月或以上、允许全家 empadronamiento（市政住址登记/住家证明） 的房源。这样比短租/季租更适合做学校申请住址。</p>
-    </div>
-    <div class="arrival-box">
-      <h3>新到达学生/中途来巴塞罗那的具体入学流程</h3>
-      <p><b>适用情况：</b>孩子不是在 3 月正常 preinscripción（预注册/入学申请）窗口申请，而是全家刚搬到巴塞罗那、学年中途到达、或错过正常窗口。这类情况通常按 <b>matrícula viva（滚动入学/学年中途安置）</b> 或 <b>fuera de plazo（逾期/超过申请期限）</b> 路径处理。</p>
-      <div class="arrival-grid">
-        <div class="arrival-card"><b>第 1 步：先固定可登记住址</b><span>签 vivienda habitual（长期自住房/常住房租赁）合同，确认全家可 empadronamiento（市政住址登记/住家证明）。没有稳定住址会影响学校分配和后续沟通。</span></div>
-        <div class="arrival-card"><b>第 2 步：预约教育局/OME</b><span>联系 Consorci d'Educació de Barcelona（巴塞罗那教育联合体/教育局）或 OME（市政入学办公室），说明孩子年龄、出生年月、当前年级、住址和到达日期。</span></div>
-        <div class="arrival-card"><b>第 3 步：提交基础材料</b><span>准备护照/NIE、empadronamiento、亲属关系证明翻译件、原学校在读/成绩/转学证明、疫苗或健康记录。材料不齐也要先咨询，不要等全部完美再行动。</span></div>
-        <div class="arrival-card"><b>第 4 步：列目标学校但接受空位逻辑</b><span>把 Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança 列为目标，同时接受教育局根据住址和剩余 vacants（空位/剩余名额）安排学校。</span></div>
-        <div class="arrival-card"><b>第 5 步：同步直接联系学校</b><span>给学校发西语邮件或电话，问目标年级是否有 vacants（空位/剩余名额）、是否能加入 lista de espera（等待名单）、是否接收零 Catalan（加泰罗尼亚语）基础孩子。</span></div>
-        <div class="arrival-card"><b>第 6 步：先入学，再优化</b><span>如果目标学校暂无空位，建议先接受有位学校，保证孩子进入系统；下一轮正常 preinscripción（预注册/入学申请）或转学机会再争取目标学校。</span></div>
-      </div>
-      <p class="note">给中国家庭的建议：新到达时不要把所有希望押在某一所 Concertada（半公半私/政府补贴私校）学校。最稳妥路径是“住址稳定 + 教育局登记 + 目标学校等待名单 + 先入学适应语言”。</p>
-    </div>
-<div class="scenario-box">
-      <h3>具体场景指导：孩子 2020年6月3日出生、无西班牙语言基础、2026年9月底到达巴塞罗那</h3>
-      <div class="scenario-summary">
-        <span><b>孩子年龄</b>2026年9月约 6岁3个月</span>
-        <span><b>对应阶段</b>Primària（小学阶段）1年级左右</span>
-        <span><b>到达时间</b>已错过 3月预注册和 6月 matrícula（正式注册/确认入学）</span>
-        <span><b>核心路径</b>matrícula viva（滚动入学/学年中途安置）</span>
-      </div>
-      <p><b>结论：</b>这种情况不要按“正常择校”来理解，而是按“新到达学生 + 学年中途入学”处理。2026年9月底到达时，学校通常已经开学，热门 Concertada（半公半私/政府补贴私校）可能没有空位。最现实策略是：先确保孩子尽快进入教育系统，再通过等待名单、下一轮预注册或后续转学优化学校。</p>
-      <div class="scenario-grid">
-        <div class="scenario-card">
-          <h4>第一阶段：到达前 2–3 个月准备</h4>
-          <ul>
-            <li>提前确定可办理 empadronamiento（市政住址登记/住家证明）的 vivienda habitual（长期自住房/常住房租赁）房源。</li>
-            <li>准备孩子护照/NIE、父母证件、出生证明/亲属关系证明的西语翻译件。</li>
-            <li>准备中国幼儿园/小学在读证明、成绩/评语、转学证明，最好做西语翻译。</li>
-            <li>提前用西语邮件联系 Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança，说明孩子出生日期、预计到达日期和语言情况。</li>
-          </ul>
-        </div>
-        <div class="scenario-card">
-          <h4>第二阶段：2026年9月底到达后 1–2 周</h4>
-          <ul>
-            <li>优先完成住址登记 empadronamiento（市政住址登记/住家证明）。</li>
-            <li>立即预约 Consorci d'Educació de Barcelona（巴塞罗那教育联合体/教育局）或 OME（市政入学办公室）。</li>
-            <li>按 matrícula viva（滚动入学/学年中途安置）提交入学需求，而不是等待下一年。</li>
-            <li>同时向目标学校确认 vacants（空位/剩余名额）和 lista de espera（等待名单）。</li>
-          </ul>
-        </div>
-        <div class="scenario-card">
-          <h4>会遇到的问题</h4>
-          <ul>
-            <li><b>空位问题：</b>9月底热门学校可能已满，尤其是 Concertada 学校。</li>
-            <li><b>语言问题：</b>孩子没有 Catalan（加泰罗尼亚语）/Spanish（西班牙语）基础，初期课堂理解会困难。</li>
-            <li><b>材料问题：</b>中国文件如果没有翻译，教育局或学校可能要求补交。</li>
+    <li><b>材料问题：</b>中国文件如果没有翻译，教育局或学校可能要求补交。</li>
             <li><b>择校问题：</b>中途入学通常更看空位，家庭偏好会让位于系统安置。</li>
           </ul>
         </div>
