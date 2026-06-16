@@ -82,6 +82,8 @@ ul{margin:0;padding-left:18px}
 
 .scenario-priority{box-sizing:border-box;width:100%;margin:14px 0 0 0;background:white;border:1px solid #fed7aa;border-radius:16px;padding:14px;clear:both}
 .scenario-priority h3{margin:0 0 8px;color:#9a3412}.scenario-priority p{margin:0;line-height:1.7}
+
+.export-actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.export-btn{border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:800;cursor:pointer}.prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.prep-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px}.prep-card h3{margin:0 0 10px;color:#0f172a}.prep-card li{margin-bottom:7px}.template-box{background:#eef6ff;border:1px solid #bfdbfe;border-radius:16px;padding:14px;margin-top:14px}.template-box pre{white-space:pre-wrap;font-family:inherit;color:#334155;line-height:1.6;margin:0}@media(max-width:980px){.prep-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -382,19 +384,57 @@ ul{margin:0;padding-left:18px}
     <div class="scenario-steps">
       <div class="scenario-step"><h3>到达前 2–3 个月</h3><ul><li>确定可办理 empadronamiento 的 vivienda habitual 房源。</li><li>准备孩子和父母证件、出生/亲属关系证明西语翻译件。</li><li>准备中国幼儿园/小学在读证明、评语或转学证明。</li><li>提前用西语邮件联系 5 所目标学校，说明出生日期、预计到达时间和语言情况。</li></ul></div>
       <div class="scenario-step"><h3>到达后 1–2 周</h3><ul><li>优先办理 empadronamiento。</li><li>立即预约 Consorci d'Educació de Barcelona 或 OME。</li><li>按 matrícula viva 提交入学需求。</li><li>同步询问目标学校是否有 1年级 vacants（空位/剩余名额）或 lista de espera（等待名单）。</li></ul></div>
-      <div class="scenario-step"><h3>主要问题</h3><ul><li>9月底热门 Concertada 学校可能已经满员。</li><li>孩子没有 Catalan（加泰罗尼亚语）/Spanish（西班牙语）基础，课堂初期会吃力。</li><li>中国文件如果没有翻译，可能需要补交。</li><li>中途入学更看空位，择校自由度低于正常 3 月窗口。</li></ul></div>
-      <div class="scenario-step"><h3>解决策略</h3><ul><li><b>先入学：</b>先接受有空位学校，确保孩子进入教育系统，不要长期在家等待目标校。</li><li><b>排等待：</b>把 Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança 都问一遍，能进入 lista de espera（等待名单）就进入。</li><li><b>补语言：</b>到达前开始西语启蒙；到达后重点补 Catalan/Spanish 基础词汇、课堂指令和日常表达。</li><li><b>下一轮优化：</b>2027年3月参加下一轮 preinscripción（预注册/入学申请），再尝试转入目标学校。</li></ul></div>
+      <div class="scenario-step"><h3>主要问题</h3><ul><li>9月底热门 Concertada 学校可能已经满员。</li><li>孩子没有 Catalan（加泰罗尼亚语）/Spanish（西班牙语）基础，课堂初期会吃力。</li><li>中国文件如果没<section class="section panel" id="school-communication-prep">
+    <h2>七、与学校沟通和申请材料准备</h2>
+    <p>这一部分可以直接作为联系学校前的准备清单。建议先准备中文信息，再用下面按钮导出西班牙语或英语版本，复制到邮件/WhatsApp/学校表格中。</p>
+    <div class="export-actions">
+      <button class="export-btn" onclick="exportSchoolPrep('es')">一键导出西班牙语版本</button>
+      <button class="export-btn" onclick="exportSchoolPrep('en')">一键导出英语版本</button>
     </div>
-    <div class="scenario-priority"><h3>目标学校联系优先级</h3><p><b>第一优先：</b>Piaget / Guinardó，宗教压力较低，更适合零语言基础孩子先融入本地环境。<br><b>第二优先：</b>FEDAC-Horta，体系成熟，但要确认宗教活动、费用和是否接收中途到达学生。<br><b>Sant Andreu 方向：</b>如果住 Navas / La Sagrera / Sant Andreu，再优先联系 Arrels 和 FEP L'Esperança。</p></div>
+    <div class="prep-grid">
+      <div class="prep-card">
+        <h3>1. 与学校沟通要准备的个人信息</h3>
+        <ul>
+          <li>孩子姓名、性别、出生日期：2020年6月3日。</li>
+          <li>预计到达巴塞罗那时间：2026年9月底。</li>
+          <li>希望申请年级：Primària（小学阶段）1年级左右，需学校确认。</li>
+          <li>当前语言情况：中文母语，无 Catalan（加泰罗尼亚语）/Spanish（西班牙语）基础。</li>
+          <li>父母姓名、联系方式、邮箱、WhatsApp。</li>
+          <li>预计居住区域/具体地址；如已办理，提供 empadronamiento（市政住址登记/住家证明）。</li>
+          <li>目标学校：Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança。</li>
+        </ul>
+      </div>
+      <div class="prep-card">
+        <h3>2. 申请入学要准备的材料清单</h3>
+        <ul>
+          <li>孩子护照或 NIE/TIE。</li>
+          <li>父母护照或 NIE/TIE。</li>
+          <li>出生证明或亲属关系证明；中文材料建议准备西语翻译件。</li>
+          <li>empadronamiento（市政住址登记/住家证明）。</li>
+          <li>租房合同，优先 vivienda habitual（长期自住房/常住房租赁）。</li>
+          <li>中国幼儿园/小学在读证明、转学证明、成绩/评语。</li>
+          <li>疫苗记录或健康记录。</li>
+          <li>如有加分项：兄弟姐妹在校、残障、大家庭/单亲家庭、收入证明等官方文件。</li>
+        </ul>
+      </div>
+      <div class="prep-card">
+        <h3>3. 需要向学校提问的内容</h3>
+        <ul>
+          <li>2026年9月底到达，是否可按 matrícula viva（滚动入学/学年中途安置）申请？</li>
+          <li>1年级是否有 vacants（空位/剩余名额）？如果没有，能否进入 lista de espera（等待名单）？</li>
+          <li>是否接收没有 Catalan/Spanish 基础的孩子？前 6–12 个月有什么语言支持？</li>
+          <li>家校沟通主要用 Catalan、Spanish 还是可以英语辅助？</li>
+          <li>全年费用明细：学费、餐食、材料、校服、课后托管、活动费、注册费。</li>
+          <li>是否有宗教活动？非宗教家庭是否可以不参加或选择性参加？</li>
+          <li>上课时间、午餐、早托/晚托和课后活动如何安排？</li>
+          <li>是否可以安排参观或线上面谈？需要提前提交哪些文件？</li>
+        </ul>
+      </div>
+    </div>
+    <div class="template-box"><h3>邮件/消息模板预览</h3><pre id="schoolPrepPreview">点击上方按钮，可生成西班牙语或英语版本，并自动下载为 .txt 文件。</pre></div>
   </section>
 
-  <section class="section panel">
-    <h2>七、申请前必须问学校的 12 个问题</h2>
-    <div class="cols">
-      <div><h3>语言与适应</h3><ul><li>孩子不会 Catalan（加泰罗尼亚语）/Spanish 是否可以入学？</li><li>前 6–12 个月是否有语言支持？</li><li>家长沟通能否使用西语或英语？</li><li>是否有中国/亚洲学生经验？</li></ul></div>
-      <div><h3>费用与服务</h3><ul><li>全年总费用是多少？</li><li>哪些是强制，哪些是自愿？</li><li>午餐、校服、材料、课后班、校车如何收费？</li><li>是否有一次性注册费或基金会捐款？</li></ul></div>
-      <div><h3>宗教与名额</h3><ul><li>宗教活动是否强制？</li><li>非宗教家庭是否常见？</li><li>目标年级是否有空位？</li><li>插班是否需要语言或学业评估？</li></ul></div>
-    </div>
+  更适合零语言基础孩子先融入本地环境。<br><b>第二优先：</b>FEDAC-Horta，体系成熟，但要确认宗教活动、费用和是否接收中途到达学生。<br><b>Sant Andreu 方向：</b>如果住 Navas / La Sagrera / Sant Andreu，再优先联系 Arrels 和 FEP L'Esperança。</p></div>
   </section>
 
   <section class="section panel">
@@ -422,6 +462,105 @@ ul{margin:0;padding-left:18px}
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceMapThumbs);
   else enhanceMapThumbs();
 })();
+</script>
+
+<script id="school-prep-export-script">
+function exportSchoolPrep(lang){
+  const templates = {
+    es: `Asunto: Consulta sobre admisión escolar para una alumna/o recién llegada/o en septiembre de 2026
+
+Estimados/as señores/as:
+
+Somos una familia china que tiene previsto llegar a Barcelona a finales de septiembre de 2026. Nuestro/a hijo/a nació el 3 de junio de 2020 y no tiene todavía base de catalán ni español. Queremos consultar la posibilidad de escolarización en Primaria, probablemente en 1º de Primaria, según la valoración del centro y de la administración educativa.
+
+Información básica:
+- Nombre del niño/a: [completar]
+- Fecha de nacimiento: 3 de junio de 2020
+- Nacionalidad / idioma materno: China / chino
+- Llegada prevista a Barcelona: finales de septiembre de 2026
+- Zona o dirección prevista de residencia: [completar]
+- Situación lingüística: sin base previa de catalán ni español
+- Teléfono / WhatsApp de la familia: [completar]
+- Correo electrónico: [completar]
+
+Documentación que podemos preparar:
+- Pasaporte o NIE/TIE del niño/a
+- Pasaporte o NIE/TIE de los padres
+- Certificado de nacimiento o documento de relación familiar, con traducción al español si es necesario
+- Empadronamiento cuando tengamos domicilio en Barcelona
+- Contrato de alquiler de vivienda habitual
+- Certificado o informe del colegio anterior en China
+- Registro de vacunas o informe médico
+
+Nos gustaría preguntar:
+1. ¿Hay plazas vacantes para 1º de Primaria o lista de espera?
+2. ¿Es posible solicitar matrícula viva o admisión fuera de plazo al llegar a finales de septiembre?
+3. ¿El centro acepta alumnos sin conocimientos previos de catalán/español?
+4. ¿Qué apoyo lingüístico ofrece el centro durante los primeros meses?
+5. ¿La comunicación con la familia puede hacerse en español o con apoyo en inglés?
+6. ¿Podrían indicarnos el coste anual aproximado y los gastos obligatorios y voluntarios?
+7. ¿Hay comedor, acogida de mañana/tarde y actividades extraescolares?
+8. ¿Hay actividades religiosas obligatorias?
+9. ¿Podemos concertar una visita o entrevista online?
+10. ¿Qué documentación deberíamos enviar antes de nuestra llegada?
+
+Muchas gracias por su ayuda.
+Atentamente,
+[Nombre de la familia]`,
+    en: `Subject: Inquiry about school admission for a newly arrived child in September 2026
+
+Dear Sir/Madam,
+
+We are a Chinese family planning to arrive in Barcelona at the end of September 2026. Our child was born on June 3, 2020 and currently has no Catalan or Spanish language background. We would like to ask about the possibility of enrolling in Primary Education, probably around Year 1 of Primary, depending on the school's and education authority's assessment.
+
+Basic information:
+- Child's name: [complete]
+- Date of birth: June 3, 2020
+- Nationality / mother tongue: Chinese / Mandarin Chinese
+- Expected arrival in Barcelona: end of September 2026
+- Expected residential area or address: [complete]
+- Language situation: no previous Catalan or Spanish background
+- Family phone / WhatsApp: [complete]
+- Email: [complete]
+
+Documents we can prepare:
+- Child's passport or NIE/TIE
+- Parents' passports or NIE/TIE
+- Birth certificate or proof of family relationship, translated into Spanish if needed
+- Empadronamiento once we have an address in Barcelona
+- Long-term residential rental contract (vivienda habitual)
+- Certificate or report from the previous school in China
+- Vaccination record or health report
+
+We would like to ask:
+1. Are there any vacancies for Year 1 of Primary, or a waiting list?
+2. Is it possible to apply through matrícula viva or late admission when arriving at the end of September?
+3. Does the school accept children without previous Catalan/Spanish knowledge?
+4. What language support is available during the first months?
+5. Can family communication be handled in Spanish or with support in English?
+6. Could you provide the approximate annual cost and compulsory/optional fees?
+7. Do you offer lunch service, morning/afternoon care and extracurricular activities?
+8. Are there any compulsory religious activities?
+9. Can we arrange a school visit or an online interview?
+10. What documents should we send before arrival?
+
+Thank you very much for your help.
+Kind regards,
+[Family name]`
+  };
+  const content = templates[lang];
+  const preview = document.getElementById('schoolPrepPreview');
+  if (preview) preview.textContent = content;
+  const blob = new Blob([content], {type:'text/plain;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = lang === 'es' ? 'school_application_inquiry_es.txt' : 'school_application_inquiry_en.txt';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
 </script>
 </body>
 </html>
