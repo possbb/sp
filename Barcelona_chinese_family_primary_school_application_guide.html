@@ -56,6 +56,15 @@ ul{margin:0;padding-left:18px}
 .map-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .map-actions a{display:inline-flex;align-items:center;text-decoration:none;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
 .school-location-title{font-size:13px;color:#475569;font-weight:800;margin:10px 0 4px}
+
+.calendar-box{background:#fff7ed;border:1px solid #fed7aa;border-left:5px solid #f97316;border-radius:18px;padding:16px;margin:14px 0}
+.calendar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.calendar-item{background:#fff;border:1px solid #fed7aa;border-radius:14px;padding:12px}
+.calendar-item b{display:block;color:#9a3412;font-size:15px;margin-bottom:5px}
+.missed-path{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.missed-step{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:12px}
+.missed-step b{display:inline-flex;width:24px;height:24px;border-radius:50%;align-items:center;justify-content:center;background:#1d4ed8;color:white;margin-right:6px}
+@media(max-width:980px){.calendar-grid,.missed-path{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -336,12 +345,39 @@ ul{margin:0;padding-left:18px}
 
   <section class="section panel">
     <h2>五、入学要求与申请路径</h2>
+    <div class="calendar-box">
+      <h3>2026-2027 学年官方时间窗口提示</h3>
+      <p><b>以下日期对应巴塞罗那 3-16 岁义务教育预注册流程中的 Infantil/Primària（3-12岁）节点。</b>后续年份日期会变化，但通常仍集中在每年 3 月申请、6 月录取和注册。</p>
+      <div class="calendar-grid">
+        <div class="calendar-item"><b>3月3日</b><span>公布初始学位 oferta inicial。先看目标学校有没有对应年级名额。</span></div>
+        <div class="calendar-item"><b>3月4日–3月18日</b><span>Infantil 3-6岁和 Primària 6-12岁提交预注册申请。</span></div>
+        <div class="calendar-item"><b>3月19日前</b><span>补交身份证明、住址、加分项等证明材料。</span></div>
+        <div class="calendar-item"><b>4月28日</b><span>同分抽签 desempate，用于同分排序。</span></div>
+        <div class="calendar-item"><b>4月29日</b><span>公布排序名单，按优先分和抽签号排序。</span></div>
+        <div class="calendar-item"><b>6月1日–6月3日</b><span>无分配申请的补充志愿/扩大申请窗口。</span></div>
+        <div class="calendar-item"><b>6月10日</b><span>公布最终学位、录取名单和等待名单。</span></div>
+        <div class="calendar-item"><b>6月22日–6月30日</b><span>已录取学生正式 matrícula 注册。错过注册可能丢失学位。</span></div>
+        <div class="calendar-item"><b>9月30日</b><span>公布通过预注册和录取流程完成注册的学生名单。</span></div>
+      </div>
+      <p class="note">重要：官方说明中明确，逾期提交申请会失去本可用于获取学位的优先权。因此中国家庭建议至少提前 2-3 个月完成住址、empadronamiento 和材料翻译准备。</p>
+    </div>
     <div class="timeline">
-      <div class="step"><p><b>1</b>确定住址</p><p>巴塞罗那小学申请非常看重住址 proximity。先租可 empadronamiento 的长期住宅，再用具体门牌查对应学校。</p></div>
+      <div class="step"><p><b>1</b>确定住址</p><p>先租可 empadronamiento 的长期住宅，再用具体门牌查 proximity。不要用不能登记的短租作为入学主地址。</p></div>
       <div class="step"><p><b>2</b>准备材料</p><p>护照/NIE、家庭住址登记、孩子出生证明或亲属关系证明、疫苗/健康材料、过往学籍材料等。</p></div>
       <div class="step"><p><b>3</b>联系学校</p><p>预约参观或线上沟通，确认名额、语言支持、费用、餐食、课后托管和是否接收插班。</p></div>
-      <div class="step"><p><b>4</b>提交申请</p><p>按教育局当年 preinscripció 时间窗口提交志愿。Concertada 学校也需走官方流程。</p></div>
-      <div class="step"><p><b>5</b>确认录取</p><p>录取后完成 matrícula，缴纳或确认相关费用，并准备语言适应和日常接送安排。</p></div>
+      <div class="step"><p><b>4</b>提交申请</p><p>在 3月4日–3月18日窗口提交志愿，3月19日前补齐证明材料。Concertada 学校也需走官方流程。</p></div>
+      <div class="step"><p><b>5</b>确认录取</p><p>6月10日看录取/等待名单，6月22日–6月30日完成 matrícula，并准备语言适应和接送安排。</p></div>
+    </div>
+    <div class="calendar-box">
+      <h3>如果错过时间窗口，怎么处理？</h3>
+      <p><b>不要只等下一年。</b>错过 3 月预注册后仍有补救路径，但会明显削弱优先权，选择范围取决于剩余空位。</p>
+      <div class="missed-path">
+        <div class="missed-step"><p><b>1</b>立刻联系教育局/OME</p><p>联系 Consorci d'Educació de Barcelona 或当地 Oficina Municipal d'Escolarització，说明孩子年龄、住址和到达时间。</p></div>
+        <div class="missed-step"><p><b>2</b>申请 fuera de plazo</p><p>提交逾期申请或学期中入学申请。官方会根据空位分配，不再等同正常窗口竞争。</p></div>
+        <div class="missed-step"><p><b>3</b>同步联系学校</p><p>直接问 Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança 是否有 vacants 或 lista de espera。</p></div>
+        <div class="missed-step"><p><b>4</b>接受过渡方案</p><p>如果目标校无位，先接受有空位学校入读，之后在下一轮预注册或转学窗口再调整。</p></div>
+      </div>
+      <p class="note">实操建议：如果你是中国家庭中途搬到巴塞罗那，先保证孩子有学上，再优化学校。优先准备 empadronamiento、孩子身份证件、亲属关系证明翻译件和原学校证明；同时把目标学校放入等待名单。</p>
     </div>
   </section>
 
