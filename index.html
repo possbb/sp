@@ -107,6 +107,12 @@ a.btn.secondary { color:#334155; background:#f8fafc; border-color:#cbd5e1; }
 .footer { margin-top:28px; color:var(--muted); font-size:13px; line-height:1.7; text-align:center; }
 @media (max-width:980px) { .grid { grid-template-columns:1fr 1fr; } .overview { grid-template-columns:1fr; } }
 @media (max-width:640px) { .grid { grid-template-columns:1fr; } .hero h1 { font-size:29px; } .hero { padding:28px; } .section-head { align-items:flex-start; flex-direction:column; } }
+
+.topic-group{margin-top:18px}
+.topic-title{display:flex;align-items:center;gap:10px;margin:18px 0 12px;padding:10px 12px;border-radius:16px;background:#eef6ff;border:1px solid #bfdbfe;color:#1e3a8a;font-weight:900}
+.topic-title.education{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
+.topic-title.environment{background:#fff7ed;border-color:#fed7aa;color:#9a3412}
+.topic-title span{font-size:20px}
 </style>
 </head>
 <body>
@@ -125,98 +131,101 @@ a.btn.secondary { color:#334155; background:#f8fafc; border-color:#cbd5e1; }
   <section class="section">
     <div class="section-head">
       <h2>主要页面</h2>
-      <div class="hint">建议从左到右阅读：趋势 → 事件 → 对比</div>
+      <div class="hint">按主题阅读：气候环境 → 教育择校 → 城市风险</div>
     </div>
-    <div class="grid">
-      <article class="card">
-        <div>
-          <div class="icon blue">📈</div>
-          <h3>巴塞罗那气候趋势分析</h3>
-          <p>基于“月度明细”数据生成的可视化报告，包含气温趋势、降水趋势、热夜、高温日、强降雨日和月度热力图。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Barcelona_climate_trend_analysis_1990_2026.html">打开页面</a>
-          <a class="btn secondary" href="barcelona_climate_charts/">图表文件夹</a>
-        </div>
-      </article>
 
-      <article class="card">
-        <div>
-          <div class="icon orange">⛈️</div>
-          <h3>巴塞罗那历史极端天气时间线</h3>
-          <p>按时间罗列代表性极端天气事件，每个事件包含配图、时间、地点、详细描述、重要性和资料来源。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Barcelona_extreme_weather_timeline.html">打开页面</a>
-        </div>
-      </article>
+    <div class="topic-group">
+      <div class="topic-title"><span>🌦️</span>气候环境与城市风险</div>
+      <div class="grid">
+        <article class="card">
+          <div>
+            <div class="icon blue">📈</div>
+            <h3>巴塞罗那气候趋势分析</h3>
+            <p>基于“月度明细”数据生成的可视化报告，包含气温趋势、降水趋势、热夜、高温日、强降雨日和月度热力图。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Barcelona_climate_trend_analysis_1990_2026.html">打开页面</a>
+            <a class="btn secondary" href="barcelona_climate_charts/">图表文件夹</a>
+          </div>
+        </article>
 
-      <article class="card">
-        <div>
-          <div class="icon red">🌍</div>
-          <h3>北京 vs 巴塞罗那气候对比</h3>
-          <p>对比两座城市的历史气候趋势，并展示 2025—2030 年气温、降水和城市风险情景推演。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Beijing_vs_Barcelona_climate_comparison_1990_2030.html">打开页面</a>
-          <a class="btn secondary" href="beijing_barcelona_climate_charts/">图表文件夹</a>
-        </div>
-      </article>
+        <article class="card">
+          <div>
+            <div class="icon orange">⛈️</div>
+            <h3>巴塞罗那历史极端天气时间线</h3>
+            <p>按时间罗列代表性极端天气事件，每个事件包含配图、时间、地点、详细描述、重要性和资料来源。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Barcelona_extreme_weather_timeline.html">打开页面</a>
+          </div>
+        </article>
 
+        <article class="card">
+          <div>
+            <div class="icon purple">🗺️</div>
+            <h3>巴塞罗那极端天气事件地图</h3>
+            <p>结合历史极端天气事件发生地区绘制的交互式地图，可按洪水、高温、干旱、风暴等类型筛选查看。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Barcelona_extreme_weather_map.html">打开页面</a>
+            <a class="btn secondary" href="Barcelona_extreme_weather_timeline.html">查看时间线</a>
+          </div>
+        </article>
 
+        <article class="card">
+          <div>
+            <div class="icon red">🌍</div>
+            <h3>北京 vs 巴塞罗那气候对比</h3>
+            <p>对比两座城市的历史气候趋势，并展示 2025—2030 年气温、降水和城市风险情景推演。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Beijing_vs_Barcelona_climate_comparison_1990_2030.html">打开页面</a>
+            <a class="btn secondary" href="beijing_barcelona_climate_charts/">图表文件夹</a>
+          </div>
+        </article>
 
+        <article class="card">
+          <div>
+            <div class="icon gray">🌫️</div>
+            <h3>巴塞罗那近5年雾霾与北京对比</h3>
+            <p>分析 2021—2025 年 PM2.5、PM10、超参考天数和季节波动，比较巴塞罗那与北京的雾霾差异。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Barcelona_Beijing_haze_comparison_2021_2025.html">打开页面</a>
+            <a class="btn secondary" href="Barcelona_Beijing_air_quality_2021_2025.xlsx">下载 Excel</a>
+          </div>
+        </article>
+      </div>
+    </div>
 
+    <div class="topic-group">
+      <div class="topic-title education"><span>🏫</span>教育择校与家庭居住</div>
+      <div class="grid">
+        <article class="card">
+          <div>
+            <div class="icon blue">🇨🇳</div>
+            <h3>中国家庭小学申请专题</h3>
+            <p>面向中国家庭深度比较 Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança，包含入学要求、时间窗口、材料、租房街道和学校定位。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Barcelona_chinese_family_primary_school_application_guide.html">打开页面</a>
+            <a class="btn secondary" href="Barcelona_primary_school_district_guide.html">小学择区总表</a>
+          </div>
+        </article>
 
-
-
-      <article class="card">
-        <div>
-          <div class="icon blue">🇨🇳</div>
-          <h3>中国家庭小学申请专题</h3>
-          <p>面向中国家庭深度比较 Guinardó、Piaget、FEDAC-Horta、Arrels、FEP L'Esperança，包含入学要求、时间窗口、材料、租房街道和学校定位。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Barcelona_chinese_family_primary_school_application_guide.html">打开页面</a>
-          <a class="btn secondary" href="Barcelona_primary_school_district_guide.html">小学择区总表</a>
-        </div>
-      </article>
-      <article class="card">
-        <div>
-          <div class="icon green">🏫</div>
-          <h3>巴塞罗那小学与家庭择区专题</h3>
-          <p>按区域整理全部小学，结合公立/私立/半公半私分类、租房成本、安全、教育、文化信仰和性价比建议。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Barcelona_primary_school_district_guide.html">打开页面</a>
-          <a class="btn secondary" href="Barcelona_primary_school_map.html">学校地图</a>
-          <a class="btn secondary" href="Barcelona_primary_schools_by_district_2025.xlsx">下载 Excel</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon gray">🌫️</div>
-          <h3>巴塞罗那近5年雾霾与北京对比</h3>
-          <p>分析 2021—2025 年 PM2.5、PM10、超参考天数和季节波动，比较巴塞罗那与北京的雾霾差异。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Barcelona_Beijing_haze_comparison_2021_2025.html">打开页面</a>
-          <a class="btn secondary" href="Barcelona_Beijing_air_quality_2021_2025.xlsx">下载 Excel</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div>
-          <div class="icon purple">🗺️</div>
-          <h3>巴塞罗那极端天气事件地图</h3>
-          <p>结合历史极端天气事件发生地区绘制的交互式地图，可按洪水、高温、干旱、风暴等类型筛选查看。</p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="Barcelona_extreme_weather_map.html">打开页面</a>
-          <a class="btn secondary" href="Barcelona_extreme_weather_timeline.html">查看时间线</a>
-        </div>
-      </article>
-
+        <article class="card">
+          <div>
+            <div class="icon green">🏫</div>
+            <h3>巴塞罗那小学与家庭择区专题</h3>
+            <p>按区域整理全部小学，结合公立/私立/半公半私分类、租房成本、安全、医疗、教育、文化信仰和性价比建议。</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="Barcelona_primary_school_district_guide.html">打开页面</a>
+            <a class="btn secondary" href="Barcelona_primary_school_map.html">学校地图</a>
+            <a class="btn secondary" href="Barcelona_primary_schools_by_district_2025.xlsx">下载 Excel</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
