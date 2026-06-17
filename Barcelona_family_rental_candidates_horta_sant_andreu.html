@@ -20,7 +20,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
 .warn{background:#fff7ed;border-left:5px solid #f97316}.ok{background:#f0fdf4;border-left:5px solid #16a34a}
 .checklist{columns:2;line-height:1.8}@media(max-width:980px){.grid{grid-template-columns:1fr}.checklist{columns:1}table{min-width:1180px}}
 
-.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.58);display:none;align-items:center;justify-content:center;z-index:99;padding:20px}.modal-backdrop.active{display:flex}.listing-modal{background:white;border-radius:22px;max-width:980px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 30px 80px rgba(15,23,42,.35);border:1px solid #e2e8f0}.modal-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px 20px;border-bottom:1px solid #e2e8f0}.modal-head h3{margin:0}.modal-close{border:0;background:#fee2e2;color:#991b1b;border-radius:999px;padding:8px 12px;font-weight:900;cursor:pointer}.modal-body{padding:18px 20px}.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.photo-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;text-decoration:none;color:#0f172a}.photo-card:hover{border-color:#93c5fd;box-shadow:0 10px 24px rgba(15,23,42,.08)}.photo-card b{display:block;margin-bottom:6px}.photo-card span{font-size:13px;color:#64748b;line-height:1.55}.event-box{margin-top:16px;background:#fff7ed;border:1px solid #fed7aa;border-left:5px solid #f97316;border-radius:16px;padding:14px}.event-box li{margin-bottom:7px}.photo-btn{border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900;cursor:pointer;white-space:nowrap}@media(max-width:850px){.photo-grid{grid-template-columns:1fr}}
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.58);display:none;align-items:center;justify-content:center;z-index:99;padding:20px}.modal-backdrop.active{display:flex}.listing-modal{background:white;border-radius:22px;max-width:980px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 30px 80px rgba(15,23,42,.35);border:1px solid #e2e8f0}.modal-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px 20px;border-bottom:1px solid #e2e8f0}.modal-head h3{margin:0}.modal-close{border:0;background:#fee2e2;color:#991b1b;border-radius:999px;padding:8px 12px;font-weight:900;cursor:pointer}.modal-body{padding:18px 20px}.photo-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:14px}.photo-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;text-decoration:none;color:#0f172a}.photo-card b{display:block;margin-bottom:6px}.photo-card span{font-size:13px;color:#64748b;line-height:1.55}.map-frame{width:100%;height:360px;border:0;border-radius:16px;background:#e2e8f0}.loaded-panel{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px}.loaded-panel h4{margin:0 0 10px;color:#0f172a}.loaded-list{display:grid;gap:8px}.loaded-item{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:10px}.loaded-item b{display:block;color:#1d4ed8;margin-bottom:4px}.visual-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.visual-card{min-height:92px;border-radius:14px;padding:12px;color:white;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(135deg,#1d4ed8,#0f766e);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}.visual-card:nth-child(2){background:linear-gradient(135deg,#7c3aed,#2563eb)}.visual-card:nth-child(3){background:linear-gradient(135deg,#ea580c,#0f766e)}.visual-card b{font-size:14px}.visual-card span{font-size:12px;line-height:1.45;color:#e0f2fe}.event-box{margin-top:16px;background:#fff7ed;border:1px solid #fed7aa;border-left:5px solid #f97316;border-radius:16px;padding:14px}.event-box li{margin-bottom:7px}.photo-btn{border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900;cursor:pointer;white-space:nowrap}@media(max-width:850px){.photo-grid{grid-template-columns:1fr}}
 .source-type{font-weight:700;color:#334155}.source-type small{display:block;margin-top:4px;font-weight:400}</style>
 </head>
 <body><div class="container">
@@ -38,7 +38,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Piaget / Guinardó / FEDAC-Horta 均可纳入候选，需看坡度。</td>
   <td>未公开确认 vivienda habitual；需问能否全家 empadronamiento。</td>
   <td>Can Baró 有坡度；实地走到学校和地铁。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Carrer%20d%E2%80%99Albert%20Llanas%2C%2028%20%E2%80%94%20Can%20Bar%C3%B3')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/horta-guinardo/3-habitaciones/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Carrer%20d%E2%80%99Albert%20Llanas%2C%2028%20%E2%80%94%20Can%20Bar%C3%B3', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/horta-guinardo/3-habitaciones/l" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-am">A-</span></td>
@@ -50,7 +50,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Guinardó 优先；Piaget/FEDAC-Horta 需看通勤。</td>
   <td>非 gran tenedor；未公开确认登记，需书面核验。</td>
   <td>无电梯；如孩子小/推车需谨慎。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Calle%20d%E2%80%99Am%C3%A8rica%20%E2%80%94%20El%20Guinard%C3%B3')">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/111758329/" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Calle%20d%E2%80%99Am%C3%A8rica%20%E2%80%94%20El%20Guinard%C3%B3', this)">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/111758329/" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bp">B+</span></td>
@@ -62,7 +62,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>FEDAC-Horta / Horta 核心较好；Piaget 可考虑。</td>
   <td>个人房源需强核验合同和登记；价格达标。</td>
   <td>无电梯；确认楼梯、楼况和合同。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Carrer%20d%E2%80%99Estoril%2C%2011%20%E2%80%94%20Horta')">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-viviendas-particulares-distrito_horta_guinardo-barcelona.htm" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Carrer%20d%E2%80%99Estoril%2C%2011%20%E2%80%94%20Horta', this)">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-viviendas-particulares-distrito_horta_guinardo-barcelona.htm" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bp">B+</span></td>
@@ -74,7 +74,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Guinardó / Piaget 可考虑，FEDAC-Horta 看具体门牌。</td>
   <td>需逐套确认来源、合同和登记。</td>
   <td>坡度和公交可达性必须实地看。</td>
-  <td><button class="photo-btn" onclick="openListingModal('La%20Font%20d%E2%80%99en%20Fargues%20%E2%80%94%20Horta-Guinard%C3%B3')">查看图片/街景/事件</button></td><td><a href="https://m.habitaclia.com/alquiler-distrito_horta_guinardo-barcelona-3.htm" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('La%20Font%20d%E2%80%99en%20Fargues%20%E2%80%94%20Horta-Guinard%C3%B3', this)">查看图片/街景/事件</button></td><td><a href="https://m.habitaclia.com/alquiler-distrito_horta_guinardo-barcelona-3.htm" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-b">B</span></td>
@@ -86,7 +86,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Piaget 可考虑；FEDAC-Horta/Guinardó 通勤需核验。</td>
   <td>需逐套确认是否 long-term/可登记。</td>
   <td>坡度、街段和学校通勤风险较高。</td>
-  <td><button class="photo-btn" onclick="openListingModal('La%20Teixonera%20%E2%80%94%20Horta-Guinard%C3%B3')">查看图片/街景/事件</button></td><td><a href="https://m.habitaclia.com/alquiler-distrito_horta_guinardo-barcelona-3.htm" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('La%20Teixonera%20%E2%80%94%20Horta-Guinard%C3%B3', this)">查看图片/街景/事件</button></td><td><a href="https://m.habitaclia.com/alquiler-distrito_horta_guinardo-barcelona-3.htm" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-b">B</span></td>
@@ -98,7 +98,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Guinardó 较好；Piaget/FEDAC-Horta 偏远一些。</td>
   <td>需核验合同性质和登记。</td>
   <td>Baix Guinardó 更靠南，三校平衡性下降。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Ronda%20del%20Guinard%C3%B3%2C%2030%20%E2%80%94%20Baix%20Guinard%C3%B3')">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/106274525/" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Ronda%20del%20Guinard%C3%B3%2C%2030%20%E2%80%94%20Baix%20Guinard%C3%B3', this)">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/106274525/" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-b">B</span></td>
@@ -110,7 +110,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Guinardó 较好；Horta 三校需看通勤。</td>
   <td>需核验合同和登记。</td>
   <td>价格高；街道噪音需看。</td>
-  <td><button class="photo-btn" onclick="openListingModal('El%20Baix%20Guinard%C3%B3%20%E2%80%94%203%E6%88%BF%E7%94%B5%E6%A2%AF%E5%80%99%E9%80%89')">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/104145096/" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('El%20Baix%20Guinard%C3%B3%20%E2%80%94%203%E6%88%BF%E7%94%B5%E6%A2%AF%E5%80%99%E9%80%89', this)">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/104145096/" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bm">B-</span></td>
@@ -122,7 +122,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>按门牌匹配 Piaget / Guinardó / FEDAC-Horta。</td>
   <td>逐套问 vivienda habitual 和 empadronamiento。</td>
   <td>必须删除 temporada、房间出租和明显过旧楼梯房。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Horta-Guinard%C3%B3%203%E6%88%BF%E7%94%B5%E6%A2%AF%E6%90%9C%E7%B4%A2%E5%85%A5%E5%8F%A3')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/pisos/barcelona-capital/horta-guinardo/ascensor/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Horta-Guinard%C3%B3%203%E6%88%BF%E7%94%B5%E6%A2%AF%E6%90%9C%E7%B4%A2%E5%85%A5%E5%8F%A3', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/pisos/barcelona-capital/horta-guinardo/ascensor/l" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-a">A</span></td>
@@ -134,7 +134,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels 方向优先；FEP L’Esperança 可考虑。</td>
   <td>长租信号强，但页面也出现法律说明，仍需书面确认登记。</td>
   <td>无/低楼层电梯描述需实地确认；价格高。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Paseo%20de%20Torras%20i%20Bages%20%E2%80%94%20Sant%20Andreu')">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/111533804/" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Paseo%20de%20Torras%20i%20Bages%20%E2%80%94%20Sant%20Andreu', this)">查看图片/街景/事件</button></td><td><a href="https://www.idealista.com/inmueble/111533804/" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-am">A-</span></td>
@@ -146,7 +146,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels / Sant Andreu 核心优先。</td>
   <td>需核验合同、登记和是否非 temporada。</td>
   <td>新房源可能竞争快；尽早联系。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Carrer%20Martin%20Luther%20King%20%E2%80%94%20Sant%20Andreu%20de%20Palomar')">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-viviendas-ascensor-sant_andreu_de_palomar-barcelona.htm" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Carrer%20Martin%20Luther%20King%20%E2%80%94%20Sant%20Andreu%20de%20Palomar', this)">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-viviendas-ascensor-sant_andreu_de_palomar-barcelona.htm" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-am">A-</span></td>
@@ -158,7 +158,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels / La Sagrera / Navas 方向好。</td>
   <td>需核验合同是否 vivienda habitual，可否全家登记。</td>
   <td>La Sagrera 靠主干道需看噪音。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Josep%20Estivil%20%E2%80%94%20La%20Sagrera')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Josep%20Estivil%20%E2%80%94%20La%20Sagrera', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bp">B+</span></td>
@@ -170,7 +170,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels / FEP L’Esperança 都可考虑，视门牌通勤。</td>
   <td>发布方需核验；邮件/平台消息联系。</td>
   <td>需确认是否接受家庭和登记。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Passeig%20de%20Santa%20Coloma%2C%2037%20%E2%80%94%20Sant%20Andreu%20de%20Palomar')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Passeig%20de%20Santa%20Coloma%2C%2037%20%E2%80%94%20Sant%20Andreu%20de%20Palomar', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bp">B+</span></td>
@@ -182,7 +182,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels 非常近；Sant Andreu 其他学校看通勤。</td>
   <td>公开描述“ideal estudiantes”，需问是否适合家庭/可登记。</td>
   <td>如果偏学生租赁或短租则排除。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Carrer%20del%20Cardenal%20Tedeschini%2C%2058%20%E2%80%94%20Congr%C3%A9s%20i%20els%20Indians')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Carrer%20del%20Cardenal%20Tedeschini%2C%2058%20%E2%80%94%20Congr%C3%A9s%20i%20els%20Indians', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-b">B</span></td>
@@ -194,7 +194,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels / Navas / La Sagrera 方向适合。</td>
   <td>需核验是否长期合同；公开可见可入住日期信息。</td>
   <td>价格高；临主路噪音需看。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Carrer%20de%20Felip%20II%20%E2%80%94%20La%20Sagrera')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Carrer%20de%20Felip%20II%20%E2%80%94%20La%20Sagrera', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/viviendas/barcelona-capital/sant-andreu/3-habitaciones/l" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-b">B</span></td>
@@ -206,7 +206,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels 匹配较好；FEP 需看通勤。</td>
   <td>需逐套确认合同性质和登记。</td>
   <td>部分可能为服务式/平台房源，需排除短租。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Congr%C3%A9s%20-%20Indians%203%E6%88%BF%E5%80%99%E9%80%89')">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-pisos-distrito_sant_andreu-barcelona.htm" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Congr%C3%A9s%20-%20Indians%203%E6%88%BF%E5%80%99%E9%80%89', this)">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-pisos-distrito_sant_andreu-barcelona.htm" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bm">B-</span></td>
@@ -218,7 +218,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels 方向；Sant Andreu 其他学校可备选。</td>
   <td>很多平台房源可能偏临时/服务式，需强核验。</td>
   <td>可能不适合长期入学地址，先问合同。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Navas%202%E2%80%934%E6%88%BF%E5%80%99%E9%80%89')">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-pisos-distrito_sant_andreu-barcelona.htm" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Navas%202%E2%80%934%E6%88%BF%E5%80%99%E9%80%89', this)">查看图片/街景/事件</button></td><td><a href="https://www.habitaclia.com/alquiler-pisos-distrito_sant_andreu-barcelona.htm" target="_blank">查看/搜索</a></td>
 </tr>
 <tr>
   <td><span class="rank rank-bm">B-</span></td>
@@ -230,7 +230,7 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
   <td>Arrels/FEP 根据门牌匹配。</td>
   <td>逐套问 vivienda habitual、empadronamiento。</td>
   <td>删除低于 €1000、房间出租、temporada、小于50㎡单人公寓。</td>
-  <td><button class="photo-btn" onclick="openListingModal('Sant%20Andreu%203%E6%88%BF/%E7%94%B5%E6%A2%AF%E6%90%9C%E7%B4%A2%E5%85%A5%E5%8F%A3')">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/pisos/barcelona-capital/sant-andreu/ascensor/l" target="_blank">查看/搜索</a></td>
+  <td><button class="photo-btn" onclick="openListingModal('Sant%20Andreu%203%E6%88%BF/%E7%94%B5%E6%A2%AF%E6%90%9C%E7%B4%A2%E5%85%A5%E5%8F%A3', this)">查看图片/街景/事件</button></td><td><a href="https://www.fotocasa.es/es/alquiler/pisos/barcelona-capital/sant-andreu/ascensor/l" target="_blank">查看/搜索</a></td>
 </tr>
 </tbody></table></div><p class="note">等级含义：A=优先实地联系；B=可作为备选；B-=只作为补充搜索池。已删除低于 €1000/月、明显房间出租、明显老旧且不适合家庭、以及短租风险过高的单一房源。价格与房源状态会变化，最终以平台实时页面和中介书面回复为准。</p></section>
 <section class="section panel warn"><h2>联系中介/房东必须问</h2><ul class="checklist"><li>¿Es contrato de vivienda habitual?（是长期自住房合同吗？）</li><li>¿Se puede empadronar toda la familia?（全家可以做住址登记吗？）</li><li>¿La duración inicial es de 12 meses o más?（初始合同是否 12 个月或以上？）</li><li>¿No es contrato de temporada?（不是短租/临时合同，对吗？）</li><li>¿Qué gastos están incluidos?（包含哪些费用？）</li><li>¿Hay ascensor?（有电梯吗？）</li><li>¿Se aceptan niños/familias?（接受家庭和孩子入住吗？）</li><li>¿Cuándo se puede visitar?（什么时候可以看房？）</li></ul></section>
@@ -239,25 +239,53 @@ th{background:#1f4e78;color:white;text-align:left;padding:12px;position:sticky;t
 <div class="modal-backdrop" id="listingModal"><div class="listing-modal"><div class="modal-head"><div><h3 id="modalTitle">房源参考</h3><p class="note" id="modalSub">图片、街景与周边事件提示</p></div><button class="modal-close" onclick="closeListingModal()">关闭</button></div><div class="modal-body" id="modalBody"></div></div></div>
 <script id="listing-modal-data">
 const listingEvents = {
-  "Horta-Guinardó": ["近一年重点关注：山坡街段通勤、夜间照明、游客较少但不同街段坡度差异明显。", "看房时建议白天和晚上各走一次到学校/地铁路线。", "社会事件核验建议：打开街景和新闻搜索，重点看治安、噪音、施工、占屋/楼况等信息。"],
-  "Sant Andreu": ["近一年重点关注：Sant Andreu 核心区家庭氛围较稳定，La Sagrera/Navas 靠主干道需关注噪音。", "Bon Pastor / Trinitat Vella 一带需逐街段实地查看夜间安全感。", "社会事件核验建议：搜索街道名 + Barcelona + incidentes / sucesos / seguridad。"]
+  "Horta-Guinard?": ["????????????????????????????????????", "?????????????????/?????", "???????????????????????/??????"],
+  "Sant Andreu": ["????????Sant Andreu ???????????La Sagrera/Navas ??????????", "Bon Pastor / Trinitat Vella ????????????????", "?????????????????????????????"]
 };
-function areaFromTitle(title){ return title.includes('Sant Andreu')||title.includes('Navas')||title.includes('Sagrera')||title.includes('Bon Pastor')||title.includes('Trinitat') ? 'Sant Andreu' : 'Horta-Guinardó'; }
-function openListingModal(encodedTitle){
+function areaFromTitle(title){ return title.includes('Sant Andreu')||title.includes('Navas')||title.includes('Sagrera')||title.includes('Bon Pastor')||title.includes('Trinitat')||title.includes('Congr?s')||title.includes('Felip II')||title.includes('Torras')||title.includes('Martin Luther King')||title.includes('Cardenal Tedeschini') ? 'Sant Andreu' : 'Horta-Guinard?'; }
+function openListingModal(encodedTitle, trigger){
   const title = decodeURIComponent(encodedTitle);
   const area = areaFromTitle(title);
-  const q = encodeURIComponent(title + ' Barcelona alquiler');
-  const streetQ = encodeURIComponent(title.replace('候选','') + ' Barcelona Spain');
+  const row = trigger ? trigger.closest('tr') : null;
+  const cells = row ? Array.from(row.querySelectorAll('td')).map(td => td.innerText.trim()) : [];
+  const link = row ? (row.querySelector('td:last-child a')?.href || '') : '';
+  const mapQuery = encodeURIComponent(title.replace('??','').replace('????','') + ' Barcelona Spain');
   document.getElementById('modalTitle').textContent = title;
-  document.getElementById('modalSub').textContent = area + '｜图片、附近街景与近一年社会事件核验';
+  document.getElementById('modalSub').textContent = area + '?????????????????????';
   const events = (listingEvents[area]||[]).map(x=>`<li>${x}</li>`).join('');
+  const summary = {
+    source: cells[2] || '??/???????',
+    district: cells[3] || area,
+    price: cells[4] || '?????????',
+    detail: cells[5] || '?????????',
+    school: cells[6] || '????????',
+    contract: cells[7] || '??? vivienda habitual???????? empadronamiento????????',
+    risk: cells[8] || '????????'
+  };
   document.getElementById('modalBody').innerHTML = `
     <div class="photo-grid">
-      <a class="photo-card" target="_blank" href="https://www.google.com/search?tbm=isch&q=${q}"><b>公开图片搜索</b><span>查看房源标题、街道、平台相关公开图片；以平台原图和中介页面为准。</span></a>
-      <a class="photo-card" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${streetQ}"><b>附近街景/地图</b><span>查看楼门、街道坡度、地铁距离、周边店铺和夜间主路环境。</span></a>
-      <a class="photo-card" target="_blank" href="https://www.google.com/search?q=${encodeURIComponent(title + ' Barcelona noticias sucesos seguridad 2025 2026')}"><b>近一年事件搜索</b><span>搜索该街道/区域近一年新闻、安全、施工和社会事件线索。</span></a>
+      <div>
+        <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${mapQuery}&output=embed"></iframe>
+        <div class="visual-strip">
+          <div class="visual-card"><b>??????</b><span>???????????????????</span></div>
+          <div class="visual-card"><b>????/??</b><span>????????/????</span></div>
+          <div class="visual-card"><b>?????</b><span>????????????</span></div>
+        </div>
+      </div>
+      <div class="loaded-panel">
+        <h4>???????</h4>
+        <div class="loaded-list">
+          <div class="loaded-item"><b>????</b><span>${summary.source}</span></div>
+          <div class="loaded-item"><b>????</b><span>${summary.district}</span></div>
+          <div class="loaded-item"><b>??/??</b><span>${summary.price}</span></div>
+          <div class="loaded-item"><b>????</b><span>${summary.detail}</span></div>
+          <div class="loaded-item"><b>????</b><span>${summary.school}</span></div>
+          <div class="loaded-item"><b>??????</b><span>${summary.contract}</span></div>
+          <div class="loaded-item"><b>????</b><span>${summary.risk}</span></div>
+        </div>
+      </div>
     </div>
-    <div class="event-box"><b>近一年社会事件/环境核验提示</b><ul>${events}</ul><p class="note">说明：本弹窗提供核验入口和区域级提示，不代表该具体楼栋发生过事件；签约前建议实地查看并搜索具体街道名。</p></div>`;
+    <div class="event-box"><b>???????/??????</b><ul>${events}</ul><p class="note">???????????????????????????????????????????????<br>????${link ? `<a href="${link}" target="_blank">????????</a>` : '??????'}</p></div>`;
   document.getElementById('listingModal').classList.add('active');
 }
 function closeListingModal(){ document.getElementById('listingModal').classList.remove('active'); }
