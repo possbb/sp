@@ -89,6 +89,7 @@ ul{margin:0;padding-left:18px}
 .section.panel.stable-panel h2{margin-top:0}
 
 .school-visual-gallery{margin:14px 0;background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px}.school-visual-gallery h3{margin:0 0 10px;color:#0f172a}.visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.visual-card{display:block;text-decoration:none;color:#0f172a;background:white;border:1px solid #dbeafe;border-radius:14px;padding:12px;transition:.15s}.visual-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,23,42,.08);border-color:#93c5fd}.visual-card .emoji{display:flex;width:42px;height:42px;border-radius:14px;align-items:center;justify-content:center;background:#eff6ff;font-size:22px;margin-bottom:8px}.visual-card b{display:block;margin-bottom:4px}.visual-card span{font-size:12px;color:#64748b;line-height:1.45}.visual-note{font-size:12px;color:#64748b;margin:10px 0 0;line-height:1.6}@media(max-width:980px){.visual-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.visual-grid{grid-template-columns:1fr}}
+.direct-visual-layout{display:grid;grid-template-columns:1.1fr 1.25fr;gap:14px;align-items:stretch}.direct-school-map{width:100%;height:330px;border:0;border-radius:16px;background:#e2e8f0}.direct-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.direct-info-card{background:white;border:1px solid #dbeafe;border-radius:14px;padding:13px;min-height:116px}.direct-info-card b{display:block;color:#0f172a;margin-bottom:7px;font-size:15px}.direct-info-card span{display:block;color:#475569;font-size:13px;line-height:1.55}.direct-info-card a{display:inline-block;margin-top:7px;color:#1d4ed8;font-weight:800;text-decoration:none}.direct-info-card a:hover{text-decoration:underline}@media(max-width:980px){.direct-visual-layout{grid-template-columns:1fr}.direct-info-grid{grid-template-columns:1fr}.direct-school-map{height:280px}}
 </style>
 </head>
 <body>
@@ -199,15 +200,20 @@ ul{margin:0;padding-left:18px}
   </div>
   <p class="fit"><b>中国家庭适配判断：</b>非常适合优先考察。它是教师合作社（cooperativa de mestres）背景，宗教压力相对低，更适合希望孩子进入本地 Catalan（加泰罗尼亚语）/Spanish 体系、同时重视社区感和费用可控的中国家庭。</p>
   <div class="lang-note"><b>主要沟通语言：</b>主要沟通语言建议按 Catalan（加泰罗尼亚语）+ Spanish（西班牙语）准备；作为合作社/本地学校，不应默认能用英语长期沟通。中国家庭第一次邮件建议用西语，必要时附英文。</div>
-  <div class="school-visual-gallery">
+  <div class="school-visual-gallery direct-gallery">
     <h3>图片与周边环境</h3>
-    <div class="visual-grid">
-      <a class="visual-card" href="https://escolaguinardo.org/un-tomb-per-escola-guinardo/" target="_blank"><span class="emoji">🏫</span><b>校内/校园照片</b><span>打开学校官网或相册，查看教室、操场、校园空间。</span></a>
-      <a class="visual-card" href="https://escolaguinardo.org/projectes/" target="_blank"><span class="emoji">🎒</span><b>活动照片/项目</b><span>查看学校活动、项目、夏令营或博客内容。</span></a>
-      <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=c.%20Doctor%20Valls%2C%2011%2C%20Barcelona%2C%20Spain" target="_blank"><span class="emoji">🛣️</span><b>附近街景</b><span>打开 Google Maps，查看校门、街道、坡度和接送环境。</span></a>
-      <a class="visual-card" href="https://www.google.com/search?tbm=isch&q=Guinard%C3%B3%20escola%20Barcelona" target="_blank"><span class="emoji">🖼️</span><b>公开图片搜索</b><span>查看公开图片结果，注意以官方/地图来源为准。</span></a>
+    <div class="direct-visual-layout">
+      <div class="direct-map-wrap">
+        <iframe class="direct-school-map" src="https://www.google.com/maps?q=c.%20Doctor%20Valls%2C%2011%2C%20Barcelona%2C%20Spain&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Guinardó 学校周边地图"></iframe>
+      </div>
+      <div class="direct-info-grid">
+        <div class="direct-info-card"><b>校内/校园照片</b><span>官网有校园参观和项目内容，可重点看教室、操场、合作社式社区氛围。<br><a href="https://www.google.com/search?tbm=isch&q=Guinard%C3%B3%20escola%20Barcelona" target="_blank">查看公开图片来源</a></span></div>
+        <div class="direct-info-card"><b>活动照片/项目</b><span>项目制和社区活动信息较多，适合重视本地融入的家庭。<br><a href="https://www.google.com/search?q=Guinard%C3%B3%20escola%20Barcelona%20activitats%20projectes%20noticias" target="_blank">查看活动/项目公开信息</a></span></div>
+        <div class="direct-info-card"><b>附近街景</b><span>El Guinardó / Horta-Guinardó。住宅社区氛围明显，靠近 Guinardó 山坡街区；接送路线需要看坡度和公交/地铁衔接。<br><a href="https://www.google.com/maps/search/?api=1&query=c.%20Doctor%20Valls%2C%2011%2C%20Barcelona%2C%20Spain" target="_blank">打开完整地图</a></span></div>
+        <div class="direct-info-card"><b>签约/租房核验</b><span>看校门接送、坡度、公交地铁、晚间安全感，并把租房地址与学校通勤一起评估。</span></div>
+      </div>
     </div>
-    <p class="visual-note">官网有校园参观/项目入口，可查看校内空间与活动。 为避免版权和盗链问题，本页不直接复制第三方照片；建议点击入口查看官方图片、活动照片和街景。</p>
+    <p class="visual-note">已直接加载学校定位地图和周边信息。因版权和盗链限制，本页不复制第三方照片；图片以学校官网、Google Maps 和公开搜索来源为准。</p>
   </div>
 
   <div class="cols">
@@ -248,15 +254,20 @@ ul{margin:0;padding-left:18px}
   </div>
   <p class="fit"><b>中国家庭适配判断：</b>适合重视性价比、低宗教压力、居住在 Horta/Llobregós/El Carmel 边缘的家庭。它与 Guinardó、FEDAC-Horta 可以形成同一区域的三校组合。</p>
   <div class="lang-note"><b>主要沟通语言：</b>主要沟通语言建议按 Catalan（加泰罗尼亚语）+ Spanish（西班牙语）准备；官网和本地学校环境更偏加泰/西语。中国家庭建议用西语联系秘书处，并询问是否可用英语辅助。</div>
-  <div class="school-visual-gallery">
+  <div class="school-visual-gallery direct-gallery">
     <h3>图片与周边环境</h3>
-    <div class="visual-grid">
-      <a class="visual-card" href="https://www.escolapiaget.cat/" target="_blank"><span class="emoji">🏫</span><b>校内/校园照片</b><span>打开学校官网或相册，查看教室、操场、校园空间。</span></a>
-      <a class="visual-card" href="https://www.escolapiaget.cat/casal-d-estiu" target="_blank"><span class="emoji">🎒</span><b>活动照片/项目</b><span>查看学校活动、项目、夏令营或博客内容。</span></a>
-      <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=c.%20Llobreg%C3%B3s%2C%20194%2C%20Barcelona%2C%20Spain" target="_blank"><span class="emoji">🛣️</span><b>附近街景</b><span>打开 Google Maps，查看校门、街道、坡度和接送环境。</span></a>
-      <a class="visual-card" href="https://www.google.com/search?tbm=isch&q=Piaget%20escola%20Barcelona" target="_blank"><span class="emoji">🖼️</span><b>公开图片搜索</b><span>查看公开图片结果，注意以官方/地图来源为准。</span></a>
+    <div class="direct-visual-layout">
+      <div class="direct-map-wrap">
+        <iframe class="direct-school-map" src="https://www.google.com/maps?q=c.%20Llobreg%C3%B3s%2C%20194%2C%20Barcelona%2C%20Spain&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Piaget 学校周边地图"></iframe>
+      </div>
+      <div class="direct-info-grid">
+        <div class="direct-info-card"><b>校内/校园照片</b><span>学校规模偏本地社区型，重点确认校内空间、餐厅、课后活动和语言支持。<br><a href="https://www.google.com/search?tbm=isch&q=Piaget%20escola%20Barcelona" target="_blank">查看公开图片来源</a></span></div>
+        <div class="direct-info-card"><b>活动照片/项目</b><span>适合提前面谈了解项目、活动和新到达儿童支持。<br><a href="https://www.google.com/search?q=Piaget%20escola%20Barcelona%20activitats%20projectes%20noticias" target="_blank">查看活动/项目公开信息</a></span></div>
+        <div class="direct-info-card"><b>附近街景</b><span>Horta / Carmel 边缘。靠近 Horta 与 Carmel 交界，街段坡度和上下学路线差异较大；建议实地走到 L5 Horta 或公交站。<br><a href="https://www.google.com/maps/search/?api=1&query=c.%20Llobreg%C3%B3s%2C%20194%2C%20Barcelona%2C%20Spain" target="_blank">打开完整地图</a></span></div>
+        <div class="direct-info-card"><b>签约/租房核验</b><span>看校门接送、坡度、公交地铁、晚间安全感，并把租房地址与学校通勤一起评估。</span></div>
+      </div>
     </div>
-    <p class="visual-note">优先通过官网和 Google Maps 查看校门、街道坡度与周边环境。 为避免版权和盗链问题，本页不直接复制第三方照片；建议点击入口查看官方图片、活动照片和街景。</p>
+    <p class="visual-note">已直接加载学校定位地图和周边信息。因版权和盗链限制，本页不复制第三方照片；图片以学校官网、Google Maps 和公开搜索来源为准。</p>
   </div>
 
   <div class="cols">
@@ -297,15 +308,20 @@ ul{margin:0;padding-left:18px}
   </div>
   <p class="fit"><b>中国家庭适配判断：</b>适合希望学校体系成熟、管理稳定、课程和活动体系更完整的中国家庭。若能接受一定基督教/天主教教育传统，可以重点考察。</p>
   <div class="lang-note"><b>主要沟通语言：</b>主要沟通语言建议按 Catalan（加泰罗尼亚语）+ Spanish（西班牙语）准备；FEDAC 体系可能有英语课程或国际化活动，但家校行政沟通不应默认英语。</div>
-  <div class="school-visual-gallery">
+  <div class="school-visual-gallery direct-gallery">
     <h3>图片与周边环境</h3>
-    <div class="visual-grid">
-      <a class="visual-card" href="https://horta.fedac.cat/" target="_blank"><span class="emoji">🏫</span><b>校内/校园照片</b><span>打开学校官网或相册，查看教室、操场、校园空间。</span></a>
-      <a class="visual-card" href="https://horta.fedac.cat/" target="_blank"><span class="emoji">🎒</span><b>活动照片/项目</b><span>查看学校活动、项目、夏令营或博客内容。</span></a>
-      <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=c.%20Campoamor%2C%2049%2C%20Barcelona%2C%20Spain" target="_blank"><span class="emoji">🛣️</span><b>附近街景</b><span>打开 Google Maps，查看校门、街道、坡度和接送环境。</span></a>
-      <a class="visual-card" href="https://www.google.com/search?tbm=isch&q=FEDAC-Horta%20escola%20Barcelona" target="_blank"><span class="emoji">🖼️</span><b>公开图片搜索</b><span>查看公开图片结果，注意以官方/地图来源为准。</span></a>
+    <div class="direct-visual-layout">
+      <div class="direct-map-wrap">
+        <iframe class="direct-school-map" src="https://www.google.com/maps?q=c.%20Campoamor%2C%2049%2C%20Barcelona%2C%20Spain&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="FEDAC-Horta 学校周边地图"></iframe>
+      </div>
+      <div class="direct-info-grid">
+        <div class="direct-info-card"><b>校内/校园照片</b><span>FEDAC 系列学校通常公开活动和教育项目较多，可看官网/社媒了解校园生活。<br><a href="https://www.google.com/search?tbm=isch&q=FEDAC%20Horta%20escola%20Barcelona" target="_blank">查看公开图片来源</a></span></div>
+        <div class="direct-info-card"><b>活动照片/项目</b><span>宗教/价值观、项目制学习、课后活动需和学校确认。<br><a href="https://www.google.com/search?q=FEDAC%20Horta%20escola%20Barcelona%20activitats%20projectes%20noticias" target="_blank">查看活动/项目公开信息</a></span></div>
+        <div class="direct-info-card"><b>附近街景</b><span>Horta 核心。Horta 老社区氛围强，生活便利，家庭居住感较好；适合把租房和学校距离一起规划。<br><a href="https://www.google.com/maps/search/?api=1&query=c.%20Campoamor%2C%2049%2C%20Barcelona%2C%20Spain" target="_blank">打开完整地图</a></span></div>
+        <div class="direct-info-card"><b>签约/租房核验</b><span>看校门接送、坡度、公交地铁、晚间安全感，并把租房地址与学校通勤一起评估。</span></div>
+      </div>
     </div>
-    <p class="visual-note">官网可能有访问限制，建议结合 Google Maps 与现场参观。 为避免版权和盗链问题，本页不直接复制第三方照片；建议点击入口查看官方图片、活动照片和街景。</p>
+    <p class="visual-note">已直接加载学校定位地图和周边信息。因版权和盗链限制，本页不复制第三方照片；图片以学校官网、Google Maps 和公开搜索来源为准。</p>
   </div>
 
   <div class="cols">
@@ -346,15 +362,20 @@ ul{margin:0;padding-left:18px}
   </div>
   <p class="fit"><b>中国家庭适配判断：</b>Sant Andreu 方向最值得中国家庭优先沟通的学校之一。位置在 Sant Andreu、Navas、La Sagrera 之间，生活便利，公开信息较多。</p>
   <div class="lang-note"><b>主要沟通语言：</b>主要沟通语言建议按 Catalan（加泰罗尼亚语）+ Spanish（西班牙语）准备；官网有西语/加泰语信息基础，中国家庭可优先用西语沟通入学和费用。</div>
-  <div class="school-visual-gallery">
+  <div class="school-visual-gallery direct-gallery">
     <h3>图片与周边环境</h3>
-    <div class="visual-grid">
-      <a class="visual-card" href="https://escola-arrels.cat/galeria-dimatges/" target="_blank"><span class="emoji">🏫</span><b>校内/校园照片</b><span>打开学校官网或相册，查看教室、操场、校园空间。</span></a>
-      <a class="visual-card" href="https://escola-arrels.cat/blog/" target="_blank"><span class="emoji">🎒</span><b>活动照片/项目</b><span>查看学校活动、项目、夏令营或博客内容。</span></a>
-      <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=c.%20Cardenal%20Tedeschini%2C%2070%2C%20Barcelona%2C%20Spain" target="_blank"><span class="emoji">🛣️</span><b>附近街景</b><span>打开 Google Maps，查看校门、街道、坡度和接送环境。</span></a>
-      <a class="visual-card" href="https://www.google.com/search?tbm=isch&q=Arrels%20escola%20Barcelona" target="_blank"><span class="emoji">🖼️</span><b>公开图片搜索</b><span>查看公开图片结果，注意以官方/地图来源为准。</span></a>
+    <div class="direct-visual-layout">
+      <div class="direct-map-wrap">
+        <iframe class="direct-school-map" src="https://www.google.com/maps?q=c.%20Cardenal%20Tedeschini%2C%2070%2C%20Barcelona%2C%20Spain&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Arrels 学校周边地图"></iframe>
+      </div>
+      <div class="direct-info-grid">
+        <div class="direct-info-card"><b>校内/校园照片</b><span>适合重点看校门接送、周边主路、社区配套和活动空间。<br><a href="https://www.google.com/search?tbm=isch&q=Escola%20Arrels%20Barcelona%20Cardenal%20Tedeschini" target="_blank">查看公开图片来源</a></span></div>
+        <div class="direct-info-card"><b>活动照片/项目</b><span>作为 Sant Andreu 方向优先校，建议直接联系确认空位和语言适应支持。<br><a href="https://www.google.com/search?q=Escola%20Arrels%20Barcelona%20Cardenal%20Tedeschini%20activitats%20projectes%20noticias" target="_blank">查看活动/项目公开信息</a></span></div>
+        <div class="direct-info-card"><b>附近街景</b><span>Congrés i els Indians / Sant Andreu。靠近 Sant Andreu、Navas、Congrés i els Indians，交通和家庭租房选择较平衡。<br><a href="https://www.google.com/maps/search/?api=1&query=c.%20Cardenal%20Tedeschini%2C%2070%2C%20Barcelona%2C%20Spain" target="_blank">打开完整地图</a></span></div>
+        <div class="direct-info-card"><b>签约/租房核验</b><span>看校门接送、坡度、公交地铁、晚间安全感，并把租房地址与学校通勤一起评估。</span></div>
+      </div>
     </div>
-    <p class="visual-note">官网有图片/博客入口，信息公开度相对好。 为避免版权和盗链问题，本页不直接复制第三方照片；建议点击入口查看官方图片、活动照片和街景。</p>
+    <p class="visual-note">已直接加载学校定位地图和周边信息。因版权和盗链限制，本页不复制第三方照片；图片以学校官网、Google Maps 和公开搜索来源为准。</p>
   </div>
 
   <div class="cols">
@@ -394,15 +415,20 @@ ul{margin:0;padding-left:18px}
   </div>
   <p class="fit"><b>中国家庭适配判断：</b>适合预算敏感、希望稳定融入本地社区的家庭。它可以作为 Sant Andreu 北侧备选，但要比其他几所更重视实地看街段、学校书面回复和语言支持。</p>
   <div class="lang-note"><b>主要沟通语言：</b>主要按 Catalan（加泰罗尼亚语）+ Spanish（西班牙语）准备；由于公开信息较少，建议电话确认秘书处是否能用西语完整说明入学流程，不要默认有英语或中文沟通。</div>
-  <div class="school-visual-gallery">
+  <div class="school-visual-gallery direct-gallery">
     <h3>图片与周边环境</h3>
-    <div class="visual-grid">
-      <a class="visual-card" href="http://escolaesperanca.cat/" target="_blank"><span class="emoji">🏫</span><b>校内/校园照片</b><span>打开学校官网或相册，查看教室、操场、校园空间。</span></a>
-      <a class="visual-card" href="http://escolaesperanca.cat/" target="_blank"><span class="emoji">🎒</span><b>活动照片/项目</b><span>查看学校活动、项目、夏令营或博客内容。</span></a>
-      <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=c.%20Quito%2C%2025-37%2C%20Barcelona%2C%20Spain" target="_blank"><span class="emoji">🛣️</span><b>附近街景</b><span>打开 Google Maps，查看校门、街道、坡度和接送环境。</span></a>
-      <a class="visual-card" href="https://www.google.com/search?tbm=isch&q=FEP%20L%27Esperan%C3%A7a%20escola%20Barcelona" target="_blank"><span class="emoji">🖼️</span><b>公开图片搜索</b><span>查看公开图片结果，注意以官方/地图来源为准。</span></a>
+    <div class="direct-visual-layout">
+      <div class="direct-map-wrap">
+        <iframe class="direct-school-map" src="https://www.google.com/maps?q=c.%20Quito%2C%2025-37%2C%20Barcelona%2C%20Spain&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="FEP L'Esperança 学校周边地图"></iframe>
+      </div>
+      <div class="direct-info-grid">
+        <div class="direct-info-card"><b>校内/校园照片</b><span>公开图片较少，建议更多依赖地图、街景和到校实地观察。<br><a href="https://www.google.com/search?tbm=isch&q=FEP%20L'Esperan%C3%A7a%20escola%20Barcelona" target="_blank">查看公开图片来源</a></span></div>
+        <div class="direct-info-card"><b>活动照片/项目</b><span>适合作为预算和空位备选，但需更强核验学校支持和周边环境。<br><a href="https://www.google.com/search?q=FEP%20L'Esperan%C3%A7a%20escola%20Barcelona%20activitats%20projectes%20noticias" target="_blank">查看活动/项目公开信息</a></span></div>
+        <div class="direct-info-card"><b>附近街景</b><span>Sant Andreu 北侧 / Trinitat Vella 方向。位置更偏 Sant Andreu 北侧，街段差异较大；建议白天和傍晚各实地查看一次。<br><a href="https://www.google.com/maps/search/?api=1&query=c.%20Quito%2C%2025-37%2C%20Barcelona%2C%20Spain" target="_blank">打开完整地图</a></span></div>
+        <div class="direct-info-card"><b>签约/租房核验</b><span>看校门接送、坡度、公交地铁、晚间安全感，并把租房地址与学校通勤一起评估。</span></div>
+      </div>
     </div>
-    <p class="visual-note">公开图片信息较少，建议重点使用街景和实地观察。 为避免版权和盗链问题，本页不直接复制第三方照片；建议点击入口查看官方图片、活动照片和街景。</p>
+    <p class="visual-note">已直接加载学校定位地图和周边信息。因版权和盗链限制，本页不复制第三方照片；图片以学校官网、Google Maps 和公开搜索来源为准。</p>
   </div>
 
   <div class="cols">
