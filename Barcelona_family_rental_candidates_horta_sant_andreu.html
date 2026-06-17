@@ -245,7 +245,7 @@ const listingEvents = {
 function areaFromTitle(title){
   return title.includes('Sant Andreu') || title.includes('Navas') || title.includes('Sagrera') || title.includes('Bon Pastor') || title.includes('Trinitat') || title.includes('Congrés') || title.includes('Felip II') || title.includes('Torras') || title.includes('Martin Luther King') || title.includes('Cardenal Tedeschini') ? 'Sant Andreu' : 'Horta-Guinardó';
 }
-function cleanCell(text){ return (text || '').replace(/查看图片/街景/事件/g, '').replace(/查看/搜索/g, '').trim(); }
+function cleanCell(text){ return (text || '').replaceAll('查看图片/街景/事件', '').replaceAll('查看/搜索', '').trim(); }
 function openListingModal(encodedTitle, trigger){
   const title = decodeURIComponent(encodedTitle);
   const area = areaFromTitle(title);
