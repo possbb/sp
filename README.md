@@ -14,12 +14,14 @@ This folder is a static website package. Upload all files and folders in this di
 - `Barcelona_Beijing_haze_comparison_2021_2025.html`
 - `Barcelona_primary_school_district_guide.html`
 - `Barcelona_primary_school_map.html`
+- `Barcelona_sarria_primary_schools.html`
 
 ## Data files
 - `Barcelona_climate_monthly_1990_2026.xlsx`
 - `Beijing_climate_monthly_1990_2026.xlsx`
 - `Barcelona_Beijing_air_quality_2021_2025.xlsx`
 - `Barcelona_primary_schools_by_district_2025.xlsx`
+- `Sarrià-Sant_Gervasi_小学目录.xlsx`
 
 ## Deployment notes
 - Keep all files and folders in the same directory.

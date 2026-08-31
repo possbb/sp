@@ -1,0 +1,298 @@
+[
+  {
+    "name": "Escola Els Xiprers",
+    "code": "08042329",
+    "zone": "Z08",
+    "ownership": "Públic",
+    "email": "a8042329@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08042329&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Nabí",
+    "code": "08043851",
+    "zone": "Z08",
+    "ownership": "Públic",
+    "email": "a8043851@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08043851&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Dolors Monserdà-Santapau",
+    "code": "08001716",
+    "zone": "Z09",
+    "ownership": "Públic",
+    "email": "a8001716@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08001716&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Orlandai",
+    "code": "08043863",
+    "zone": "Z09",
+    "ownership": "Públic",
+    "email": "ceiporlandai@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08043863&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Tàber",
+    "code": "08043899",
+    "zone": "Z09",
+    "ownership": "Públic",
+    "email": "escola@taber.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08043899&formatoInforme=pdf"
+  },
+  {
+    "name": "Institut Escola Costa i Llobera",
+    "code": "08071226",
+    "zone": "Z09",
+    "ownership": "Públic",
+    "email": "costaillobera.informacio@costaillobera.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08071226&formatoInforme=pdf"
+  },
+  {
+    "name": "Betània-Patmos",
+    "code": "08004511",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "info@betania-patmos.org",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004511&formatoInforme=pdf"
+  },
+  {
+    "name": "Jesuïtes Sarrià - Sant Ignasi",
+    "code": "08004067",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "info.santignasi@fje.edu",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004067&formatoInforme=pdf"
+  },
+  {
+    "name": "Montserrat",
+    "code": "08004912",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "a8004912@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004912&formatoInforme=pdf"
+  },
+  {
+    "name": "Padre Damián Sagrados Corazones",
+    "code": "08040199",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "info@padredamiansscc.net",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08040199&formatoInforme=pdf"
+  },
+  {
+    "name": "Peter Pan",
+    "code": "08004869",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "escola@peterpan.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004869&formatoInforme=pdf"
+  },
+  {
+    "name": "Reial Monestir de Santa Isabel",
+    "code": "08004705",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "info@rmsantaisabel.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004705&formatoInforme=pdf"
+  },
+  {
+    "name": "Sagrado Corazón",
+    "code": "08004122",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "secretaria.a@corazonistas.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004122&formatoInforme=pdf"
+  },
+  {
+    "name": "Sagrat Cor-Sarrià",
+    "code": "08004717",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "scs@sagratcorsarria.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004717&formatoInforme=pdf"
+  },
+  {
+    "name": "Sant Marc de Sarrià",
+    "code": "08004031",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "cv@santmarc.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004031&formatoInforme=pdf"
+  },
+  {
+    "name": "Santa Dorotea",
+    "code": "08004778",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "sarria@salesianes.org",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004778&formatoInforme=pdf"
+  },
+  {
+    "name": "Santa Teresa - Ganduxer",
+    "code": "08004201",
+    "zone": "Z09",
+    "ownership": "Concertat",
+    "email": "a8004201@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004201&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Poeta Foix",
+    "code": "08001731",
+    "zone": "Z10",
+    "ownership": "Públic",
+    "email": "ceippoetafoix@xtec.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08001731&formatoInforme=pdf"
+  },
+  {
+    "name": "Institut Escola Projecte",
+    "code": "08077952",
+    "zone": "Z10",
+    "ownership": "Públic",
+    "email": "projecte@escolaprojecte.cat",
+    "source": "https://escolaprojecte.org/contacte/"
+  },
+  {
+    "name": "Augusta",
+    "code": "08057084",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "augusta@escola-augusta.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08057084&formatoInforme=pdf"
+  },
+  {
+    "name": "Canigó",
+    "code": "08003993",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "canigo@fomento.edu",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08003993&formatoInforme=pdf"
+  },
+  {
+    "name": "Decroly",
+    "code": "08004316",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "escola@decroly.org",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004316&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Pia Balmes",
+    "code": "08011941",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "balmes@escolapia.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08011941&formatoInforme=pdf"
+  },
+  {
+    "name": "Escola Pia de Sarrià-Calassanç",
+    "code": "08004286",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "info@piasarriafp.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004286&formatoInforme=pdf"
+  },
+  {
+    "name": "Frederic Mistral-Tècnic Eulàlia",
+    "code": "08012027",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "fmistralt@fundaciocollserola.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08012027&formatoInforme=pdf"
+  },
+  {
+    "name": "Galí Bellesguard",
+    "code": "08004195",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "gbellesguard@galibellesguard.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004195&formatoInforme=pdf"
+  },
+  {
+    "name": "Jesuïtes Sant Gervasi - Infant Jesús",
+    "code": "08004626",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "info.infantjesus@fje.edu",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004626&formatoInforme=pdf"
+  },
+  {
+    "name": "John Talabot",
+    "code": "08032099",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "info@johntalabot.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08032099&formatoInforme=pdf"
+  },
+  {
+    "name": "La Salle Bonanova",
+    "code": "08003907",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "sallebonanova@lasalle.cat",
+    "source": "lookup failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "name": "L'Horitzó",
+    "code": "08039987",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "info@escola-horitzo.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08039987&formatoInforme=pdf"
+  },
+  {
+    "name": "Lleó XIII",
+    "code": "08005412",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "info@lleoxiii.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08005412&formatoInforme=pdf"
+  },
+  {
+    "name": "Lys",
+    "code": "08004641",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "escolalys@escolalys.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004641&formatoInforme=pdf"
+  },
+  {
+    "name": "Madres Concepcionistas de la Enseñanza",
+    "code": "08004900",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "mmccbcn@concepcionistas.es",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004900&formatoInforme=pdf"
+  },
+  {
+    "name": "Nausica",
+    "code": "08004471",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "escolanausica@escolanausica.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004471&formatoInforme=pdf"
+  },
+  {
+    "name": "Nostra Senyora de Lurdes",
+    "code": "08004328",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "escola.lurdes@escolalurdes.cat",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004328&formatoInforme=pdf"
+  },
+  {
+    "name": "Sil",
+    "code": "08004080",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "sil@colegiosil.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004080&formatoInforme=pdf"
+  },
+  {
+    "name": "Jesús María Sant Gervasi",
+    "code": "08004742",
+    "zone": "Z10",
+    "ownership": "Concertat",
+    "email": "secretaria@edu.jmsanger.com",
+    "source": "https://www.buscocolegio.com/Colegio/generarInforme.action?codigo=08004742&formatoInforme=pdf"
+  }
+]
