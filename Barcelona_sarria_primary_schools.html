@@ -10,9 +10,10 @@
     .shell{max-width:1360px;margin:auto;padding:28px 22px 64px}.back{display:inline-block;margin-bottom:16px;color:#1d5d92;font-size:14px;text-decoration:none}.back:hover{text-decoration:underline}
     header{padding:30px 32px;background:#185884;color:#fff;border-radius:8px;box-shadow:0 12px 30px rgba(20,67,104,.17)}h1{margin:0;font-size:32px;letter-spacing:0}.lead{max-width:900px;margin:12px 0 0;line-height:1.7;color:#e6f2f9}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.meta span{padding:6px 10px;border:1px solid rgba(255,255,255,.45);font-size:13px}
     .controls{display:grid;grid-template-columns:minmax(240px,1fr) 200px auto;gap:10px;margin:24px 0 12px}.controls input,.controls select{width:100%;height:42px;padding:0 12px;border:1px solid #bccbd8;background:#fff;color:var(--ink);font:inherit}.download{display:inline-flex;align-items:center;justify-content:center;height:42px;padding:0 14px;background:#1769aa;color:#fff;text-decoration:none;font-weight:700;font-size:14px}.download:hover{background:#0f568e}
-    .summary{margin:0 0 12px;color:var(--muted);font-size:14px}.table-box{overflow:auto;background:var(--paper);border:1px solid var(--line);box-shadow:0 8px 24px rgba(16,35,63,.06)}table{width:100%;min-width:1100px;border-collapse:collapse;font-size:14px}th{position:sticky;top:0;background:#185884;color:#fff;text-align:left;padding:12px 11px;z-index:1;white-space:nowrap}td{padding:11px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55}tbody tr:hover{background:#f7fbfe}.zone{color:#40566e;font-size:13px}.email{color:#135b93;word-break:break-word}.tag{display:inline-block;padding:4px 7px;font-size:12px;font-weight:700;white-space:nowrap}.public{background:var(--green);color:var(--green-ink)}.concerted{background:var(--yellow);color:var(--yellow-ink)}.private{background:var(--peach);color:var(--peach-ink)}
+    .summary{margin:0 0 12px;color:var(--muted);font-size:14px}.mail-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}.tool-button{height:38px;padding:0 12px;border:1px solid #a7bdcf;background:#fff;color:#174b73;font:inherit;font-weight:700;cursor:pointer}.tool-button:hover{background:#e9f3fb}.tool-button.primary{background:#1769aa;border-color:#1769aa;color:#fff}.tool-button.primary:hover{background:#0f568e}.selected-count{font-size:13px;color:var(--muted)}.table-box{overflow:auto;background:var(--paper);border:1px solid var(--line);box-shadow:0 8px 24px rgba(16,35,63,.06)}table{width:100%;min-width:1180px;border-collapse:collapse;font-size:14px}th{position:sticky;top:0;background:#185884;color:#fff;text-align:left;padding:12px 11px;z-index:1;white-space:nowrap}td{padding:11px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55}tbody tr:hover{background:#f7fbfe}.zone{color:#40566e;font-size:13px}.email{color:#135b93;word-break:break-word}.tag{display:inline-block;padding:4px 7px;font-size:12px;font-weight:700;white-space:nowrap}.public{background:var(--green);color:var(--green-ink)}.concerted{background:var(--yellow);color:var(--yellow-ink)}.private{background:var(--peach);color:var(--peach-ink)}.pick{width:18px;height:18px;accent-color:#1769aa;cursor:pointer}
+    .mail-panel{margin-top:18px;padding:20px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(16,35,63,.06)}.mail-panel[hidden]{display:none}.mail-panel h2{margin:0 0 8px;font-size:20px}.mail-panel p{margin:0 0 15px;color:var(--muted);font-size:13px;line-height:1.65}.mail-grid{display:grid;grid-template-columns:1fr;gap:11px}.mail-grid label{display:grid;gap:6px;font-size:14px;font-weight:700}.mail-grid input,.mail-grid textarea{width:100%;border:1px solid #bccbd8;padding:10px;font:inherit;font-weight:400;color:var(--ink);background:#fff}.mail-grid textarea{min-height:230px;resize:vertical;line-height:1.6}.mail-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}.mail-status{font-size:13px;color:var(--muted)}
     .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.note{padding:17px;background:#fff;border:1px solid var(--line)}.note h2{margin:0 0 8px;font-size:16px}.note p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.source{margin-top:20px;color:var(--muted);font-size:12px;line-height:1.65}.source a{color:#135b93}
-    @media(max-width:760px){.shell{padding:18px 12px 42px}header{padding:24px 20px}h1{font-size:25px}.controls{grid-template-columns:1fr}.notes{grid-template-columns:1fr}.download{width:100%}}
+    @media(max-width:760px){.shell{padding:18px 12px 42px}header{padding:24px 20px}h1{font-size:25px}.controls{grid-template-columns:1fr}.notes{grid-template-columns:1fr}.download{width:100%}.tool-button{width:100%}}
   </style>
 </head>
 <body>
@@ -31,12 +32,39 @@
         <a class="download" href="Sarrià-Sant_Gervasi_小学目录.xlsx">下载 Excel</a>
       </div>
       <p class="summary" id="summary" aria-live="polite"></p>
+      <div class="mail-tools">
+        <button class="tool-button" id="selectVisible" type="button">勾选当前筛选结果</button>
+        <button class="tool-button" id="clearSelected" type="button">清空勾选</button>
+        <button class="tool-button primary" id="openComposer" type="button">批量邮件</button>
+        <span class="selected-count" id="selectedCount" aria-live="polite">已选择 0 所</span>
+      </div>
       <div class="table-box">
         <table>
-          <thead><tr><th>招生片区</th><th>学校名称</th><th>性质</th><th>学校代码</th><th>公开邮箱</th><th>学校情况</th></tr></thead>
+          <thead><tr><th>选择</th><th>招生片区</th><th>学校名称</th><th>性质</th><th>学校代码</th><th>公开邮箱</th><th>学校情况</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>
+      <section class="mail-panel" id="mailPanel" hidden aria-label="批量邮件编辑器">
+        <h2>批量邮件</h2>
+        <p>收件人将放入密送（BCC）。每次最多生成 12 所学校的邮件草稿；超过时请按批次发送。请在发送前核对收件人、孩子信息和附件。</p>
+        <div class="mail-grid">
+          <label>邮件主题<input id="mailSubject" value="Consulta sobre plaza de Primaria - septiembre de 2026"></label>
+          <label>邮件正文<textarea id="mailBody">Estimado equipo de admisiones:
+
+Somos una familia de tres personas que llegará a Barcelona el 23 de septiembre de 2026. Estamos buscando una plaza de Educación Primaria para nuestro hijo/a [nombre], de [edad] años.
+
+Nos gustaría conocer la disponibilidad de plaza, el proceso de admisión, los documentos necesarios, los idiomas de enseñanza y los costes aproximados para el curso 2026-2027.
+
+Estaremos en Barcelona y podemos visitar el colegio durante nuestra estancia.
+
+Muchas gracias por su ayuda.
+
+Atentamente,
+[nombre de los padres]
+[teléfono]</textarea></label>
+        </div>
+        <div class="mail-actions"><button class="tool-button primary" id="sendBatch" type="button">在邮箱客户端中打开草稿</button><span class="mail-status" id="mailStatus" aria-live="polite"></span></div>
+      </section>
     </section>
 
     <section class="notes">
@@ -57,11 +85,18 @@
     ];
     const escape=value=>String(value).replace(/[&<>'"]/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[char]));
     const labelClass=ownership=>ownership==="公立"?"public":ownership.includes("协约")?"concerted":"private";
-    let schools=[];
-    function render(){const query=document.querySelector("#query").value.trim().toLowerCase();const type=document.querySelector("#type").value;const shown=schools.filter(s=>{const text=[s.zone,s.name,s.ownership,s.code,s.email,s.description].join(" ").toLowerCase();return (!query||text.includes(query))&&(type==="all"||s.ownership===type)});document.querySelector("#summary").textContent=`显示 ${shown.length} / ${schools.length} 所学校`;
-      document.querySelector("#rows").innerHTML=shown.map(s=>`<tr><td class="zone">${escape(s.zone)}</td><td><strong>${escape(s.name)}</strong></td><td><span class="tag ${labelClass(s.ownership)}">${escape(s.ownership)}</span></td><td>${escape(s.code)}</td><td><a class="email" href="mailto:${escape(s.email)}">${escape(s.email)}</a></td><td>${escape(s.description)}</td></tr>`).join("");}
+    let schools=[];const selectedEmails=new Set();
+    function visibleSchools(){const query=document.querySelector("#query").value.trim().toLowerCase();const type=document.querySelector("#type").value;return schools.filter(s=>{const text=[s.zone,s.name,s.ownership,s.code,s.email,s.description].join(" ").toLowerCase();return (!query||text.includes(query))&&(type==="all"||s.ownership===type)});}
+    function updateSelectedCount(){document.querySelector("#selectedCount").textContent=`已选择 ${selectedEmails.size} 所`;}
+    function render(){const shown=visibleSchools();document.querySelector("#summary").textContent=`显示 ${shown.length} / ${schools.length} 所学校`;
+      document.querySelector("#rows").innerHTML=shown.map(s=>`<tr><td><input class="pick" type="checkbox" data-email="${escape(s.email)}" aria-label="选择 ${escape(s.name)}" ${selectedEmails.has(s.email)?"checked":""}></td><td class="zone">${escape(s.zone)}</td><td><strong>${escape(s.name)}</strong></td><td><span class="tag ${labelClass(s.ownership)}">${escape(s.ownership)}</span></td><td>${escape(s.code)}</td><td><a class="email" href="mailto:${escape(s.email)}">${escape(s.email)}</a></td><td>${escape(s.description)}</td></tr>`).join("");
+      document.querySelectorAll(".pick").forEach(input=>input.addEventListener("change",event=>{const email=event.target.dataset.email;if(event.target.checked)selectedEmails.add(email);else selectedEmails.delete(email);updateSelectedCount();}));updateSelectedCount();}
     fetch("sarria_primary_schools.json").then(response=>{if(!response.ok)throw new Error("数据文件无法读取");return response.json()}).then(data=>{schools=[...data.map(s=>({name:s.name,zone:zones[s.zone],ownership:s.ownership==="Públic"?"公立":"私立协约校（半公办）",code:s.code,email:s.email,description:s.ownership==="Públic"?"公立；本地加泰罗尼亚课程，I3/小学通过官方预注册。":"私立协约；I3/小学纳入官方预注册，餐费、活动及补充服务可能另收费。"})),...privateSchools];render()}).catch(()=>{document.querySelector("#summary").textContent="学校数据加载失败，请下载 Excel 查看完整目录。"});
     document.querySelector("#query").addEventListener("input",render);document.querySelector("#type").addEventListener("change",render);
+    document.querySelector("#selectVisible").addEventListener("click",()=>{visibleSchools().forEach(s=>selectedEmails.add(s.email));render();});
+    document.querySelector("#clearSelected").addEventListener("click",()=>{selectedEmails.clear();render();document.querySelector("#mailStatus").textContent="";});
+    document.querySelector("#openComposer").addEventListener("click",()=>{const panel=document.querySelector("#mailPanel");panel.hidden=false;panel.scrollIntoView({behavior:"smooth",block:"start"});document.querySelector("#mailStatus").textContent=selectedEmails.size?`本批将使用前 ${Math.min(selectedEmails.size,12)} 个已选邮箱。`:"请先勾选至少一所学校。";});
+    document.querySelector("#sendBatch").addEventListener("click",()=>{const emails=[...selectedEmails].slice(0,12);const status=document.querySelector("#mailStatus");if(!emails.length){status.textContent="请先勾选至少一所学校。";return;}const subject=document.querySelector("#mailSubject").value.trim();const body=document.querySelector("#mailBody").value.trim();const mailto=`mailto:?bcc=${encodeURIComponent(emails.join(","))}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;if(mailto.length>1900){status.textContent="邮件内容过长，请缩短正文后再试。";return;}status.textContent=`正在打开含 ${emails.length} 个密送收件人的邮件草稿。`;window.location.href=mailto;});
   </script>
 </body>
 </html>
