@@ -46,7 +46,7 @@
       </div>
       <section class="mail-panel" id="mailPanel" hidden aria-label="批量邮件编辑器">
         <h2>批量邮件</h2>
-        <p>收件人将放入密送（BCC）。每次最多生成 12 所学校的邮件草稿；超过时请按批次发送。请在发送前核对收件人、孩子信息和附件。</p>
+        <p>收件人将放入密送（BCC）。每次最多生成 50 所学校的邮件草稿；超过时请按批次发送。请在发送前核对收件人、孩子信息和附件。</p>
         <div class="mail-grid">
           <label>邮件主题<input id="mailSubject" value="Consulta sobre plaza de Primaria - septiembre de 2026"></label>
           <label>邮件正文<textarea id="mailBody">Estimado equipo de admisiones:
@@ -95,8 +95,8 @@ Atentamente,
     document.querySelector("#query").addEventListener("input",render);document.querySelector("#type").addEventListener("change",render);
     document.querySelector("#selectVisible").addEventListener("click",()=>{visibleSchools().forEach(s=>selectedEmails.add(s.email));render();});
     document.querySelector("#clearSelected").addEventListener("click",()=>{selectedEmails.clear();render();document.querySelector("#mailStatus").textContent="";});
-    document.querySelector("#openComposer").addEventListener("click",()=>{const panel=document.querySelector("#mailPanel");panel.hidden=false;panel.scrollIntoView({behavior:"smooth",block:"start"});document.querySelector("#mailStatus").textContent=selectedEmails.size?`本批将使用前 ${Math.min(selectedEmails.size,12)} 个已选邮箱。`:"请先勾选至少一所学校。";});
-    document.querySelector("#sendBatch").addEventListener("click",()=>{const emails=[...selectedEmails].slice(0,12);const status=document.querySelector("#mailStatus");if(!emails.length){status.textContent="请先勾选至少一所学校。";return;}const subject=document.querySelector("#mailSubject").value.trim();const body=document.querySelector("#mailBody").value.trim();const mailto=`mailto:?bcc=${encodeURIComponent(emails.join(","))}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;if(mailto.length>1900){status.textContent="邮件内容过长，请缩短正文后再试。";return;}status.textContent=`正在打开含 ${emails.length} 个密送收件人的邮件草稿。`;window.location.href=mailto;});
+    document.querySelector("#openComposer").addEventListener("click",()=>{const panel=document.querySelector("#mailPanel");panel.hidden=false;panel.scrollIntoView({behavior:"smooth",block:"start"});document.querySelector("#mailStatus").textContent=selectedEmails.size?`本批将使用前 ${Math.min(selectedEmails.size,50)} 个已选邮箱。`:"请先勾选至少一所学校。";});
+    document.querySelector("#sendBatch").addEventListener("click",()=>{const emails=[...selectedEmails].slice(0,50);const status=document.querySelector("#mailStatus");if(!emails.length){status.textContent="请先勾选至少一所学校。";return;}const subject=document.querySelector("#mailSubject").value.trim();const body=document.querySelector("#mailBody").value.trim();const mailto=`mailto:?bcc=${encodeURIComponent(emails.join(","))}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;if(mailto.length>7500){status.textContent="邮件内容或收件人过长，请缩短正文后再试。";return;}status.textContent=`正在打开含 ${emails.length} 个密送收件人的邮件草稿。`;window.location.href=mailto;});
   </script>
 </body>
 </html>
