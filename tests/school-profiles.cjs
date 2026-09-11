@@ -45,8 +45,34 @@ for (const name of names) {
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(new URL('Barcelona_sarria_primary_schools.html?v=profiles-' + Date.now(), base).href);
     await page.waitForFunction(() => document.querySelectorAll('.school-profile details').length === 42);
-    assert.equal(await page.locator('thead th').count(), 10);
-    assert.equal(await page.locator('#rows td').count(), 420);
+    assert.equal(await page.locator('thead th').count(), 11);
+    assert.equal(await page.locator('#rows td').count(), 462);
+    assert.equal(await page.locator('.school-note').count(), 42);
+    const firstNote = page.locator('.school-note').first();
+    const noteKey = await firstNote.getAttribute('data-school-note');
+    const noteName = await page.locator('#rows tr td:nth-child(3)').first().innerText();
+    const noteText = '已联系，等待回复\n</textarea><img src=x onerror="window.noteInjection=true">';
+    await firstNote.fill(noteText);
+    assert.equal(await page.evaluate(key => localStorage.getItem(key), noteKey), noteText);
+    await page.click('#sortDistance');
+    await page.fill('#query', noteName);
+    assert.equal(await page.locator('.school-note').inputValue(), noteText);
+    assert.equal(await page.evaluate(() => window.noteInjection), undefined);
+    await page.reload();
+    await page.waitForFunction(() => document.querySelectorAll('.school-note').length === 42);
+    await page.fill('#query', noteName);
+    assert.equal(await page.locator('.school-note').inputValue(), noteText);
+    await page.evaluate(() => { window.originalNoteSetItem = Storage.prototype.setItem; Storage.prototype.setItem = () => { throw new Error('Storage unavailable'); }; });
+    await page.locator('.school-note').fill('未持久化的草稿');
+    assert.match(await page.locator('.note-status').innerText(), /保存失败/);
+    await page.click('#sortDistance');
+    assert.equal(await page.locator('.school-note').inputValue(), '未持久化的草稿');
+    await page.evaluate(() => { Storage.prototype.setItem = window.originalNoteSetItem; delete window.originalNoteSetItem; });
+    await page.locator('.school-note').fill('');
+    assert.equal(await page.evaluate(key => localStorage.getItem(key), noteKey), null);
+    await page.reload();
+    await page.waitForFunction(() => document.querySelectorAll('.school-note').length === 42);
+    assert((await page.locator('.school-note').evaluateAll(inputs => inputs.map(input => input.value))).every(value => value === ''));
     assert.equal(await page.locator('.school-profile dt').count(), 252);
     assert.equal(await page.locator('.fees').count(), 42);
     assert.equal(await page.locator('.distance').count(), 42);
@@ -93,7 +119,7 @@ for (const name of names) {
     fs.mkdirSync(output, { recursive: true });
     for (const [label, width, height] of [['desktop',1440,1000], ['mobile',390,844], ['small',320,740]]) {
       await page.setViewportSize({ width, height });
-      await page.evaluate(() => { const table = document.querySelector('.table-box'); table.scrollLeft = table.scrollWidth; table.scrollIntoView({block:'start'}); });
+      await page.evaluate(() => { document.querySelector('.school-profile').scrollIntoView({block:'nearest',inline:'end'}); document.querySelector('.table-box').scrollIntoView({block:'start'}); });
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), label);
       assert(await page.locator('.school-profile').evaluate(el => el.scrollWidth <= el.clientWidth), label);
       assert(await page.locator('.school-profile').evaluate(el => {
@@ -102,6 +128,15 @@ for (const name of names) {
         return cell.left >= box.left && cell.right <= box.right;
       }), label + ' full profile column visible at right edge');
       await page.screenshot({ path: path.join(output, label + '.png') });
+      await page.locator('.school-note').fill('等待学校确认十月插班名额\n需询问语言支持。');
+      await page.evaluate(() => { const table = document.querySelector('.table-box'); table.scrollLeft = table.scrollWidth; table.scrollIntoView({block:'start'}); });
+      assert(await page.locator('.school-note').evaluate(el => {
+        const input = el.getBoundingClientRect();
+        const box = document.querySelector('.table-box').getBoundingClientRect();
+        return input.left >= box.left && input.right <= box.right;
+      }), label + ' note fully visible');
+      await page.screenshot({ path: path.join(output, label + '-notes.png') });
+      await page.locator('.school-note').fill('');
     }
     await page.setViewportSize({width:1440,height:1000});
     await page.fill('#query', '');
@@ -121,7 +156,7 @@ for (const name of names) {
     await page.click('#clearSelected');
     assert.match(await page.locator('#selectedCount').innerText(), /0/);
     assert.deepEqual(errors, []);
-    console.log('PASS: default ascending, toggle/keyboard/filtered sorting, unknown distances last, selection retained; 42 records, 10 columns, details, mail and 1440/390/320px layouts.');
+    console.log('PASS: notes persist across reload/sort/filter, clear, escape HTML and report storage errors; sorting, 42 records, 11 columns, details, mail and 1440/390/320px layouts.');
   } finally {
     if (browser) await browser.close();
     if (server) await new Promise(resolve => server.close(resolve));
