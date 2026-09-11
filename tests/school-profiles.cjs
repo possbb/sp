@@ -76,6 +76,16 @@ for (const name of names) {
     assert.equal(await page.locator('.school-profile dt').count(), 252);
     assert.equal(await page.locator('.fees').count(), 42);
     assert.equal(await page.locator('.distance').count(), 42);
+    fs.mkdirSync(output, {recursive:true});
+    for (const width of [1440,1920]) {
+      await page.setViewportSize({width,height:1000});
+      await page.evaluate(() => {const box=document.querySelector('.table-box');box.scrollLeft=0;box.scrollIntoView({block:'start'});});
+      assert.equal(await page.locator('table').evaluate(el => getComputedStyle(el).minWidth), '1460px');
+      assert(await page.locator('th,td').evaluateAll(cells => cells.every(el => el.scrollWidth <= el.clientWidth + 1)));
+      if(width===1920) assert(await page.locator('.table-box').evaluate(el => el.scrollWidth <= el.clientWidth+1));
+      await page.screenshot({path:path.join(output,`compact-${width}.png`)});
+    }
+    await page.setViewportSize({width:1440,height:1000});
     const distanceData = JSON.parse(fs.readFileSync(path.join(root, 'sarria_school_distances.json'), 'utf8'));
     const distances = new Map(distanceData.schools.map(s => [s.name, s.distanceKm]));
     async function checkOrder(ascending) {
