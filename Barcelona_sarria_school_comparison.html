@@ -9,6 +9,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;line-height:1.65}.shell{padding:24px 16px 40px}a{color:#135b93}nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px}header{padding:26px 30px;background:#185884;color:white;border-radius:8px}h1{font-size:28px;margin:0 0 8px}header p{margin:8px 0;max-width:1100px}header a{color:white}.meta{font-size:14px;color:#e6f2f9}.notice{padding:14px 0;color:var(--muted);max-width:1300px}.notice p{margin:4px 0}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:12px}label{display:grid;gap:4px;font-size:14px}input,select,button{font:inherit;padding:9px 12px;border:1px solid #a7bdcf;background:white;color:var(--ink);border-radius:4px}input{width:320px;max-width:100%}button{cursor:pointer}button:hover{background:#e9f3fb}:focus-visible{outline:3px solid #dc8619;outline-offset:2px}#status{font-size:14px;color:var(--muted);margin:8px 0}.table-box{overflow:auto;max-height:76vh;min-height:350px;background:white;border:1px solid var(--line);position:relative;overscroll-behavior-x:contain}table{border-collapse:separate;border-spacing:0;width:max-content;table-layout:fixed;font-size:14px}caption{text-align:left;background:#e9f3fb;padding:10px 14px;caption-side:bottom}th,td{width:260px;min-width:260px;max-width:260px;white-space:normal;overflow-wrap:anywhere;padding:14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top}thead th{position:sticky;top:0;background:#185884;color:white;z-index:3;text-align:left}thead .dimension{display:block;border-top:1px solid #7098b3;margin-top:10px;padding-top:8px}.top-choice{display:block;font-size:15px;color:#fff1bd}.basis{display:block;font-size:12px;font-weight:400;color:#e7f0f7;margin-top:5px}thead th:first-child{z-index:5;left:0}tbody th{position:sticky;left:0;background:#f1f6fa;z-index:2;text-align:left}tbody th a{display:block;font-size:12px;font-weight:400;margin-top:7px}tbody tr:hover td{background:#f5faff}tbody th .school-name{font-size:16px}tbody td:nth-child(19){width:340px;min-width:340px;max-width:340px}.shared th{background:#e3edf5}.shared td{background:#f3f7fa}.muted{color:var(--muted)}.empty{padding:22px;font-weight:600}.footer{font-size:13px;color:var(--muted);margin-top:16px}.hint{font-size:13px;color:var(--muted);margin:8px 0}#top-scroll{overflow-x:auto;overflow-y:hidden;height:20px;border:1px solid var(--line);border-bottom:0;background:white}#top-track{height:1px}
 @media(max-width:600px){.shell{padding:14px 10px 30px}header{padding:20px 16px}h1{font-size:23px}.controls{display:grid;grid-template-columns:1fr}input,select{width:100%;min-width:0}.table-box{max-height:70vh}th,td{width:240px;min-width:240px;max-width:240px}thead th:first-child,tbody th{width:150px;min-width:150px;max-width:150px}tbody th .school-name{font-size:14px}}
 .distance-warning{display:block;margin:10px 0;padding:6px 8px;border:1px solid #d89535;border-radius:4px;background:#fff0d5;color:#743d00;font-size:12px;font-weight:700}
+.column-toggle{display:block;margin-top:10px;font-size:12px;padding:6px 8px}.table-box table .is-collapsed{width:76px;min-width:76px;max-width:76px;padding:10px 6px}.is-collapsed .top-choice,.is-collapsed .basis,.is-collapsed .cell-content{display:none}.is-collapsed .dimension{font-size:12px;border:0;margin:0;padding:0}.sync-panel{padding:12px;background:#e9f3fb;border:1px solid var(--line);margin-bottom:12px}.sync-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:end}.sync-panel p{margin:6px 0}.sync-panel input{max-width:100%}button:disabled{cursor:default;opacity:.55}
 @media print{nav,.controls,.hint,#top-scroll{display:none}.table-box{max-height:none;overflow:visible}th,td{position:static!important}body{background:white}}
 </style>
 </head>
@@ -33,6 +34,11 @@
 <button type="button" id="reset">重置筛选与位置</button>
 </div>
 <p id="status" role="status" aria-live="polite"></p>
+<section class="sync-panel" aria-label="折叠记录线上保存">
+<div class="sync-actions"><button type="button" id="expand-columns">展开全部列</button><button type="button" id="save-columns" disabled>保存到线上</button><button type="button" id="reload-columns">读取线上记录</button></div>
+<p id="column-sync-status" role="status" aria-live="polite">正在读取线上折叠记录…</p>
+<details><summary>线上保存授权与说明</summary><p>折叠记录公开，所有设备和访问者共用；点击“保存到线上”才会发布。令牌只在当前页面内存使用，不写入记录或浏览器存储。仅修改本表折叠配置，不影响学校优先级和备注。</p><label for="column-token">GitHub 写入令牌<input id="column-token" type="password" autocomplete="off" spellcheck="false" placeholder="仅用于本次保存，请勿分享"></label><button type="button" id="clear-column-token">清除令牌</button><p><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">创建细粒度令牌</a>：仅选择 possbb/sp，Contents 权限为 Read and write，并设置较短有效期。令牌具有仓库内容写入权限，请妥善保管。</p></details>
+</section>
 <p class="hint" id="scroll-help">大表可左右滚动；顶部滚动条与表格同步。表头及学校名称固定。也可用“快速跳到比较列”定位；点击表格区域后可用方向键滚动。</p>
 <div id="top-scroll" aria-hidden="true"><div id="top-track"></div></div>
 <div class="table-box" id="table-box" tabindex="0" role="region" aria-label="21所小学22维度对比表，可横向和纵向滚动" aria-describedby="scroll-help">
@@ -43,6 +49,7 @@
 <noscript>此对比表需要启用 JavaScript。请启用后刷新；也可返回小学目录查看学校资料。</noscript>
 </main>
 <script src="sarria_school_comparison_data.js"></script>
+<script src="sarria_school_comparison_columns.js"></script>
 <script>
 (()=>{
 "use strict";
@@ -50,12 +57,14 @@ const {columns,defaults,schools}=comparisonData;
 const head=document.getElementById("head"), rows=document.getElementById("rows");
 const box=document.getElementById("table-box"), top=document.getElementById("top-scroll");
 const search=document.getElementById("search"),scope=document.getElementById("scope"), dimension=document.getElementById("dimension");
+const columnState=createComparisonColumns(columns,()=>{applyColumnState();syncWidth();});
 columns.forEach(([key,title,choice,basis],i)=>{
  const th=document.createElement("th");th.scope="col";th.id="col-"+key;
  const best=document.createElement("span");best.className="top-choice";best.textContent="优先考察："+choice;
  const note=document.createElement("span");note.className="basis";note.textContent=basis;
  const label=document.createElement("span");label.className="dimension";label.textContent=title;
- th.append(best,note,label);head.append(th);
+ const toggle=document.createElement("button");toggle.type="button";toggle.className="column-toggle";toggle.addEventListener("click",()=>columnState.toggle(key));
+ th.append(best,note,label,toggle);head.append(th);
  const option=document.createElement("option");option.value=i;option.textContent=title;dimension.append(option);
 });
 const common={
@@ -89,23 +98,30 @@ function addRow(s,shared=false){
    if(s.distanceKm){const badge=document.createElement("span");badge.className="distance-warning";badge.textContent="较远·需评估接送｜直线约 "+s.distanceKm.toFixed(1)+" km（估算）";cell.append(badge);}
    for(const [title,url] of s.sources||[]){const a=document.createElement("a");a.textContent=title+" ↗";a.href=url;a.target="_blank";a.rel="noopener noreferrer";cell.append(a);}
   }else cell.textContent=s[key]||defaults[key]||"待确认。";
-  tr.append(cell);
+  const content=document.createElement("div");content.className="cell-content";content.append(...cell.childNodes);cell.append(content);tr.append(cell);
  });rows.append(tr);
 }
 function syncWidth(){document.getElementById("top-track").style.width=document.getElementById("comparison").scrollWidth+"px";}
+function applyColumnState(){
+ columns.forEach(([key,title],i)=>{
+  const collapsed=columnState.isCollapsed(key),th=head.children[i];if(!th)return;
+  th.classList.toggle("is-collapsed",collapsed);const button=th.querySelector("button");button.textContent=collapsed?"展开":"折叠";button.setAttribute("aria-expanded",String(!collapsed));button.setAttribute("aria-label",(collapsed?"展开":"折叠")+title+"列");button.disabled=columnState.isBusy();
+  for(const tr of rows.children)tr.children[i].classList.toggle("is-collapsed",collapsed);
+ });
+}
 function render(){
  const q=search.value.trim().toLocaleLowerCase();
  const filtered=schools.filter((s,i)=>(scope.value!=="priority"||i<4)&&(scope.value!=="added"||s.distanceKm)&&JSON.stringify({...defaults,...s}).toLocaleLowerCase().includes(q));
  rows.replaceChildren();filtered.forEach(s=>addRow(s));addRow(common,true);
  document.getElementById("status").textContent="显示 "+filtered.length+" / "+schools.length+" 所学校 · 22 个维度 · 最后一行是全校通用确认清单";
- document.getElementById("empty").hidden=filtered.length>0;syncWidth();
+ document.getElementById("empty").hidden=filtered.length>0;applyColumnState();syncWidth();
 }
 search.addEventListener("input",render);scope.addEventListener("change",render);
 dimension.addEventListener("change",()=>{const th=head.children[Number(dimension.value)];box.scrollLeft=Math.max(0,th.offsetLeft-head.children[0].offsetWidth);});
 document.getElementById("reset").addEventListener("click",()=>{search.value="";scope.value="all";dimension.value="0";render();box.scrollLeft=0;box.scrollTop=0;});
 top.addEventListener("scroll",()=>{if(Math.abs(box.scrollLeft-top.scrollLeft)>1)box.scrollLeft=top.scrollLeft;});
 box.addEventListener("scroll",()=>{if(Math.abs(top.scrollLeft-box.scrollLeft)>1)top.scrollLeft=box.scrollLeft;});
-new ResizeObserver(syncWidth).observe(box);render();
+new ResizeObserver(syncWidth).observe(box);render();columnState.load();
 })();
 </script>
 </body>
