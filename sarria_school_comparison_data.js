@@ -1,4 +1,3 @@
-/* 既有会话研究整理；不是实时学位或个别服务承诺。 */
 const comparisonData = {
   "reviewDate": "2026-09-11",
   "columns": [
@@ -107,14 +106,14 @@ const comparisonData = {
     [
       "lunch",
       "午餐",
-      "Escola Pia",
-      "价格较透明；不是口味或营养排名"
+      "Escola Pia · Santa Dorotea",
+      "有公开餐费；不是口味或营养排名"
     ],
     [
       "fees",
       "2026—2027费用",
-      "Escola Pia",
-      "本次唯一取得完整基础报价；不是最便宜"
+      "Escola Pia · Santa Dorotea",
+      "已有官方收费资料；包含项目与收费期数不同，不能直接比较最低总价"
     ],
     [
       "admission",
@@ -593,7 +592,178 @@ const comparisonData = {
           "https://www.escolalurdes.cat/1r-nivell/"
         ]
       ]
+    },
+    {
+      "name": "Sant Marc de Sarrià",
+      "distanceKm": 1.8,
+      "address": "Carrer de Carrasco i Formiguera, 12；一年级入口待确认。",
+      "ethos": "宗教属性与宗教活动参与要求待校方确认；不凭校名推断。",
+      "path": "官网有小学阶段介绍；后续学段、升学衔接与录取条件待确认。",
+      "teaching": "官网强调个别关注、尊重发展节奏、情绪教育，以及项目与合作学习；需要参观一年级课堂确认落实方式。",
+      "english": "小学网页列出 Drama、Speaking Workshop 等补充活动；一年级英语总课时、各科语言和师资配置待确认。",
+      "arts": "小学页列出编程、戏剧等补充活动；本学年一年级适用项目及费用需确认。",
+      "sports": "小学页列有游泳和心理运动活动；当前一年级频次、场地、收费与陪同需确认。",
+      "care": "强调个别关注和情绪教育；具体心理支持人员、家校沟通语言及反馈机制待确认。",
+      "fit": "可作为重视个别关注和英语活动的补充考察对象；接送距离较远，需先确认学位及适应支持。",
+      "ask": "确认校门、英语课时、游泳收费、宗教安排，以及新抵达一年级学生的具体支持。",
+      "sources": [
+        [
+          "官方小学介绍",
+          "https://www.santmarc.com/oferta-educativa/primaria/"
+        ],
+        [
+          "官方校规（2023文件）",
+          "https://www.santmarc.com/wp-content/uploads/2023/07/NOFC.pdf"
+        ],
+        [
+          "住所至学校导航（自行核实路线）",
+          "https://www.google.com/maps/dir/?api=1&origin=Carrer%20d'Hurtado%2C%2031%2C%20Barcelona&destination=Carrer%20de%20Carrasco%20i%20Formiguera%2C%2012%2C%20Barcelona&travelmode=walking"
+        ]
+      ],
+      "priority": "新增补充考察；未纳入家庭已确定排序。",
+      "travel": "较远·需评估接送。目录既有坐标至 Hurtado 31 的直线估算约 1.8 公里，不是步行里程／时间；实际路线、坡度、校门与安全性需实测。"
+    },
+    {
+      "name": "Santa Dorotea",
+      "distanceKm": 2.2,
+      "address": "Passeig de Sant Joan Bosco, 24；一年级入口待确认。",
+      "ethos": "Salesianes 慈幼修女会学校，基督宗教教育背景；宗教活动参与和替代安排需询问。",
+      "path": "官网列幼儿、小学、ESO；页面链接的 Salesians Sarrià 高中属于另一所学校，不能视为本校直升保证。",
+      "teaching": "小学教育与多语言项目可在官网核查；一年级读写、数学、作业及评价方式需进一步询问。",
+      "english": "官网小学安排为每周5节：3小时 AMCO 英语＋2小时 Natural Science；有每周外语会话助教活动。一年级当年执行课表需确认。五、六年级英语棋类不可当作一年级安排。",
+      "arts": "小学具体艺术、音乐和科技课时，以及必修／课外和收费待确认。",
+      "sports": "官网列泳池服务；不代表一年级必修游泳，频次、陪同和收费待确认。",
+      "care": "官网列心理教育团队、早晚接待等服务；是否含新抵达语言支持及家长沟通语言待确认。",
+      "lunch": "2026—2027 官方表：每周5天午餐，9月至次年5月 €165/月，6月 €70；完整列示学年共 €1,555。中途入学按月／天如何计费待确认。",
+      "fees": "2026—2027 小学月表合计 €173：补充活动 €85＋活动与服务 €62＋基金会款 €26。学校收费期数、各项必需／可选／自愿性质待确认；不能直接当作学费或全包年费。若按10期假设，€1,730＋完整学年5天午餐 €1,555＝€3,285，仅为条件预测，不含未列项目，亦非9月底到达后的实际账单。",
+      "fit": "英语安排与收费公开程度较具体；适合进一步核对预算，但宗教文化、接送与语言支持仍是决策条件。",
+      "ask": "€173是否收10期？基金会款是否自愿？材料、校服、出游、游泳和支持是否另付？迟入学怎样计费？",
+      "sources": [
+        [
+          "学校官网与服务",
+          "https://sarria.salesianes.org/"
+        ],
+        [
+          "官方英语课时",
+          "https://sarria.salesianes.org/projectes/multilinguisme/l-angles-a-lescola/"
+        ],
+        [
+          "2026—2027 官方收费表",
+          "https://sarria.salesianes.org/wp-content/uploads/2026/09/Quotes-Curs-2026-27-1.pdf"
+        ],
+        [
+          "住所至学校导航（自行核实路线）",
+          "https://www.google.com/maps/dir/?api=1&origin=Carrer%20d'Hurtado%2C%2031%2C%20Barcelona&destination=Passeig%20de%20Sant%20Joan%20Bosco%2C%2024%2C%20Barcelona&travelmode=walking"
+        ]
+      ],
+      "priority": "新增补充考察；未纳入家庭已确定排序。",
+      "travel": "较远·需评估接送。目录既有坐标至 Hurtado 31 的直线估算约 2.2 公里，不是步行里程／时间；实际路线、坡度、校门与安全性需实测。原定位仅到街道，精度有限。"
+    },
+    {
+      "name": "Padre Damián Sagrados Corazones",
+      "distanceKm": 2.3,
+      "address": "Avinguda de Vallvidrera, 10（官网联系页）；须确认一年级具体校门。",
+      "ethos": "Sagrados Corazones 宗教团体学校，基督宗教与牧灵教育背景；具体参与要求待确认。",
+      "path": "小学及后续衔接安排需向学校确认；不把可覆盖学段理解为保证升学。",
+      "teaching": "小学官网强调多种教学方法、工具学科、推理、合作项目；数学操作实验、阅读与口语，以及可持续发展／校园种植活动。",
+      "english": "小学官网介绍 AMCO 英语教学；未取得一年级各科英语占比、每周总课时与师资明细。",
+      "arts": "项目活动与跨学科学习已有介绍；一年级音乐、美术、科技和设备费待确认。",
+      "care": "个别适应、心理教育服务配置及家校沟通语言需取得书面说明；一般支持服务不等于第二语言支持。",
+      "fit": "可考察其合作学习与英语项目；距离估算精度较低，先用实际校门导航再决定参观优先级。",
+      "ask": "核实 Av. de Vallvidrera 10 的小学入口、路线；一年级英语课表、新抵达支持和全包费用。",
+      "sources": [
+        [
+          "官方小学介绍",
+          "https://www.padredamiansscc.org/es/etapes/primaria/"
+        ],
+        [
+          "官方校址",
+          "https://www.padredamiansscc.org/es/contacte/"
+        ],
+        [
+          "学校历史与办学背景",
+          "https://www.padredamiansscc.org/en/el-col%C2%B7legi/historia/"
+        ],
+        [
+          "住所至学校导航（自行核实路线）",
+          "https://www.google.com/maps/dir/?api=1&origin=Carrer%20d'Hurtado%2C%2031%2C%20Barcelona&destination=Avinguda%20de%20Vallvidrera%2C%2010%2C%20Barcelona&travelmode=walking"
+        ]
+      ],
+      "priority": "新增补充考察；未纳入家庭已确定排序。",
+      "travel": "较远·需评估接送。目录既有坐标至 Hurtado 31 的直线估算约 2.3 公里，不是步行里程／时间；实际路线、坡度、校门与安全性需实测。原定位仅到道路，未精确到校门，约2.3公里仅作粗略提示，须复核。"
+    },
+    {
+      "name": "Sagrat Cor-Sarrià",
+      "distanceKm": 2.1,
+      "address": "Carrer del Sagrat Cor, 25；2026—2027 资料提及可由 Ramon Miquel i Planas 或 Sagrat Cor 进入，一年级楼门为 Placeta del Rellotge，需学校再次确认。",
+      "ethos": "宗教活动、价值观教育及参与选择需核实；勿与位于 Eduard Conde 的其他同名／近名学校混淆。",
+      "path": "学校提供多个教育阶段；各阶段招生及衔接条件需分别核实，不能推定直升。",
+      "teaching": "小学官网介绍 Ratulec 阅读项目；一年级读写、数学、合作学习与作业安排待进一步确认。",
+      "english": "官方国际化页面介绍从幼儿起学习英语，小学发展口语与书面能力；未取得一年级明确占比，不引用其他同名学校的比例。",
+      "arts": "具体一年级艺术、音乐与科技安排待确认；文化课外活动不能自动视为正课。",
+      "care": "新生情绪适应、导师跟进、心理服务与家长沟通方式需向校方确认。",
+      "hours": "2026—2027 官方说明列小学一年级 8:30—16:30；午间安排、早晚接待及9月底抵达后的适应时间另问。",
+      "fit": "阅读项目和一年级时间／入口资料较具体；需结合较远接送与真实语言支持判断，而非仅凭校名或规模选择。",
+      "ask": "确认 Placeta del Rellotge 一年级入口、午间与早晚接待；各科语言、适应支持及完整报价。",
+      "sources": [
+        [
+          "官方小学介绍",
+          "https://sagratcorsarria.com/oferta-educativa/primaria/?lang=es"
+        ],
+        [
+          "官方国际化介绍",
+          "https://sagratcorsarria.com/som-internacionals/"
+        ],
+        [
+          "2026—2027 官方说明",
+          "https://sagratcorsarria.com/docs/dossier-informatiu/dosier-informativo-2026-27.pdf"
+        ],
+        [
+          "住所至学校导航（自行核实路线）",
+          "https://www.google.com/maps/dir/?api=1&origin=Carrer%20d'Hurtado%2C%2031%2C%20Barcelona&destination=Carrer%20del%20Sagrat%20Cor%2C%2025%2C%20Barcelona&travelmode=walking"
+        ]
+      ],
+      "priority": "新增补充考察；未纳入家庭已确定排序。",
+      "travel": "较远·需评估接送。目录既有坐标至 Hurtado 31 的直线估算约 2.1 公里，不是步行里程／时间；实际路线、坡度、校门与安全性需实测。"
+    },
+    {
+      "name": "Reial Monestir de Santa Isabel",
+      "distanceKm": 1.9,
+      "address": "Carrer del Cardenal Sentmenat, 1–5；小学具体入口待确认。",
+      "ethos": "官网明确为天主教、三语、concertat 学校；应确认宗教课、祈祷、庆典与可选择的参与方式。",
+      "path": "幼儿、小学及后续中学阶段；未来学段录取、资助性质和收费需分别确认。",
+      "teaching": "官网强调完整人格教育与个人陪伴；具体一年级读写、数学、作业和评价方式待确认。",
+      "english": "官网小学阶段宣称约33%英语，列英语及部分学科英语教学；不是加泰语／西语／英语各占三分之一的保证，一年级实际课表需核实。",
+      "foreign": "教育模式页提及法语／德语选项；起始年级、正课或课外以及一年级能否参加待确认。",
+      "arts": "官网小学英语介绍包含艺术、电脑等学科；一年级实际适用科目和设备费用需确认。",
+      "care": "强调个人陪伴；具体心理人员、语言适应课时与家校沟通语言待确认。",
+      "lunch": "官方服务页介绍 Aramark 餐饮与营养／菜单应用；一年级价格、特殊饮食、午间看护和迟入学计费待确认。",
+      "fit": "可作为看重明确三语及天主教教育的补充选项；英语特色不等于新抵达儿童自动容易适应，且接送较远。",
+      "ask": "一年级实际英语课表、语言入学评估用途、天主教活动参与方式、支持方案及全年费用。",
+      "sources": [
+        [
+          "官方性质与理念",
+          "https://www.rmsantaisabel.com/ca/nostre-collegi/"
+        ],
+        [
+          "官方小学英语介绍",
+          "https://www.rmsantaisabel.com/colegio-privado-barcelona/"
+        ],
+        [
+          "官方教育模式",
+          "https://www.rmsantaisabel.com/modelo-educativo/"
+        ],
+        [
+          "官方餐饮服务",
+          "https://www.rmsantaisabel.com/ca/serveis/"
+        ],
+        [
+          "住所至学校导航（自行核实路线）",
+          "https://www.google.com/maps/dir/?api=1&origin=Carrer%20d'Hurtado%2C%2031%2C%20Barcelona&destination=Carrer%20del%20Cardenal%20Sentmenat%2C%201%E2%80%935%2C%20Barcelona&travelmode=walking"
+        ]
+      ],
+      "priority": "新增补充考察；未纳入家庭已确定排序。",
+      "travel": "较远·需评估接送。目录既有坐标至 Hurtado 31 的直线估算约 1.9 公里，不是步行里程／时间；实际路线、坡度、校门与安全性需实测。"
     }
   ]
 };
-

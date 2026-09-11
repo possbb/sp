@@ -12,8 +12,18 @@ const {chromium} = require('playwright');
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(new URL('Barcelona_sarria_school_comparison.html',base).href);
   assert.equal(await page.locator('thead th').count(),22);
-  assert.equal(await page.locator('tr[data-school]').count(),16);
-  assert.equal(await page.locator('tbody tr').count(),17);
+  assert.equal(await page.locator('tr[data-school]').count(),21);
+  assert.equal(await page.locator('tbody tr').count(),22);
+  assert.equal(await page.locator('.distance-warning').count(),5);
+  await page.selectOption('#scope','added');
+  assert.equal(await page.locator('tr[data-school]').count(),5);
+  for(const name of ['Sant Marc de Sarrià','Santa Dorotea','Padre Damián Sagrados Corazones','Sagrat Cor-Sarrià','Reial Monestir de Santa Isabel']){
+   assert((await page.locator('tbody').innerText()).includes(name));
+  }
+  assert((await page.locator('tbody').innerText()).includes('€3,285'));
+  assert((await page.locator('tbody').innerText()).includes('原定位仅到道路'));
+  await page.screenshot({path:path.resolve(root,'../school-comparison-added.png'),fullPage:true});
+  await page.click('#reset');
   assert.equal(await page.locator('.top-choice').count(),22);
   assert.equal(await page.locator('tbody tr:first-child td').count(),21);
   assert((await page.locator('tbody').innerText()).includes('€5,297.80'));
@@ -36,6 +46,6 @@ const {chromium} = require('playwright');
   await page.locator('a[href="Barcelona_sarria_school_comparison.html"]').click();
   assert(page.url().includes('Barcelona_sarria_school_comparison.html'));
   assert.deepEqual(errors,[]);
-  console.log('PASS: 16 schools / 22 columns / shared checklist / column recommendations / filters / jump / mobile / round-trip links / no JS errors');
+  console.log('PASS: 21 schools / 22 columns / 5 distance warnings / added-school filter / shared checklist / column recommendations / filters / jump / mobile / round-trip links / no JS errors');
  } finally {await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
