@@ -15,7 +15,7 @@ const { pathToFileURL } = require('node:url');
     assert(directory.includes('href="Barcelona_school_contact_checklist.html"'));
     await page.goto(new URL('Barcelona_school_contact_checklist.html?v=contact-' + Date.now(),base).href);
     assert.equal(await page.locator('#first-round article').count(),5);
-    assert.equal(await page.locator('blockquote').count(),5);
+    assert.equal(await page.locator('#first-round blockquote').count(),5);
     assert.equal(await page.locator('tbody tr').count(),8);
     assert.equal(await page.locator('#decisions li').count(),2);
     const text = await page.locator('main').innerText();
