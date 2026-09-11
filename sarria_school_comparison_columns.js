@@ -27,7 +27,20 @@ function createComparisonColumns(columns, onChange) {
   if(busy)return;
   if(dirty().length&&!confirm("读取线上记录将放弃本页尚未保存的折叠修改，继续？"))return;
   busy=true;refresh("正在读取线上折叠记录…");
-  try{const {data}=await read(token.value.trim());base={...data.collapsed};current={...base};ready=true;refresh("已读取线上折叠记录；修改后请点击保存到线上。");}
+  try{
+   let data,fallback=false;
+   try{({data}=await read(token.value.trim()));}
+   catch(error){
+    if(token.value.trim())throw error;
+    const response=await fetch("sarria_school_comparison_columns.json?v="+Date.now(),{cache:"no-store",signal:AbortSignal.timeout(15000)});
+    if(!response.ok)throw error;
+    data=await response.json();
+    if(data.version!==1||!data.collapsed||typeof data.collapsed!=="object"||Array.isArray(data.collapsed)||Object.values(data.collapsed).some(v=>typeof v!=="boolean"))throw new Error("备用线上折叠数据格式异常");
+    fallback=true;
+   }
+   base={...data.collapsed};current={...base};ready=true;
+   refresh(fallback?"已读取网站发布的线上记录（备用方式，可能稍晚于最新保存）；输入令牌后可读取最新记录。":"已读取线上折叠记录；修改后请点击保存到线上。");
+  }
   catch(error){refresh("读取失败："+error.message+"。当前视图保留，请重试；未读取成功时不能保存。");ready=false;}
   finally{busy=false;refresh();}
  }

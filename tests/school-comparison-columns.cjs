@@ -62,6 +62,12 @@ const {chromium}=require('playwright');
   assert.equal(await p.locator('#col-english button').getAttribute('aria-expanded'),'true');
   assert.equal(await p.locator('#col-fees button').getAttribute('aria-expanded'),'false');
   await p.click('#expand-columns');assert.equal(await p.locator('thead .is-collapsed').count(),0);
+  const fallback=await browser.newPage();
+  await fallback.route('https://api.github.com/**',route=>route.fulfill({status:403,json:{}}));
+  await fallback.route('**/sarria_school_comparison_columns.json?*',route=>route.fulfill({json:{version:1,collapsed:{name:true}}}));
+  await fallback.goto(pathToFileURL(path.resolve(__dirname,'../Barcelona_sarria_school_comparison.html')).href);
+  await fallback.getByText(/已读取网站发布的线上记录/).waitFor();
+  assert.equal(await fallback.locator('#col-name button').getAttribute('aria-expanded'),'false');
   assert.deepEqual(errors,[]);
   console.log('PASS: 22 column toggles, widths, filtered rows, online read/write/readback, separate-device restore, unrelated edit merge, 401/409 preserve edits, token clearing, mobile');
  }finally{await browser.close();}
