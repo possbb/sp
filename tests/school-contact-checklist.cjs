@@ -13,13 +13,15 @@ const { pathToFileURL } = require('node:url');
     page.on('pageerror', error => errors.push(error.message));
     const directory = fs.readFileSync(path.join(root,'Barcelona_sarria_primary_schools.html'),'utf8');
     assert(directory.includes('href="Barcelona_school_contact_checklist.html"'));
-    await page.goto(new URL('Barcelona_school_contact_checklist.html?v=contact-1',base).href);
-    assert.equal(await page.locator('#first-round article').count(),6);
-    assert.equal(await page.locator('blockquote').count(),6);
+    await page.goto(new URL('Barcelona_school_contact_checklist.html?v=contact-' + Date.now(),base).href);
+    assert.equal(await page.locator('#first-round article').count(),5);
+    assert.equal(await page.locator('blockquote').count(),5);
     assert.equal(await page.locator('tbody tr').count(),8);
-    assert.equal(await page.locator('#decisions li').count(),3);
+    assert.equal(await page.locator('#decisions li').count(),2);
     const text = await page.locator('main').innerText();
-    for (const value of ['2020 年 6 月','Weiyiyi','Carrer d’Hurtado, 31, 2-4, 08022 Barcelona','Carrer de Lluís Marià Vidal, 54, 1-2, 08032 Barcelona','empadronamiento','自愿项目','加泰罗尼亚语水平尚未确认']) assert(text.includes(value),value);
+    for (const value of ['2020 年 6 月','Weiyiyi','自愿项目','加泰罗尼亚语水平尚未确认']) assert(text.includes(value),value);
+    for (const value of ['两个地址','Carrer d’Hurtado','Carrer de Lluís Marià Vidal','empadronamiento','三个决定性答案','6 件']) assert(!text.includes(value),value);
+    assert.deepEqual((await page.locator('#first-round h3').allTextContents()).map(value => value[0]),['1','2','3','4','5']);
     for (const width of [1440,390,320]) {
       await page.setViewportSize({width,height:900});
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
@@ -29,6 +31,6 @@ const { pathToFileURL } = require('node:url');
     assert.equal(new URL(page.url()).hash,'#second-round');
     assert.equal(await page.locator('.back').getAttribute('href'),'Barcelona_sarria_primary_schools.html');
     assert.deepEqual(errors,[]);
-    console.log('PASS: 6 questions, 8 follow-ups, 3 decisions, addresses, links and desktop/mobile layout.');
+    console.log('PASS: 5 questions, 8 follow-ups, 2 decisions, removed address section, numbering, links and desktop/mobile layout.');
   } finally { await browser.close(); }
 })().catch(error => {console.error(error);process.exitCode=1;});
