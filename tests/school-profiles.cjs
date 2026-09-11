@@ -50,6 +50,29 @@ for (const name of names) {
     assert.equal(await page.locator('.school-profile dt').count(), 252);
     assert.equal(await page.locator('.fees').count(), 42);
     assert.equal(await page.locator('.distance').count(), 42);
+    const distanceData = JSON.parse(fs.readFileSync(path.join(root, 'sarria_school_distances.json'), 'utf8'));
+    const distances = new Map(distanceData.schools.map(s => [s.name, s.distanceKm]));
+    async function checkOrder(ascending) {
+      const shown = await page.locator('#rows tr td:nth-child(3)').allTextContents();
+      const values = shown.map(name => distances.get(name));
+      assert(values.every(Number.isFinite));
+      assert(values.every((value, i) => !i || (ascending ? value >= values[i-1] : value <= values[i-1])));
+      assert.equal(await page.locator('#distanceHeader').getAttribute('aria-sort'), ascending ? 'ascending' : 'descending');
+      assert(await page.evaluate(() => compareDistance({distanceKm:null},{distanceKm:1}) > 0 && compareDistance({distanceKm:1},{}) < 0 && compareDistance({},{}) === 0));
+    }
+    await checkOrder(true);
+    await page.locator('.pick').first().check();
+    const selected = await page.locator('.pick:checked').getAttribute('data-email');
+    await page.click('#sortDistance');
+    await checkOrder(false);
+    assert.equal(await page.locator('.pick:checked').getAttribute('data-email'), selected);
+    await page.selectOption('#type', {label:'公立'});
+    await checkOrder(false);
+    await page.locator('#sortDistance').focus();
+    await page.keyboard.press('Enter');
+    await checkOrder(true);
+    await page.selectOption('#type', 'all');
+    await page.click('#clearSelected');
     await page.selectOption('#type', { label: '公立' });
     assert.equal(await page.locator('#rows tr').count(), 8);
     await page.selectOption('#type', { label: '私立（非协约）' });
@@ -98,7 +121,7 @@ for (const name of names) {
     await page.click('#clearSelected');
     assert.match(await page.locator('#selectedCount').innerText(), /0/);
     assert.deepEqual(errors, []);
-    console.log('PASS: 42 researched records, 10 columns, six detail groups, sources, keyboard expansion, filters, mail selection, 1440/390/320px layouts.');
+    console.log('PASS: default ascending, toggle/keyboard/filtered sorting, unknown distances last, selection retained; 42 records, 10 columns, details, mail and 1440/390/320px layouts.');
   } finally {
     if (browser) await browser.close();
     if (server) await new Promise(resolve => server.close(resolve));
